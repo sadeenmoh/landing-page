@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Tajawal', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  [dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* --- إصلاح مشكلة التمرير الأفقي والتعليق على الهواتف --- */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* منع أي صورة أو عنصر من تجاوز عرض الشاشة وتسبب بطء الحركة */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom scrollbar for beauty aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9bfb5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b59285;
+}
