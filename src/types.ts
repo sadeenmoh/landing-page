@@ -6,6 +6,8 @@ export interface Shade {
   nameEn: string;
   hex: string;
   previewImage?: string;
+  image?: string;
+  stock: number; // <--- الجديد: مخزون كل درجة لحال
 }
 
 export type CategoryType = 'face' | 'lips' | 'eyes' | 'nails' | 'bestsellers';
@@ -24,20 +26,24 @@ export interface Product {
   image: string;
   hoverImage: string;
   gallery: string[];
+  
+  shades?: Shade[];
   badge?: 'bestseller' | 'new' | 'featured' | 'trending';
+  
   descriptionAr: string;
   descriptionEn: string;
   keyBenefitsAr: string[];
   keyBenefitsEn: string[];
   ingredientsAr: string;
   ingredientsEn: string;
-  shades: Shade[];
-  origin: string; // "Made in Turkey"
-  inStock: boolean;
+  
+  origin: string;
+  stock: number; // للمنتجات اللي ما الها درجات، و للمنتجات اللي الها درجات رح ينحسب مجموع درجاتها تلقائيا
+  inStock: boolean; // رح ينحسب تلقائيا: اذا stock > 0
 }
 
 export interface CartItem {
-  id: string; // product.id + '-' + (selectedShade?.id || 'default')
+  id: string;
   product: Product;
   selectedShade?: Shade;
   quantity: number;
@@ -47,7 +53,7 @@ export interface Governorate {
   id: string;
   nameAr: string;
   nameEn: string;
-  deliveryFee: number; // in JOD (0 if cart total >= 20 JOD)
+  deliveryFee: number;
   deliveryTimeAr: string;
   deliveryTimeEn: string;
 }
@@ -67,7 +73,7 @@ export interface CustomerReview {
   id: string;
   name: string;
   orderNumber: string;
-  rating: number; // 1 to 5
+  rating: number;
   comment: string;
   productId?: string;
   productNameAr?: string;
@@ -124,7 +130,7 @@ export interface OrderItemSummary {
 }
 
 export interface OrderRecord {
-  id: string; // e.g. #M2M-8492
+  id: string;
   customerName: string;
   phone: string;
   governorate: string;
@@ -141,3 +147,26 @@ export interface OrderRecord {
   status: 'pending' | 'delivered';
   createdAt: string;
 }
+
+// ===== دوال مساعدة للمخزون =====
+export const getProductTotalStock = (product: Product): number => {
+  if (product.shades && product.shades.length > 0) {
+    return product.shades.reduce((sum, shade) => sum + (shade.stock || 0), 0);
+  }
+  return product.stock || 0;
+};
+
+export const isProductOutOfStock = (product: Product): boolean => {
+  return getProductTotalStock(product) === 0;
+};
+
+export const isShadeOutOfStock = (shade: Shade): boolean => {
+  return (shade.stock || 0) === 0;
+};
+
+export const getShadeStockStatus = (shade: Shade): { textAr: string; textEn: string; available: boolean } => {
+  if (shade.stock === 0) {
+    return { textAr: 'نفذت', textEn: 'Out of stock', available: false };
+  }
+  return { textAr: `متوفر (${shade.stock})`, textEn: `In stock (${shade.stock})`, available: true };
+};

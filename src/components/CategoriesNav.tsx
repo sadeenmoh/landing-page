@@ -21,21 +21,24 @@ export const CategoriesNav: React.FC<CategoriesNavProps> = ({
       id: 'face' as const,
       title: t.categoryFaceTitle,
       subtitle: t.categoryFaceSub,
-      tag: language === 'ar' ? 'فاونديشن ومثبت' : 'Foundation & Mist',
+      tag: language === 'ar'? 'فاونديشن ومثبت' : 'Foundation & Mist',
       image: 'https://cdn.phototourl.com/member/2026-09-27-22751244-fc1e-495b-9447-5308027e1dd6.jpg',
     },
     {
       id: 'lips' as const,
       title: t.categoryLipsTitle,
-      subtitle: t.categoryLipsSub,
-      tag: language === 'ar' ? 'أحمر شفاه وجلوس' : 'Matte & Gloss',
+      // هون التعديل المطلوب
+      subtitle: language === 'ar'
+       ? 'أحمر شفاه • ملمع شفاه • محدد شفاه • زيت مغذي • قلوس مات • قلوس شاين'
+        : 'Lipstick • Gloss • Liner • Nourishing Oil • Matte Gloss • Shine Gloss',
+      tag: language === 'ar'? 'أحمر شفاه وجلوس' : 'Matte & Gloss',
       image: 'https://cdn.phototourl.com/member/2026-09-27-e8cdef11-6e4d-460f-893b-6669a366bca2.jpg',
     },
     {
       id: 'eyes' as const,
       title: t.categoryEyesTitle,
       subtitle: t.categoryEyesSub,
-      tag: language === 'ar' ? 'ماسكارا وباليت' : 'Lashes & Shadows',
+      tag: language === 'ar'? 'ماسكارا وباليت' : 'Lashes & Shadows',
       image: 'https://cdn.phototourl.com/member/2026-09-27-aa0186e8-8d8d-4d43-bd13-621277db1484.jpg',
     },
   ];
@@ -72,7 +75,7 @@ export const CategoriesNav: React.FC<CategoriesNavProps> = ({
                 }}
                 className={`group relative text-start p-5 sm:p-6 rounded-3xl transition-all duration-300 flex flex-col items-center text-center cursor-pointer ${
                   isSelected
-                    ? 'bg-[#faefe9] border-2 border-[#b87661] shadow-xl shadow-[#b87661]/10 scale-[1.02]'
+                   ? 'bg-[#faefe9] border-2 border-[#b87661] shadow-xl shadow-[#b87661]/10 scale-[1.02]'
                     : 'bg-[#faf6f3] hover:bg-[#faefe9] border border-[#ebdcd5] hover:border-[#c59a85] hover:shadow-md'
                 }`}
                 id={`category-card-${cat.id}`}
@@ -82,7 +85,7 @@ export const CategoriesNav: React.FC<CategoriesNavProps> = ({
                   <div
                     className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 transition-all duration-300 ${
                       isSelected
-                        ? 'ring-4 ring-[#b87661] ring-offset-2 ring-offset-[#faefe9]'
+                       ? 'ring-4 ring-[#b87661] ring-offset-2 ring-offset-[#faefe9]'
                         : 'ring-2 ring-[#dfc6bc] group-hover:ring-[#c59a85]'
                     }`}
                   >
@@ -103,7 +106,7 @@ export const CategoriesNav: React.FC<CategoriesNavProps> = ({
                 </span>
 
                 {/* Subtitle / items preview */}
-                <p className="text-xs sm:text-sm text-[#7d655f] mt-2.5 line-clamp-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#7d655f] mt-2.5 line-clamp-3 leading-relaxed">
                   {cat.subtitle}
                 </p>
 

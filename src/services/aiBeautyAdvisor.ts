@@ -57,7 +57,7 @@ export function generateBeautyAdvice(
 
     return {
       replyText: isAr
-        ? 'يتوفر كريم أساس **لومينوس سيلك HD** من Miss2m في 4 درجات مختارة بعناية لتناسب مختلف ألوان البشرة في منطقتنا:\n\n• **01 Ivory Fair**: للبشرة البيضاء الفاتحة.\n• **02 Natural Warm**: للبشرة الفاتحة إلى المتوسطة.\n• **03 Golden Honey**: للبشرة الحنطية والقمحية.\n• **04 Warm Almond**: للبشرة السمراء الدافئة.\n\nما هو لون بشرتك أو الإندرتون المعتاد لأساعدك في الاختيار بدقة؟'
+        ? 'يتوفر كريم أساس كيرفول إتش دي HD من Miss2m في 4 درجات مختارة بعناية لتناسب مختلف ألوان البشرة في منطقتنا:\n\n• **01 Ivory Fair**: للبشرة البيضاء الفاتحة.\n• **02 Natural Warm**: للبشرة الفاتحة إلى المتوسطة.\n• **03 Golden Honey**: للبشرة الحنطية والقمحية.\n• **04 Warm Almond**: للبشرة السمراء الدافئة.\n\nما هو لون بشرتك أو الإندرتون المعتاد لأساعدك في الاختيار بدقة؟'
         : 'Miss2m Luminous Silk HD Foundation comes in 4 tailored shades:\n\n• **01 Ivory Fair**: Fair/Light\n• **02 Natural Warm**: Light-Medium\n• **03 Golden Honey**: Medium/Olive/Wheat\n• **04 Warm Almond**: Tan/Deep\n\nWhat is your skin tone or undertone?',
       suggestedProductIds: ['m2m-found-01'],
       quickReplies: isAr
@@ -81,17 +81,16 @@ export function generateBeautyAdvice(
 
   // 3. Dry skin / Hydration
   if (has(['جافة', 'جفاف', 'تقشر', 'dry', 'hydration', 'ترطيب'])) {
-    return {
+return {
       replyText: isAr
-        ? 'للبشرة الجافة، السر يكمن في الترطيب المسبق! فاونديشن لومينوس سيلك من Miss2m مدعم بـ **حمض الهيالورونيك** ليوفر ترطيباً مستمراً يمنع أي تقشر. ولتنظيف وترطيب البشرة بعمق في نهاية اليوم، ننصحك بشدة بـ **بلسم التنظيف النباتي Hydra-Infusion Cleansing Balm** الغني بالزيوت المغذية.'
-        : 'For dry skin, hydration is key! Miss2m Luminous Silk Foundation contains Hyaluronic Acid to hydrate without flaking. Pair it with our **Hydra-Infusion Cleansing Balm** for deep nourishing cleansing.',
+        ? 'للبشرة الجافة، السر يكمن في الترطيب المسبق! فاونديشن **كيرفول إتش دي** من Miss2m مدعم بـ **حمض الهيالورونيك** ليوفر ترطيباً مستمراً يمنع أي تقشر. ولتنظيف وترطيب البشرة بعمق في نهاية اليوم، ننصحك بشدة بـ **بلسم التنظيف النباتي Hydra-Infusion Cleansing Balm** الغني بالزيوت المغذية.'
+        : 'For dry skin, hydration is key! Miss2m **Careful HD Foundation** contains Hyaluronic Acid to hydrate without flaking. Pair it with our **Hydra-Infusion Cleansing Balm** for deep nourishing cleansing.',
       suggestedProductIds: ['m2m-found-01', 'm2m-balm-01'],
       quickReplies: isAr
         ? ['درجات الفاونديشن', 'هايلايتر طبيعي', 'توصيل خلال 48 ساعة']
         : ['Foundation shades', 'Natural highlighter', 'Delivery in 48 hours'],
     };
   }
-
   // 4. Lipstick / Lip makeup
   if (has(['روج', 'حمرة', 'شفايف', 'lipstick', 'lips', 'مات', 'ثابت', 'مخملي', 'matte'])) {
     return {

@@ -39,7 +39,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
     { id: 'eyes' as const, label: t.navEyes },
   ];
 
-  // Filter & Sort computation
+  // Filter & Sort computation - FIXED for optional shades
   const filteredProducts = useMemo(() => {
     let list = [...products];
 
@@ -48,10 +48,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
       list = list.filter((p) => p.category === selectedCategory);
     }
 
-    // Search query
+    // Search query - FIXED: shades can be undefined
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
       list = list.filter((p) => {
+        const allShades = p.shades || [];
         return (
           p.nameAr.toLowerCase().includes(q) ||
           p.nameEn.toLowerCase().includes(q) ||
@@ -59,7 +60,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           p.subcategoryEn.toLowerCase().includes(q) ||
           p.descriptionAr.toLowerCase().includes(q) ||
           p.descriptionEn.toLowerCase().includes(q) ||
-          p.shades.some(
+          allShades.some(
             (s) => s.nameAr.toLowerCase().includes(q) || s.nameEn.toLowerCase().includes(q)
           )
         );

@@ -30,15 +30,48 @@ import { AdminDashboardModal } from './components/AdminDashboardModal';
 import { InstagramFeed } from './components/InstagramFeed';
 import { Footer } from './components/Footer';
 import { StorePoliciesModal, PolicyTab } from './components/StorePoliciesModal';
+import { ScrollToTop } from './components/ScrollToTop';
 import { CheckCircle } from 'lucide-react';
 
+const PRODUCTS_STOCK_KEY = 'miss2m_products_stock';
+
 export default function App() {
-  // Primary language default is Arabic (RTL)
   const [language, setLanguage] = useState<Language>('ar');
   const [selectedCategory, setSelectedCategory] = useState<CategoryType | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   
-  // Modals and Drawers
+  // *** جديد: قراءة المخزون من لوحة التحكم ***
+  const [productsWithStock, setProductsWithStock] = useState<Product[]>(() => {
+    try {
+      const saved = localStorage.getItem(PRODUCTS_STOCK_KEY);
+      if (saved) return JSON.parse(saved) as Product[];
+    } catch {}
+    return PRODUCTS;
+  });
+
+  // تحديث المخزون لحظي لما تعدلي بلوحة التحكم
+  useEffect(() => {
+    const syncStock = () => {
+      try {
+        const saved = localStorage.getItem(PRODUCTS_STOCK_KEY);
+        if (saved) setProductsWithStock(JSON.parse(saved));
+      } catch {}
+    };
+    window.addEventListener('storage', syncStock);
+    const interval = setInterval(syncStock, 1000);
+    // كمان نتابع تغيير localStorage بنفس الصفحة
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function(key, value) {
+      originalSetItem.apply(this, [key, value] as any);
+      if (key === PRODUCTS_STOCK_KEY) syncStock();
+    };
+    return () => {
+      window.removeEventListener('storage', syncStock);
+      clearInterval(interval);
+      localStorage.setItem = originalSetItem;
+    };
+  }, []);
+
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -58,7 +91,6 @@ export default function App() {
   const [activePolicyTab, setActivePolicyTab] = useState<PolicyTab>('shipping');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Cart & Promo
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem('miss2m_cart');
@@ -68,7 +100,6 @@ export default function App() {
     }
   });
 
-  // Wishlist state
   const [wishlistIds, setWishlistIds] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem('miss2m_wishlist');
@@ -78,7 +109,6 @@ export default function App() {
     }
   });
 
-  // Customer Reviews state
   const [reviews, setReviews] = useState<CustomerReview[]>(() => {
     try {
       const saved = localStorage.getItem('miss2m_reviews');
@@ -88,10 +118,8 @@ export default function App() {
     }
   });
 
-  // Orders Management state
   const [orders, setOrders] = useState<OrderRecord[]>(() => getOrders());
 
-  // Customer-Specific Star Rewards Account
   const [identifiedCustomerId, setIdentifiedCustomerId] = useState<string | null>(() => getActiveCustomerId());
   const [customerAccount, setCustomerAccount] = useState<CustomerStarAccount | null>(() => {
     const savedId = getActiveCustomerId();
@@ -105,34 +133,24 @@ export default function App() {
   const [appliedPromoCode, setAppliedPromoCode] = useState('');
   const [promoDiscountPercent, setPromoDiscountPercent] = useState(0);
 
-  // Save cart changes
   useEffect(() => {
     try {
       localStorage.setItem('miss2m_cart', JSON.stringify(cartItems));
-    } catch {
-      // ignore
-    }
+    } catch {}
   }, [cartItems]);
 
-  // Save wishlist changes
   useEffect(() => {
     try {
       localStorage.setItem('miss2m_wishlist', JSON.stringify(wishlistIds));
-    } catch {
-      // ignore
-    }
+    } catch {}
   }, [wishlistIds]);
 
-  // Save reviews changes
   useEffect(() => {
     try {
       localStorage.setItem('miss2m_reviews', JSON.stringify(reviews));
-    } catch {
-      // ignore
-    }
+    } catch {}
   }, [reviews]);
 
-  // Synchronize document direction and lang with active language
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -149,26 +167,16 @@ export default function App() {
     }, 3500);
   };
 
-  // Identify Customer by Phone Number or Order Number
   const handleIdentifyCustomer = (phoneOrOrder: string) => {
     const { account, isNew } = getCustomerAccount(phoneOrOrder);
     setIdentifiedCustomerId(account.phone);
     setCustomerAccount(account);
     setIsNewCustomer(isNew);
     setActiveCustomerId(account.phone);
-
     if (isNew) {
-      showToast(
-        language === 'ar'
-          ? `أهلاً بكِ! تم فتح حساب نجوم جديد برقم (${account.phone}) برصيد 0 نجوم ⭐`
-          : `Welcome! New Star account started with 0 stars ⭐`
-      );
+      showToast(language === 'ar' ? `أهلاً بكِ! تم فتح حساب نجوم جديد برقم (${account.phone}) برصيد 0 نجوم ⭐` : `Welcome! New Star account started with 0 stars ⭐`);
     } else {
-      showToast(
-        language === 'ar'
-          ? `أهلاً بعودتك! رصيد نجومك المرتبط برقمك: ${account.totalStars} ⭐`
-          : `Welcome back! Your star balance: ${account.totalStars} ⭐`
-      );
+      showToast(language === 'ar' ? `أهلاً بعودتك! رصيد نجومك المرتبط برقمك: ${account.totalStars} ⭐` : `Welcome back! Your star balance: ${account.totalStars} ⭐`);
     }
   };
 
@@ -177,16 +185,17 @@ export default function App() {
     setIdentifiedCustomerId(null);
     setCustomerAccount(null);
     setIsNewCustomer(false);
-    showToast(
-      language === 'ar' ? 'تم تسجيل الخروج من حساب النجوم' : 'Signed out of Star account'
-    );
+    showToast(language === 'ar' ? 'تم تسجيل الخروج من حساب النجوم' : 'Signed out of Star account');
   };
 
-  // Cart operations
   const handleAddToCart = (product: Product, shade?: Shade, quantity: number = 1) => {
     const targetShade = shade || (product.shades && product.shades.length > 0 ? product.shades[0] : undefined);
+    // منع الاضافة اذا نفذ المخزون
+    if ((targetShade?.stock ?? product.stock ?? 0) <= 0) {
+      showToast(language === 'ar' ? 'عذراً، هذه الدرجة نفذت' : 'Sorry, this shade is out of stock');
+      return;
+    }
     const cartItemId = `${product.id}-${targetShade ? targetShade.id : 'default'}`;
-
     setCartItems((prevItems) => {
       const existing = prevItems.find((item) => item.id === cartItemId);
       if (existing) {
@@ -194,47 +203,22 @@ export default function App() {
           item.id === cartItemId ? { ...item, quantity: item.quantity + quantity } : item
         );
       }
-      return [
-        ...prevItems,
-        {
-          id: cartItemId,
-          product,
-          selectedShade: targetShade,
-          quantity,
-        },
-      ];
+      return [...prevItems, { id: cartItemId, product, selectedShade: targetShade, quantity }];
     });
-
     const name = language === 'ar' ? product.nameAr : product.nameEn;
-    showToast(
-      language === 'ar'
-        ? `تمت إضافة "${name}" إلى سلة المشتريات`
-        : `Added "${name}" to your shopping bag`
-    );
+    showToast(language === 'ar' ? `تمت إضافة "${name}" إلى سلة المشتريات` : `Added "${name}" to your shopping bag`);
   };
 
-  // Wishlist operations
   const handleToggleWishlist = (productId: string) => {
-    const product = PRODUCTS.find((p) => p.id === productId);
-    const prodName = product
-      ? (language === 'ar' ? product.nameAr : product.nameEn)
-      : '';
-
+    const product = productsWithStock.find((p) => p.id === productId);
+    const prodName = product ? (language === 'ar' ? product.nameAr : product.nameEn) : '';
     setWishlistIds((prev) => {
       const exists = prev.includes(productId);
       if (exists) {
-        showToast(
-          language === 'ar'
-            ? `تمت إزالة "${prodName}" من المفضلة`
-            : `Removed "${prodName}" from your wishlist`
-        );
+        showToast(language === 'ar' ? `تمت إزالة "${prodName}" من المفضلة` : `Removed "${prodName}" from your wishlist`);
         return prev.filter((id) => id !== productId);
       } else {
-        showToast(
-          language === 'ar'
-            ? `تمت إضافة "${prodName}" إلى المفضلة ❤️`
-            : `Added "${prodName}" to your wishlist ❤️`
-        );
+        showToast(language === 'ar' ? `تمت إضافة "${prodName}" إلى المفضلة ❤` : `Added "${prodName}" to your wishlist ❤`);
         return [...prev, productId];
       }
     });
@@ -242,24 +226,19 @@ export default function App() {
 
   const handleClearWishlist = () => {
     setWishlistIds([]);
-    showToast(
-      language === 'ar' ? 'تم تفريغ قائمة المفضلة' : 'Wishlist cleared'
-    );
+    showToast(language === 'ar' ? 'تم تفريغ قائمة المفضلة' : 'Wishlist cleared');
   };
 
   const handleAddAllWishlistToCart = () => {
-    const wishlistedProducts = PRODUCTS.filter((p) => wishlistIds.includes(p.id));
+    const wishlistedProducts = productsWithStock.filter((p) => wishlistIds.includes(p.id));
     if (wishlistedProducts.length === 0) return;
-
     wishlistedProducts.forEach((product) => {
-      handleAddToCart(product, undefined, 1);
+      const availableShade = product.shades?.find(s => (s.stock ?? 0) > 0);
+      if ((product.stock ?? 0) > 0 || availableShade) {
+        handleAddToCart(product, availableShade, 1);
+      }
     });
-
-    showToast(
-      language === 'ar'
-        ? 'تمت إضافة جميع مستحضرات المفضلة إلى السلة ✨'
-        : 'All wishlist items added to bag ✨'
-    );
+    showToast(language === 'ar' ? 'تمت إضافة جميع مستحضرات المفضلة إلى السلة ✨' : 'All wishlist items added to bag ✨');
   };
 
   const handleUpdateQuantity = (cartItemId: string, newQuantity: number) => {
@@ -267,22 +246,14 @@ export default function App() {
       handleRemoveItem(cartItemId);
       return;
     }
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === cartItemId ? { ...item, quantity: newQuantity } : item
-      )
-    );
+    setCartItems((prev) => prev.map((item) => (item.id === cartItemId ? { ...item, quantity: newQuantity } : item)));
   };
 
   const handleRemoveItem = (cartItemId: string) => {
     setCartItems((prev) => prev.filter((item) => item.id !== cartItemId));
   };
 
-  // Review submission tied to customer account
-  const handleSubmitReview = (
-    reviewData: Omit<CustomerReview, 'id' | 'date' | 'isVerifiedPurchase' | 'likesCount'>,
-    reviewerPhone?: string
-  ) => {
+  const handleSubmitReview = (reviewData: Omit<CustomerReview, 'id' | 'date' | 'isVerifiedPurchase' | 'likesCount'>, reviewerPhone?: string) => {
     const newReview: CustomerReview = {
       ...reviewData,
       id: `rev-${Date.now()}`,
@@ -290,78 +261,40 @@ export default function App() {
       isVerifiedPurchase: true,
       likesCount: 0,
     };
-
     setReviews((prev) => [newReview, ...prev]);
-
     const targetIdentifier = reviewerPhone || identifiedCustomerId || reviewData.orderNumber;
-    const { updatedAccount, milestoneUnlocked } = awardStarsToCustomer(
-      targetIdentifier,
-      1,
-      `تقييم موثق برقم الطلب ${reviewData.orderNumber}`,
-      `Verified review for order ${reviewData.orderNumber}`,
-      reviewData.orderNumber,
-      reviewData.name
-    );
-
+    const { updatedAccount, milestoneUnlocked } = awardStarsToCustomer(targetIdentifier, 1, `تقييم موثق برقم الطلب ${reviewData.orderNumber}`, `Verified review for order ${reviewData.orderNumber}`, reviewData.orderNumber, reviewData.name);
     setIdentifiedCustomerId(updatedAccount.phone);
     setCustomerAccount(updatedAccount);
     setIsNewCustomer(false);
-
     if (milestoneUnlocked) {
       setTimeout(() => {
         setCelebrationVoucherCode('STAR20');
         setIsCelebrationOpen(true);
       }, 500);
     }
-
-    showToast(
-      language === 'ar'
-        ? `شكراً لكِ! تم نشر تقييمك واحتساب +1 نجمة. رصيدك الآن: ${updatedAccount.totalStars} ⭐`
-        : `Thank you! Your review was published and +1 Star added. Balance: ${updatedAccount.totalStars} ⭐`
-    );
+    showToast(language === 'ar' ? `شكراً لكِ! تم نشر تقييمك واحتساب +1 نجمة. رصيدك الآن: ${updatedAccount.totalStars} ⭐` : `Thank you! Your review was published and +1 Star added. Balance: ${updatedAccount.totalStars} ⭐`);
   };
 
-  // Order confirmation tied to customer phone and saved to orders list
-  const handleOrderSuccess = (
-    orderId: string,
-    customerName: string,
-    customerPhone?: string,
-    newOrderRecord?: OrderRecord
-  ) => {
+  const handleOrderSuccess = (orderId: string, customerName: string, customerPhone?: string, newOrderRecord?: OrderRecord) => {
     setCartItems([]);
     localStorage.removeItem('miss2m_cart');
-
     if (newOrderRecord) {
       const updatedOrders = addOrder(newOrderRecord);
       setOrders(updatedOrders);
     }
-
     const targetIdentifier = customerPhone || identifiedCustomerId || orderId;
-    const { updatedAccount, milestoneUnlocked } = awardStarsToCustomer(
-      targetIdentifier,
-      1,
-      `بونص تأكيد وشحن الطلب ${orderId}`,
-      `Bonus for confirmed order ${orderId}`,
-      orderId,
-      customerName
-    );
-
+    const { updatedAccount, milestoneUnlocked } = awardStarsToCustomer(targetIdentifier, 1, `بونص تأكيد وشحن الطلب ${orderId}`, `Bonus for confirmed order ${orderId}`, orderId, customerName);
     setIdentifiedCustomerId(updatedAccount.phone);
     setCustomerAccount(updatedAccount);
     setIsNewCustomer(false);
-
     if (milestoneUnlocked) {
       setTimeout(() => {
         setCelebrationVoucherCode('STAR20');
         setIsCelebrationOpen(true);
       }, 500);
     }
-
-    showToast(
-      language === 'ar'
-        ? `تم تأكيد طلبك (${orderId}) وكسبتِ +1 نجمة بونص! رصيدك: ${updatedAccount.totalStars} ⭐`
-        : `Order confirmed (${orderId})! You earned +1 Star! Balance: ${updatedAccount.totalStars} ⭐`
-    );
+    showToast(language === 'ar' ? `تم تأكيد طلبك (${orderId}) وكسبتِ +1 نجمة بونص! رصيدك: ${updatedAccount.totalStars} ⭐` : `Order confirmed (${orderId})! You earned +1 Star! Balance: ${updatedAccount.totalStars} ⭐`);
   };
 
   const handleOpenReviewWithPrefill = (orderId: string, customerName: string, customerPhone?: string) => {
@@ -372,30 +305,19 @@ export default function App() {
   };
 
   const handleLikeReview = (reviewId: string) => {
-    setReviews((prev) =>
-      prev.map((r) => (r.id === reviewId ? { ...r, likesCount: (r.likesCount || 0) + 1 } : r))
-    );
+    setReviews((prev) => prev.map((r) => (r.id === reviewId ? { ...r, likesCount: (r.likesCount || 0) + 1 } : r)));
   };
 
-  // Admin Dashboard actions
   const handleUpdateOrderStatus = (orderId: string, status: 'pending' | 'delivered') => {
     const updated = updateOrderStatus(orderId, status);
     setOrders(updated);
-    showToast(
-      language === 'ar'
-        ? `تم تحديث حالة الطلب ${orderId} إلى: ${status === 'delivered' ? 'تم الاستلام والتوصيل' : 'قيد المعالجة'}`
-        : `Order ${orderId} status changed to: ${status}`
-    );
+    showToast(language === 'ar' ? `تم تحديث حالة الطلب ${orderId} إلى: ${status === 'delivered' ? 'تم الاستلام والتوصيل' : 'قيد المعالجة'}` : `Order ${orderId} status changed to: ${status}`);
   };
 
   const handleDeleteOrder = (orderId: string) => {
     const updated = deleteOrder(orderId);
     setOrders(updated);
-    showToast(
-      language === 'ar'
-        ? `تم حذف الطلب ${orderId} بنجاح`
-        : `Order ${orderId} removed`
-    );
+    showToast(language === 'ar' ? `تم حذف الطلب ${orderId} بنجاح` : `Order ${orderId} removed`);
   };
 
   const handleDeleteReview = (reviewId: string) => {
@@ -403,24 +325,16 @@ export default function App() {
       const updated = prev.filter((r) => r.id !== reviewId);
       try {
         localStorage.setItem('miss2m_reviews', JSON.stringify(updated));
-      } catch {
-        // ignore
-      }
+      } catch {}
       return updated;
     });
-    showToast(
-      language === 'ar' ? 'تم حذف التقييم بنجاح' : 'Review removed successfully'
-    );
+    showToast(language === 'ar' ? 'تم حذف التقييم بنجاح' : 'Review removed successfully');
   };
 
   const handleApplyVoucherToCart = (code: string) => {
     setAppliedPromoCode(code);
     setPromoDiscountPercent(20);
-    showToast(
-      language === 'ar'
-        ? `تم تفعيل قسيمة الخصم 20% (${code}) بنجاح على سلتك! 🎉`
-        : `20% OFF voucher (${code}) successfully applied to your bag! 🎉`
-    );
+    showToast(language === 'ar' ? `تم تفعيل قسيمة الخصم 20% (${code}) بنجاح على سلتك! 🎉` : `20% OFF voucher (${code}) successfully applied to your bag! 🎉`);
   };
 
   const handleApplyPromoCode = (code: string): boolean => {
@@ -433,10 +347,7 @@ export default function App() {
       setAppliedPromoCode('MISS2M');
       setPromoDiscountPercent(15);
       return true;
-    } else if (
-      upper === 'STAR20' ||
-      (customerAccount && customerAccount.unlockedVouchers.includes(upper))
-    ) {
+    } else if (upper === 'STAR20' || (customerAccount && customerAccount.unlockedVouchers.includes(upper))) {
       setAppliedPromoCode(upper);
       setPromoDiscountPercent(20);
       return true;
@@ -450,23 +361,18 @@ export default function App() {
   };
 
   const totalCartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-
-  // Dynamic customer values
   const currentTotalStars = customerAccount ? customerAccount.totalStars : 0;
   const currentUnlockedVouchers = customerAccount ? customerAccount.unlockedVouchers : [];
   const currentHistory = customerAccount ? customerAccount.history : [];
 
   return (
     <div className="min-h-screen bg-[#faf7f5] text-[#241714] flex flex-col selection:bg-[#e8c2b4] selection:text-[#3d2019]">
-      {/* Toast notification banner */}
       {toastMessage && (
         <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-[#2c1c18] text-[#f7ece8] px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 text-xs sm:text-sm font-bold animate-in fade-in slide-in-from-top-4 duration-200 border border-[#ebdcd5]">
           <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
           <span>{toastMessage}</span>
         </div>
       )}
-
-      {/* Main Header & Announcement */}
       <Header
         language={language}
         onToggleLanguage={handleToggleLanguage}
@@ -480,12 +386,10 @@ export default function App() {
         onSelectCategory={setSelectedCategory}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        products={PRODUCTS}
+        products={productsWithStock}
         onSelectProduct={(p) => setQuickViewProduct(p)}
       />
-
       <main className="flex-1">
-        {/* Hero Section */}
         <Hero
           language={language}
           onShopNowClick={() => {
@@ -498,17 +402,9 @@ export default function App() {
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
         />
-
-        {/* Categories Navigation */}
-        <CategoriesNav
-          language={language}
-          selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
-        />
-
-        {/* Product Showcase */}
+        <CategoriesNav language={language} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
         <ProductShowcase
-          products={PRODUCTS}
+          products={productsWithStock}
           language={language}
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
@@ -519,192 +415,24 @@ export default function App() {
           wishlistIds={wishlistIds}
           onToggleWishlist={handleToggleWishlist}
         />
-
-        {/* Miss2m Star Club & Loyalty Rewards Section */}
-        <StarRewardsSection
-          language={language}
-          totalStars={currentTotalStars}
-          unlockedVouchers={currentUnlockedVouchers}
-          identifiedPhone={identifiedCustomerId}
-          onOpenStarClub={() => setIsStarClubOpen(true)}
-          onOpenReviewModal={() => {
-            setPrefilledOrderNumber('');
-            setPrefilledCustomerName('');
-            setPrefilledCustomerPhone(identifiedCustomerId || '');
-            setIsReviewModalOpen(true);
-          }}
-          onOpenCelebrationModal={(code) => {
-            setCelebrationVoucherCode(code);
-            setIsCelebrationOpen(true);
-          }}
-        />
-
-        {/* Public Customer Reviews Showcase Grid */}
-        <ReviewsShowcase
-          language={language}
-          reviews={reviews}
-          onOpenReviewModal={() => {
-            setPrefilledOrderNumber('');
-            setPrefilledCustomerName('');
-            setPrefilledCustomerPhone(identifiedCustomerId || '');
-            setIsReviewModalOpen(true);
-          }}
-          onLikeReview={handleLikeReview}
-        />
-
-        {/* Features & Trust Badges */}
+        <StarRewardsSection language={language} totalStars={currentTotalStars} unlockedVouchers={currentUnlockedVouchers} identifiedPhone={identifiedCustomerId} onOpenStarClub={() => setIsStarClubOpen(true)} onOpenReviewModal={() => { setPrefilledOrderNumber(''); setPrefilledCustomerName(''); setPrefilledCustomerPhone(identifiedCustomerId || ''); setIsReviewModalOpen(true); }} onOpenCelebrationModal={(code) => { setCelebrationVoucherCode(code); setIsCelebrationOpen(true); }} />
+        <ReviewsShowcase language={language} reviews={reviews} onOpenReviewModal={() => { setPrefilledOrderNumber(''); setPrefilledCustomerName(''); setPrefilledCustomerPhone(identifiedCustomerId || ''); setIsReviewModalOpen(true); }} onLikeReview={handleLikeReview} />
         <TrustBadges language={language} />
-
-        {/* Instagram Feed Preview */}
         <InstagramFeed language={language} />
       </main>
-
-      {/* Footer */}
-      <Footer
-        language={language}
-        onOpenPolicy={handleOpenPolicy}
-        onSelectCategory={setSelectedCategory}
-        onOpenAdminDashboard={() => setIsAdminDashboardOpen(true)}
-      />
-
-      {/* Slide-out Cart Drawer */}
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        items={cartItems}
-        onUpdateQuantity={handleUpdateQuantity}
-        onRemoveItem={handleRemoveItem}
-        language={language}
-        onProceedToCheckout={() => {
-          setIsCartOpen(false);
-          setIsCheckoutOpen(true);
-        }}
-        appliedPromoCode={appliedPromoCode}
-        promoDiscountPercent={promoDiscountPercent}
-        onApplyPromoCode={handleApplyPromoCode}
-      />
-
-      {/* Dedicated Wishlist Drawer */}
-      <WishlistDrawer
-        isOpen={isWishlistOpen}
-        onClose={() => setIsWishlistOpen(false)}
-        wishlistIds={wishlistIds}
-        products={PRODUCTS}
-        language={language}
-        onToggleWishlist={handleToggleWishlist}
-        onAddToCart={handleAddToCart}
-        onAddAllToCart={handleAddAllWishlistToCart}
-        onClearWishlist={handleClearWishlist}
-        onQuickView={(p) => setQuickViewProduct(p)}
-      />
-
-      {/* Jordan Checkout Modal with Star Rewards Integration */}
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-        items={cartItems}
-        language={language}
-        onOrderSuccess={handleOrderSuccess}
-        onOpenReviewWithOrder={handleOpenReviewWithPrefill}
-        promoDiscountPercent={promoDiscountPercent}
-      />
-
-      {/* Product Quick View Modal */}
-      <QuickViewModal
-        product={quickViewProduct}
-        isOpen={!!quickViewProduct}
-        onClose={() => setQuickViewProduct(null)}
-        language={language}
-        onAddToCart={handleAddToCart}
-        isWishlisted={quickViewProduct ? wishlistIds.includes(quickViewProduct.id) : false}
-        onToggleWishlist={handleToggleWishlist}
-      />
-
-      {/* Customer Review & Star Earning Modal */}
-      <ReviewModal
-        isOpen={isReviewModalOpen}
-        onClose={() => setIsReviewModalOpen(false)}
-        products={PRODUCTS}
-        language={language}
-        prefilledOrderNumber={prefilledOrderNumber}
-        prefilledCustomerName={prefilledCustomerName}
-        prefilledCustomerPhone={prefilledCustomerPhone}
-        onSubmitReview={handleSubmitReview}
-      />
-
-      {/* Miss2m Star Club Loyalty Tracker Modal with Phone / Order Lookup */}
-      <StarClubModal
-        isOpen={isStarClubOpen}
-        onClose={() => setIsStarClubOpen(false)}
-        language={language}
-        totalStars={currentTotalStars}
-        unlockedVouchers={currentUnlockedVouchers}
-        history={currentHistory}
-        identifiedPhone={identifiedCustomerId}
-        customerName={customerAccount?.name}
-        isNewCustomer={isNewCustomer}
-        onIdentifyCustomer={handleIdentifyCustomer}
-        onClearIdentity={handleClearCustomerIdentity}
-        onOpenReviewModal={() => {
-          setPrefilledOrderNumber('');
-          setPrefilledCustomerName('');
-          setPrefilledCustomerPhone(identifiedCustomerId || '');
-          setIsReviewModalOpen(true);
-        }}
-        onOpenCelebrationModal={(code) => {
-          setCelebrationVoucherCode(code);
-          setIsCelebrationOpen(true);
-        }}
-        onShopNow={() => {
-          const el = document.getElementById('product-showcase-section');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}
-      />
-
-      {/* 10-Star Milestone Celebration Modal */}
-      <MilestoneCelebrationModal
-        isOpen={isCelebrationOpen}
-        onClose={() => setIsCelebrationOpen(false)}
-        language={language}
-        voucherCode={celebrationVoucherCode}
-        onApplyToCart={handleApplyVoucherToCart}
-      />
-
-      {/* AI Beauty Assistant Modal */}
-      <BeautyAssistantModal
-        isOpen={isAIAssistantOpen}
-        onClose={() => setIsAIAssistantOpen(false)}
-        language={language}
-        products={PRODUCTS}
-        onAddToCart={handleAddToCart}
-        onQuickView={(p) => setQuickViewProduct(p)}
-      />
-
-      {/* Secure Admin Dashboard Modal */}
-      <AdminDashboardModal
-        isOpen={isAdminDashboardOpen}
-        onClose={() => setIsAdminDashboardOpen(false)}
-        language={language}
-        orders={orders}
-        onUpdateOrderStatus={handleUpdateOrderStatus}
-        onDeleteOrder={handleDeleteOrder}
-        reviews={reviews}
-        onDeleteReview={handleDeleteReview}
-      />
-
-      {/* Store Policies Modal */}
-      <StorePoliciesModal
-        isOpen={policyModalOpen}
-        onClose={() => setPolicyModalOpen(false)}
-        language={language}
-        initialTab={activePolicyTab}
-      />
-
-      {/* Modern AI Beauty Assistant Floating Action Button */}
-      <AIBeautyButton
-        language={language}
-        onOpenAIAssistant={() => setIsAIAssistantOpen(true)}
-      />
+      <Footer language={language} onOpenPolicy={handleOpenPolicy} onSelectCategory={setSelectedCategory} onOpenAdminDashboard={() => setIsAdminDashboardOpen(true)} />
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={cartItems} onUpdateQuantity={handleUpdateQuantity} onRemoveItem={handleRemoveItem} language={language} onProceedToCheckout={() => { setIsCartOpen(false); setIsCheckoutOpen(true); }} appliedPromoCode={appliedPromoCode} promoDiscountPercent={promoDiscountPercent} onApplyPromoCode={handleApplyPromoCode} />
+      <WishlistDrawer isOpen={isWishlistOpen} onClose={() => setIsWishlistOpen(false)} wishlistIds={wishlistIds} products={productsWithStock} language={language} onToggleWishlist={handleToggleWishlist} onAddToCart={handleAddToCart} onAddAllToCart={handleAddAllWishlistToCart} onClearWishlist={handleClearWishlist} onQuickView={(p) => setQuickViewProduct(p)} />
+      <CheckoutModal isOpen={isCheckoutOpen} onClose={() => setIsCheckoutOpen(false)} items={cartItems} language={language} onOrderSuccess={handleOrderSuccess} onOpenReviewWithOrder={handleOpenReviewWithPrefill} promoDiscountPercent={promoDiscountPercent} />
+      <QuickViewModal product={quickViewProduct} isOpen={!!quickViewProduct} onClose={() => setQuickViewProduct(null)} language={language} onAddToCart={handleAddToCart} isWishlisted={quickViewProduct ? wishlistIds.includes(quickViewProduct.id) : false} onToggleWishlist={handleToggleWishlist} />
+      <ReviewModal isOpen={isReviewModalOpen} onClose={() => setIsReviewModalOpen(false)} products={productsWithStock} language={language} prefilledOrderNumber={prefilledOrderNumber} prefilledCustomerName={prefilledCustomerName} prefilledCustomerPhone={prefilledCustomerPhone} onSubmitReview={handleSubmitReview} />
+      <StarClubModal isOpen={isStarClubOpen} onClose={() => setIsStarClubOpen(false)} language={language} totalStars={currentTotalStars} unlockedVouchers={currentUnlockedVouchers} history={currentHistory} identifiedPhone={identifiedCustomerId} customerName={customerAccount?.name} isNewCustomer={isNewCustomer} onIdentifyCustomer={handleIdentifyCustomer} onClearIdentity={handleClearCustomerIdentity} onOpenReviewModal={() => { setPrefilledOrderNumber(''); setPrefilledCustomerName(''); setPrefilledCustomerPhone(identifiedCustomerId || ''); setIsReviewModalOpen(true); }} onOpenCelebrationModal={(code) => { setCelebrationVoucherCode(code); setIsCelebrationOpen(true); }} onShopNow={() => { const el = document.getElementById('product-showcase-section'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} />
+      <MilestoneCelebrationModal isOpen={isCelebrationOpen} onClose={() => setIsCelebrationOpen(false)} language={language} voucherCode={celebrationVoucherCode} onApplyToCart={handleApplyVoucherToCart} />
+      <BeautyAssistantModal isOpen={isAIAssistantOpen} onClose={() => setIsAIAssistantOpen(false)} language={language} products={productsWithStock} onAddToCart={handleAddToCart} onQuickView={(p) => setQuickViewProduct(p)} />
+      <AdminDashboardModal isOpen={isAdminDashboardOpen} onClose={() => setIsAdminDashboardOpen(false)} language={language} orders={orders} onUpdateOrderStatus={handleUpdateOrderStatus} onDeleteOrder={handleDeleteOrder} reviews={reviews} onDeleteReview={handleDeleteReview} />
+      <StorePoliciesModal isOpen={policyModalOpen} onClose={() => setPolicyModalOpen(false)} language={language} initialTab={activePolicyTab} />
+      <AIBeautyButton language={language} onOpenAIAssistant={() => setIsAIAssistantOpen(true)} />
+      <ScrollToTop />
     </div>
   );
 }

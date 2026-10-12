@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, ArrowLeft, Tag, Sparkles, Truck } from 'lucide-react';
+import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, ArrowLeft, Tag, Sparkles, Truck, AlertTriangle } from 'lucide-react';
 import { CartItem, Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { FREE_SHIPPING_THRESHOLD, WHATSAPP_PHONE } from '../data/jordanLocations';
@@ -37,15 +37,39 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
   if (!isOpen) return null;
 
-  // Computations
-  const subtotal = items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
-  const discountAmount = (subtotal * promoDiscountPercent) / 100;
-  const isFreeDelivery = subtotal >= FREE_SHIPPING_THRESHOLD;
-  const deliveryFee = items.length === 0 ? 0 : isFreeDelivery ? 0 : 2.0;
-  const total = Math.max(0, subtotal - discountAmount + deliveryFee);
+  // === دوال المخزون الجديدة ===
+  const getItemStock = (item: CartItem): number => {
+    if (item.selectedShade) {
+      return item.selectedShade.stock ?? 0;
+    }
+    return item.product.stock ?? 0;
+  };
 
-  const amountNeededForFreeShipping = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const progressPercent = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
+  const isItemOutOfStock = (item: CartItem): boolean => getItemStock(item) === 0;
+  const isItemOverStock = (item: CartItem): boolean => item.quantity > getItemStock(item);
+
+  // هل في منتجات نافذة بالسلة؟
+  const hasOutOfStockItems = items.some(item => isItemOutOfStock(item) || isItemOverStock(item));
+  const outOfStockCount = items.filter(item => isItemOutOfStock(item) || isItemOverStock(item)).length;
+
+  // Computations - فقط للمنتجات المتوفرة
+  const subtotal = items.reduce((acc, item) => {
+    if (isItemOutOfStock(item)) return acc; // ما نحسب النافذ
+    const qty = Math.min(item.quantity, getItemStock(item)); // نحسب لحد المخزون
+    return acc + item.product.price * qty;
+  }, 0);
+  
+  // المجموع الحقيقي القديم (للتوافق)
+  const rawSubtotal = items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+  const displaySubtotal = rawSubtotal; // نعرض الكل بس نمنع الدفع اذا في نافذ
+  
+  const discountAmount = (displaySubtotal * promoDiscountPercent) / 100;
+  const isFreeDelivery = displaySubtotal >= FREE_SHIPPING_THRESHOLD;
+  const deliveryFee = items.length === 0 ? 0 : isFreeDelivery ? 0 : 2.0;
+  const total = Math.max(0, displaySubtotal - discountAmount + deliveryFee);
+
+  const amountNeededForFreeShipping = Math.max(0, FREE_SHIPPING_THRESHOLD - displaySubtotal);
+  const progressPercent = Math.min(100, (displaySubtotal / FREE_SHIPPING_THRESHOLD) * 100);
 
   const handleApplyPromo = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,14 +85,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   };
 
   const handleWhatsAppDirectOrder = () => {
-    if (items.length === 0) return;
+    if (items.length === 0 || hasOutOfStockItems) return;
 
     let text = `*مرحباً Miss2m Jordan! أرغب بطلب المنتجات التالية من المتجر:*\n\n`;
     items.forEach((item, index) => {
       const shadeName = item.selectedShade ? ` (درجة: ${item.selectedShade.nameAr})` : '';
       text += `${index + 1}. ${item.product.nameAr}${shadeName} - العدد: ${item.quantity} × ${item.product.price.toFixed(2)} د.أ\n`;
     });
-    text += `\n*المجموع الفرعي:* ${subtotal.toFixed(2)} د.أ`;
+    text += `\n*المجموع الفرعي:* ${displaySubtotal.toFixed(2)} د.أ`;
     if (promoDiscountPercent > 0) {
       text += `\n*الخصم (${promoDiscountPercent}%):* -${discountAmount.toFixed(2)} د.أ`;
     }
@@ -103,7 +127,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   {t.cartTitle}
                 </h3>
                 <span className="text-xs text-[#7d645e] font-medium">
-                  {items.length} {t.items}
+                  {items.length} {t.items} {hasOutOfStockItems && `• ${outOfStockCount} نفذ`}
                 </span>
               </div>
             </div>
@@ -140,6 +164,21 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             </div>
           </div>
 
+          {/* Out of stock warning banner */}
+          {hasOutOfStockItems && (
+            <div className="px-5 py-3 bg-red-50 border-b border-red-200 flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+              <div className="text-xs">
+                <p className="font-black text-red-800">
+                  {language === 'ar' ? `يوجد ${outOfStockCount} منتج نافذ في سلتك` : `${outOfStockCount} item(s) out of stock`}
+                </p>
+                <p className="text-red-600 mt-0.5 font-medium">
+                  {language === 'ar' ? 'احذفي المنتجات النافذة أو قللي الكمية لإتمام الطلب' : 'Remove out of stock items or reduce quantity to checkout'}
+                </p>
+              </div>
+            </div>
+          )}
+
           {/* Cart Items List */}
           <div className="flex-1 overflow-y-auto p-5 space-y-4">
             {items.length === 0 ? (
@@ -165,77 +204,114 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </button>
               </div>
             ) : (
-              items.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex gap-3 p-3.5 rounded-2xl bg-[#faf5f2] border border-[#ebdcd5] hover:border-[#cb9e90] transition-colors"
-                >
-                  <img
-                    src={item.product.image}
-                    alt={item.product.nameEn}
-                    className="w-18 h-18 rounded-xl object-cover bg-white flex-shrink-0"
-                  />
+              items.map((item) => {
+                const stock = getItemStock(item);
+                const outOfStock = stock === 0;
+                const overStock = item.quantity > stock;
+                const hasIssue = outOfStock || overStock;
+                const canIncrease = item.quantity < stock;
 
-                  <div className="flex-1 min-w-0 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-start justify-between gap-1">
-                        <h5 className="text-xs font-extrabold text-[#261714] line-clamp-1">
-                          {language === 'ar' ? item.product.nameAr : item.product.nameEn}
-                        </h5>
-                        <button
-                          onClick={() => onRemoveItem(item.id)}
-                          className="text-[#9e837b] hover:text-[#b84837] p-1 transition-colors"
-                          title="Remove item"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
+                return (
+                  <div
+                    key={item.id}
+                    className={`flex gap-3 p-3.5 rounded-2xl border transition-colors ${
+                      hasIssue
+                        ? 'bg-red-50 border-red-200'
+                        : 'bg-[#faf5f2] border-[#ebdcd5] hover:border-[#cb9e90]'
+                    }`}
+                  >
+                    <img
+                      src={item.product.image}
+                      alt={item.product.nameEn}
+                      className={`w-18 h-18 rounded-xl object-cover bg-white flex-shrink-0 ${hasIssue ? 'opacity-60 grayscale' : ''}`}
+                    />
 
-                      {item.selectedShade && (
-                        <div className="flex items-center gap-1.5 mt-1">
-                          <span
-                            className="w-3 h-3 rounded-full border border-white shadow-2xs inline-block"
-                            style={{ backgroundColor: item.selectedShade.hex }}
-                          />
-                          <span className="text-[11px] text-[#7d655f] font-medium truncate">
-                            {language === 'ar'
-                              ? item.selectedShade.nameAr
-                              : item.selectedShade.nameEn}
-                          </span>
+                    <div className="flex-1 min-w-0 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-start justify-between gap-1">
+                          <h5 className="text-xs font-extrabold text-[#261714] line-clamp-1">
+                            {language === 'ar' ? item.product.nameAr : item.product.nameEn}
+                          </h5>
+                          <button
+                            onClick={() => onRemoveItem(item.id)}
+                            className="text-[#9e837b] hover:text-[#b84837] p-1 transition-colors"
+                            title="Remove item"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
                         </div>
-                      )}
-                    </div>
 
-                    <div className="flex items-center justify-between mt-2 pt-1 border-t border-[#ebd9cf]">
-                      {/* Quantity Controller */}
-                      <div className="flex items-center border border-[#dfc6bc] rounded-lg bg-white overflow-hidden">
-                        <button
-                          onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                          className="p-1 hover:bg-[#faefe9] text-[#473631] transition-colors"
-                          aria-label="Decrease quantity"
-                        >
-                          <Minus className="w-3 h-3" />
-                        </button>
-                        <span className="px-2.5 text-xs font-black text-[#261714]">
-                          {item.quantity}
-                        </span>
-                        <button
-                          onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                          className="p-1 hover:bg-[#faefe9] text-[#473631] transition-colors"
-                          aria-label="Increase quantity"
-                        >
-                          <Plus className="w-3 h-3" />
-                        </button>
+                        {item.selectedShade && (
+                          <div className="flex items-center gap-1.5 mt-1">
+                            <span
+                              className="w-3 h-3 rounded-full border border-white shadow-2xs inline-block"
+                              style={{ backgroundColor: hasIssue ? '#ccc' : item.selectedShade.hex }}
+                            />
+                            <span className="text-[11px] text-[#7d655f] font-medium truncate">
+                              {language === 'ar'
+                                ? item.selectedShade.nameAr
+                                : item.selectedShade.nameEn}
+                            </span>
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold border ${
+                              hasIssue ? 'bg-red-100 text-red-700 border-red-200' : 'bg-white text-[#7d655f] border-[#ebdcd5]'
+                            }`}>
+                              {outOfStock ? (language === 'ar' ? 'نفذت' : 'Out') : `${stock} متوفر`}
+                            </span>
+                          </div>
+                        )}
+
+                        {!item.selectedShade && (
+                          <div className="mt-1">
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold border ${
+                              hasIssue ? 'bg-red-100 text-red-700 border-red-200' : 'bg-white text-[#7d655f] border-[#ebdcd5]'
+                            }`}>
+                              {outOfStock ? (language === 'ar' ? 'نفذت الكمية' : 'Out of stock') : `${stock} متوفر`}
+                            </span>
+                          </div>
+                        )}
+
+                        {hasIssue && (
+                          <div className="mt-1.5 text-[11px] font-black text-red-700 flex items-center gap-1">
+                            <AlertTriangle className="w-3 h-3" />
+                            {outOfStock
+                              ? (language === 'ar' ? 'هذه الدرجة نفذت - احذفيها' : 'This shade out of stock - remove it')
+                              : (language === 'ar' ? `الكمية أكبر من المتوفر (المتوفر ${stock})` : `Only ${stock} available`)}
+                          </div>
+                        )}
                       </div>
 
-                      {/* Total for this line */}
-                      <span className="text-xs font-black text-[#261714]">
-                        {(item.product.price * item.quantity).toFixed(2)} {t.currency}
-                      </span>
+                      <div className="flex items-center justify-between mt-2 pt-1 border-t border-[#ebd9cf]">
+                        {/* Quantity Controller */}
+                        <div className="flex items-center border border-[#dfc6bc] rounded-lg bg-white overflow-hidden">
+                          <button
+                            onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                            className="p-1 hover:bg-[#faefe9] text-[#473631] transition-colors"
+                            aria-label="Decrease quantity"
+                          >
+                            <Minus className="w-3 h-3" />
+                          </button>
+                          <span className={`px-2.5 text-xs font-black ${overStock ? 'text-red-600' : 'text-[#261714]'}`}>
+                            {item.quantity}
+                          </span>
+                          <button
+                            onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                            disabled={!canIncrease}
+                            className="p-1 hover:bg-[#faefe9] text-[#473631] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                            aria-label="Increase quantity"
+                          >
+                            <Plus className="w-3 h-3" />
+                          </button>
+                        </div>
+
+                        {/* Total for this line */}
+                        <span className="text-xs font-black text-[#261714]">
+                          {(item.product.price * item.quantity).toFixed(2)} {t.currency}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))
+                );
+              })
             )}
           </div>
 
@@ -285,7 +361,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div className="space-y-2 text-xs pt-2 border-t border-[#ebdcd5]">
                 <div className="flex justify-between text-[#614942]">
                   <span>{t.subtotal}</span>
-                  <span className="font-bold">{subtotal.toFixed(2)} {t.currency}</span>
+                  <span className="font-bold">{displaySubtotal.toFixed(2)} {t.currency}</span>
                 </div>
 
                 {promoDiscountPercent > 0 && (
@@ -315,23 +391,43 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <button
                   id="cart-proceed-checkout-btn"
                   onClick={() => {
+                    if (hasOutOfStockItems) return;
                     onClose();
                     onProceedToCheckout();
                   }}
-                  className="w-full py-3.5 rounded-2xl bg-[#2c1c18] hover:bg-[#462a22] text-[#f7ece8] text-sm font-extrabold shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 group"
+                  disabled={hasOutOfStockItems}
+                  className={`w-full py-3.5 rounded-2xl text-sm font-extrabold shadow-xl transition-all flex items-center justify-center gap-2 group ${
+                    hasOutOfStockItems
+                      ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                      : 'bg-[#2c1c18] hover:bg-[#462a22] text-[#f7ece8] hover:shadow-2xl'
+                  }`}
                 >
-                  <span>{t.proceedCheckout}</span>
-                  {isRtl ? (
-                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  {hasOutOfStockItems ? (
+                    <span className="flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" />
+                      {language === 'ar' ? `احذفي ${outOfStockCount} منتج نافذ أولاً` : `Remove ${outOfStockCount} out of stock items`}
+                    </span>
                   ) : (
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <>
+                      <span>{t.proceedCheckout}</span>
+                      {isRtl ? (
+                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                      ) : (
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      )}
+                    </>
                   )}
                 </button>
 
                 {/* Direct WhatsApp Order Button */}
                 <button
                   onClick={handleWhatsAppDirectOrder}
-                  className="w-full py-2.5 rounded-2xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] border border-[#25D366]/30 text-xs font-bold transition-all flex items-center justify-center gap-2"
+                  disabled={hasOutOfStockItems}
+                  className={`w-full py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+                    hasOutOfStockItems
+                      ? 'bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed'
+                      : 'bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] border border-[#25D366]/30'
+                  }`}
                 >
                   <span>💬</span>
                   <span>{t.orderViaWhatsApp}</span>

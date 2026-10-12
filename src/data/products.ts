@@ -1,55 +1,8 @@
 import { Product } from '../types';
-
-
-
 export const PRODUCTS: Product[] = [
   // ==========================================
-  {
-  id: 'miss2m-lip-oil-gloss-mp501',
-  nameAr: 'غلوس زيتي للشفاه بنكهات الفواكه - ليب اويل MP501',
-  nameEn: 'MISS2M LipOil Gloss With Flavors MP501',
-  category: 'lips',
-  subcategoryAr: 'غلوس زيتي',
-  subcategoryEn: 'LipOil Gloss',
-  price: 10.00,
-  originalPrice: 12.00,
-  rating: 4.9,
-  reviewsCount: 342,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/1hh0bRAlR.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/VT7bKnd1.png',
-  gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/1hh0bRAlR.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/VT7bKnd1.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/oF3px0GK.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/hnyfZrjb.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/z8fAyTW0.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/8Vw2MqMK.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/7ddkloWG.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/xNkPtDhR.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/XvRlzcyn.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/5vuSCHG8.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/goarfXVK.png',
-'https://cdn.imagetourls.com/uploads/tyImg/MwqoXiU5.png'
-
-  ],
-  badge: 'bestseller',
-  descriptionAr: 'ملمع الشفاه ليب اويل يقدم لك مجموعة متنوعة من الخيارات. اضف لمسة خاصة لشفتيك بنكهات الفراولة والتوت والخوخ والفانيليا. كل اصدار من LipOil Gloss يجمع بين اللمعان والعناية. ليب اويل غلوس يدلل شفتيك باللون والنكهة المناسبة لكل عمر واسلوب. حجمه العملي يسهل حمله في حقيبتك، مما يوفر النضارة واللمعان طوال اليوم. اكتشفي تنوع LipOil Gloss واضفي نكهة خاصة لشفتيك!',
-  descriptionEn: 'LipOil Gloss now offers you a variety of optional Add a special touch to your lips with strawberry, blackberry, peach, and vanilla flavors. Each LipOil Gloss variant combines shine and care. LipOil Gloss pampers your lips with color and flavor options suitable for every age and style. Its practical size makes it easy to carry in your bag, providing freshness and shine all day long. Discover the rich variety of LipOil Gloss and add a special flavor to your lips!',
-  keyBenefitsAr: ['بنكهات فراولة وتوت وخوخ وفانيليا', 'لمعان وعناية في نفس الوقت', 'حجم عملي سهل الحمل', 'نضارة ولمعان طوال اليوم', 'Ice Blue & Comfort اصدارات خاصة'],
-  keyBenefitsEn: ['Strawberry, Blackberry, Peach, Vanilla Flavors', 'Shine and Care Combined', 'Practical Size Easy To Carry', 'Freshness & Shine All Day Long', 'Ice Blue & Comfort Editions'],
-  ingredientsAr: 'زيوت مرطبة بنكهات الفواكه',
-  ingredientsEn: 'Moisturizing oils with fruit flavors',
-  shades: [
-    { id: 'strawberry', nameAr: 'فراولة', nameEn: 'Strawberry', hex: '#FF7A9A' },
-    { id: 'blackberry', nameAr: 'توت', nameEn: 'Blackberry', hex: '#8A2A6A' },
-    { id: 'peach', nameAr: 'خوخ', nameEn: 'Peach', hex: '#FF9A6A' },
-    { id: 'vanilla', nameAr: 'فانيليا', nameEn: 'Vanilla', hex: '#FFE8A0' },
-    
-  ],
-  origin: 'Made in Turkey',
-  inStock: true
-},
-  {
+  
+ {
   id: 'miss2m-emotion-connect-mp503',
   nameAr: 'تنت شفاه وخدود - ايموشن كونكت MP503',
   nameEn: 'MISS2M Emotion Connect Tint Lips MP503',
@@ -60,12 +13,17 @@ export const PRODUCTS: Product[] = [
   originalPrice: 6.00,
   rating: 4.9,
   reviewsCount: 187,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/rex91skL.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/7nmwmgfh.jpg',
+  image: '/images/503/101.jpg',
+  hoverImage: '/images/503/101.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/rex91skL.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/7nmwmgfh.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/1hG1DmCXW.jpg'
+    '/images/503/101.jpg',
+    '/images/503/102.webp',
+    '/images/503/103.webp'
+  ],
+  shades: [
+    { id: '101', nameAr: '101 - وردي', nameEn: '101 Pink', hex: '#E35A8A', image: '/images/503/101.jpg', stock: 35 },
+    { id: '102', nameAr: '102 - خوخي', nameEn: '102 Peach', hex: '#D46A5A', image: '/images/503/102.webp', stock: 35 },
+    { id: '103', nameAr: '103 - توتي', nameEn: '103 Berry', hex: '#A03070', image: '/images/503/103.webp', stock: 35 }
   ],
   badge: 'new',
   descriptionAr: 'هل انت في بحث عن منتج يعزز جمالك الطبيعي ويضيف لمسة حيوية لشفتيك وخديك؟ تعرفي على ايموشن تنت من ميس تو ام. هذا التنت الخاص يمنح بشرتك وشفتيك لونا خفيفا وطبيعيا، مما يوفر مظهرا منتعشا ومفعما بالحيوية. يقدم ايموشن تنت مظهرا رائعا طوال اليوم بتركيبته سهلة التطبيق وطويلة الامد. يضمن ملمسه الخفيف احساسا مريحا على البشرة مع لمسة نهائية طبيعية.',
@@ -74,15 +32,243 @@ export const PRODUCTS: Product[] = [
   keyBenefitsEn: ['Light & Natural Color for Lips & Cheeks', 'Fresh and Energetic Look', 'Easy-to-Apply & Long-Lasting Formula', 'Lightweight Comfortable Texture'],
   ingredientsAr: 'تركيبة تنت خفيفة طبيعية',
   ingredientsEn: 'Lightweight tint natural formula',
+  origin: 'Made in Turkey',
+ stock: 105,
+inStock: true
+},
+{
+  id: 'miss2m-prof-matte-mp160',
+  nameAr: 'فاونديشن بروف مات سوبر لونج وير - MP160',
+  nameEn: 'MISS2M Prof. Matte Foundation Super Longwear MP160',
+  category: 'face',
+  subcategoryAr: 'فاونديشن',
+  subcategoryEn: 'Foundation',
+  price: 5.00,
+  originalPrice: 10.00,
+  rating: 4.8,
+  reviewsCount: 243,
+  image: '/images/160/5.png',
+  hoverImage: '/images/160/5.png',
+  gallery: [
+    '/images/160/5.png',
+  ],
   shades: [
-    { id: '101', nameAr: '101 - وردي', nameEn: '101 Pink', hex: '#E35A8A' },
-    { id: '102', nameAr: '102 - خوخي', nameEn: '102 Peach', hex: '#D46A5A' },
-    { id: '103', nameAr: '103 - توتي', nameEn: '103 Berry', hex: '#A03070' }
+    { id: '01', nameAr: '01 - فاتح جداً', nameEn: '01 Very Light', hex: '#F5D5B8', image: '/images/160/01.jpg', stock: 35 },
+    { id: '02', nameAr: '02 - فاتح', nameEn: '02 Light', hex: '#ECC9A8', image: '/images/160/02.jpg', stock: 35 },
+    { id: '03', nameAr: '03 - طبيعي فاتح', nameEn: '03 Light Natural', hex: '#E8BE96', image: '/images/160/03.jpg', stock: 35 },
+    { id: '04', nameAr: '04 - طبيعي', nameEn: '04 Natural', hex: '#DFAE87', image: '/images/160/04.jpg' , stock: 35},
+    { id: '05', nameAr: '05 - حنطي', nameEn: '05 Beige', hex: '#D3A07B', image: '/images/160/05.jpg', stock: 35 },
+    { id: '06', nameAr: '06 - حنطي متوسط', nameEn: '06 Medium Beige', hex: '#C89672', image: '/images/160/06.jpg', stock: 35 }
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'هل تبحثين عن فاونديشن يمنحك تغطية كاملة بمظهر طبيعي يدوم طوال اليوم؟ تعرفي على بروف مات فاونديشن MP160 من ميس تو ام. تركيبته المقاومة للانتقال والسوبر ثابتة توفر لك لمسة نهائية مطفية وطبيعية تحمي بشرتك من اشعة الشمس بفضل تركيبته الواقية والمستدامة. مناسب لجميع انواع البشرة وقد اجتاز بنجاح الاختبارات الجلدية، ليمنحك ثقة ومظهر مثالي بدون تكتل او لمعان.',
+  descriptionEn: 'Looking for a foundation that gives you full coverage with a natural finish that lasts all day? Meet Prof. Matte Foundation MP160 by MISS2M. Its super longwear, transfer-resistant formula provides a full natural coverage with a protective formula against sun rays. Suitable for all skin types and has successfully passed dermatological tests, giving you a flawless, matte and natural look without cakiness.',
+  keyBenefitsAr: ['تغطية كاملة بمظهر طبيعي ومطفي', 'تركيبة سوبر ثابتة ومقاومة للانتقال', 'حماية من اشعة الشمس', 'مناسب لجميع انواع البشرة ومختبر جلديا'],
+  keyBenefitsEn: ['Full Natural Coverage with Matte Finish', 'Super Longwear & Transfer Resistant Formula', 'Protective Formula Against Sun Rays', 'Suitable for All Skin Types & Dermatologically Tested'],
+  ingredientsAr: 'تركيبة مطفية مقاومة للانتقال بحماية من الشمس',
+  ingredientsEn: 'Matte transfer-resistant formula with sun protection',
+  origin: 'Made in Turkey',
+  stock: 210,
+inStock: true
+},
+{
+  id: 'miss2m-blush-on-mp405',
+  nameAr: 'بلاشر احمر خدود - ميك اب تايم MP405',
+  nameEn: 'MISS2M Make Up Time Blush On MP405',
+  category: 'face',
+  subcategoryAr: 'بلاشر',
+  subcategoryEn: 'Blush',
+  price: 3.50,
+  originalPrice: 5.50,
+  rating: 4.9,
+  reviewsCount: 214,
+  image: '/images/405/20.webp',
+  hoverImage: '/images/405/21.jpg',
+  gallery: [
+    '/images/405/20.webp',
+    '/images/405/21.jpg',
+    '/images/405/22.jpg',
+    '/images/405/23.jpg',
+    '/images/405/24.jpg',
+    '/images/405/25.jpg',
+    '/images/405/26.jpg',
+    '/images/405/27.jpg',
+    '/images/405/28.jpg',
+    '/images/405/29.jpg',
+    '/images/405/mp405-chart.jpg'
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'بلاشر ميك اب تايم من MISS2M يمكن استخدامه جاف ورطب يمنح بشرتك مظهراً حريرياً ويبرز عظام الخد بلون طبيعي وألوانه القوية تدوم طويلاً. 10 درجات متنوعة من الخوخي الفاتح للنود البني لتناسب كل ألوان البشرة.',
+  descriptionEn: 'MAKE UP TIME BLUSH ON which can be applied wet and dry gives your skin a silky appearance and gives you defined cheekbones and a natural color appearance while its intense colors have a long wear performance',
+  keyBenefitsAr: ['يستخدم جاف ورطب', 'مظهر حريري ناعم', 'يبرز عظام الخد', 'ألوان قوية وثبات طويل', '10 درجات متنوعة'],
+  keyBenefitsEn: ['Wet & Dry Application', 'Silky Appearance', 'Defined Cheekbones', 'Intense Long-Wear Colors', '10 Versatile Shades'],
+  ingredientsAr: 'تالك، ميكا، دايميثيكون',
+  ingredientsEn: 'Talc, Mica, Dimethicone, Magnesium Stearate',
+   shades: [
+    { 
+      id: '20', 
+      nameAr: '20 - خوخي فاتح', 
+      nameEn: '20 - Light Peach', 
+      hex: '#E8AFA0',
+      image: '/images/405/20.webp'
+      , stock: 35
+    },
+    { 
+      id: '21', 
+      nameAr: '21 - زهري بيبي', 
+      nameEn: '21 - Baby Pink', 
+      hex: '#E8B4B8',
+      image: '/images/405/21.jpg'
+      , stock: 35
+    },
+    { 
+      id: '22', 
+      nameAr: '22 - بيج خوخي دافي', 
+      nameEn: '22 - Warm Peach Beige', 
+      hex: '#D9A692',
+      image: '/images/405/22.jpg'
+      , stock: 35
+    },
+    { 
+      id: '23', 
+      nameAr: '23 - نود بني فاتح', 
+      nameEn: '23 - Light Nude Brown', 
+      hex: '#C99E8E',
+      image: '/images/405/23.jpg'
+      , stock: 35
+    },
+    { 
+      id: '24', 
+      nameAr: '24 - روز ترابي', 
+      nameEn: '24 - Dusty Rose', 
+      hex: '#C48B80',
+      image: '/images/405/24.jpg'
+      , stock: 35
+    },
+    { 
+      id: '25', 
+      nameAr: '25 - خوخي روزي', 
+      nameEn: '25 - Peachy Rose', 
+      hex: '#C99585',
+      image: '/images/405/25.jpg'
+      , stock: 35
+    },
+    { 
+      id: '26', 
+      nameAr: '26 - تاوب بني بارد', 
+      nameEn: '26 - Cool Taupe Brown', 
+      hex: '#8D6F66',
+      image: '/images/405/26.jpg'
+      , stock: 35
+    },
+    { 
+      id: '27', 
+      nameAr: '27 - نود دافي', 
+      nameEn: '27 - Warm Nude', 
+      hex: '#B78E7D',
+      image: '/images/405/27.jpg'
+      , stock: 35
+    },
+    { 
+      id: '28', 
+      nameAr: '28 - زهري حليبي فاتح', 
+      nameEn: '28 - Milky Light Pink', 
+      hex: '#E7B8BB',
+      image: '/images/405/28.jpg'
+      , stock: 35
+    },
+    { 
+      id: '29', 
+      nameAr: '29 - خوخي تيراكوتا', 
+      nameEn: '29 - Peach Terracotta', 
+      hex: '#CC8D7A',
+      image: '/images/405/29.jpg'
+      , stock: 35
+    },
   ],
   origin: 'Made in Turkey',
-  inStock: true
+stock: 350,
+inStock: true
 },
   {
+  id: 'miss2m-lip-oil-gloss-mp501',
+  nameAr: 'غلوس زيتي للشفاه بنكهات الفواكه - ليب اويل MP501',
+  nameEn: 'MISS2M LipOil Gloss With Flavors MP501',
+  category: 'lips',
+  subcategoryAr: 'غلوس زيتي',
+  subcategoryEn: 'LipOil Gloss',
+  price: 2.00,
+  originalPrice: 4.00,
+  rating: 4.9,
+  reviewsCount: 342,
+  image: '/images/501/01.jpg',
+  
+  hoverImage: '/images/501/01.jpg',
+  gallery: [
+    '/images/501/01.jpg',
+    '/images/501/011.jpg',
+    '/images/501/0111.jpg',
+    '/images/501/02.jpg',
+    '/images/501/022.jpg',
+    '/images/501/0222.jpg',
+    '/images/501/03.jpg',
+    '/images/501/03.jpg',
+    '/images/501/0333.jpg',
+    '/images/501/04.jpg',
+    '/images/501/044.jpg',
+    '/images/501/0444.jpg'
+    
+
+
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'ملمع الشفاه ليب اويل يقدم لك مجموعة متنوعة من الخيارات. اضف لمسة خاصة لشفتيك بنكهات الفراولة والتوت والخوخ والفانيليا. كل اصدار من LipOil Gloss يجمع بين اللمعان والعناية. ليب اويل غلوس يدلل شفتيك باللون والنكهة المناسبة لكل عمر واسلوب. حجمه العملي يسهل حمله في حقيبتك، مما يوفر النضارة واللمعان طوال اليوم. اكتشفي تنوع LipOil Gloss واضفي نكهة خاصة لشفتيك!',
+  descriptionEn: 'LipOil Gloss now offers you a variety of optional Add a special touch to your lips with strawberry, blackberry, peach, and vanilla flavors. Each LipOil Gloss variant combines shine and care. LipOil Gloss pampers your lips with color and flavor options suitable for every age and style. Its practical size makes it easy to carry in your bag, providing freshness and shine all day long. Discover the rich variety of LipOil Gloss and add a special flavor to your lips!',
+  keyBenefitsAr: ['بنكهات فراولة وتوت وخوخ وفانيليا', 'لمعان وعناية في نفس الوقت', 'حجم عملي سهل الحمل', 'نضارة ولمعان طوال اليوم', 'Ice Blue & Comfort اصدارات خاصة'],
+  keyBenefitsEn: ['Strawberry, Blackberry, Peach, Vanilla Flavors', 'Shine and Care Combined', 'Practical Size Easy To Carry', 'Freshness & Shine All Day Long', 'Ice Blue & Comfort Editions'],
+  ingredientsAr: 'زيوت مرطبة بنكهات الفواكه',
+  ingredientsEn: 'Moisturizing oils with fruit flavors',
+   shades: [
+    { 
+      id: 'strawberry', 
+      nameAr: 'فراولة', 
+      nameEn: 'Strawberry', 
+      hex: '#FF7A9A',
+      image: '/images/501/011.jpg'
+      , stock: 35 // صورة 1
+    },
+    { 
+      id: 'blackberry', 
+      nameAr: 'توت', 
+      nameEn: 'Blackberry', 
+      hex: '#8A2A6A',
+      image: '/images/501/033.jpg'
+      , stock: 35 // صورة 7
+    },
+    { 
+      id: 'peach', 
+      nameAr: 'خوخ', 
+      nameEn: 'Peach', 
+      hex: '#FF9A6A',
+      image: '/images/501/022.jpg' 
+      , stock: 35// صورة 4
+    },
+    { 
+      id: 'vanilla', 
+      nameAr: 'فانيلا', 
+      nameEn: 'Vanilla', 
+      hex: '#FFFFFF',
+      image: '/images/501/044.jpg' 
+      , stock: 35// صورة 10
+    },
+  ],
+  origin: 'Made in Turkey',
+ stock: 140,
+inStock: true
+},
+
+
+{
   id: 'miss2m-superior-lip-pencil-mp854',
   nameAr: 'محدد شفاه سوبريور - شفاه أكثر بروزا MP854',
   nameEn: 'MISS2M Superior Lip Pencil MP854',
@@ -93,228 +279,113 @@ export const PRODUCTS: Product[] = [
   originalPrice: 2.00,
   rating: 4.9,
   reviewsCount: 312,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/13oAtP458.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/Q8KJJ95L.jpg',
+  image: '/images/mp854/01-CALIFORNIA.jpg',
+  hoverImage: '/images/mp854/08.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/13oAtP458.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/Q8KJJ95L.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/P7zJgcQ4.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/4vrTl8cP.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/MQZa8p3s.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/30GpMYni.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/10c4yAcpw.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/PDrZCoZT.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/l3gm120H.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/c0L5kZ5A.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/Az0lwrYe.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/19nyD6k9o.jpg'
+    '/images/854/01-CALIFORNIA.jpg',
+    '/images/854/02-CORAL.jpg',
+    '/images/854/03-PEACHY.jpg',
+    '/images/854/04-ROSEY PINK.jpg',
+    '/images/854/05-CARMEN PINK.jpg',
+    '/images/854/06- BROWN PINK.jpg',
+    '/images/854/07-FRENCH ROSE.jpg',
+    '/images/854/08.jpg',
+    '/images/854/09- PEANUT BROWN.jpg',
+    '/images/854/10-VENICE RED.jpg',
+    '/images/854/11-SOFT PINK.jpg',
+    '/images/854/12-LATTE COFFEE.jpg',
+   '/images/854/13.jpg',
+  '/images/854/14.jpg',
+  '/images/854/15.jpg',
+  '/images/854/16.jpg',
+  '/images/854/17.jpg'
   ],
   badge: 'bestseller',
-  descriptionAr: 'يتميز محدد الشفاه النسائي بتطبيق سهل بفضل تركيبته الخاصة التي تساعدك على تحديد شفتيك وفي نفس الوقت تمنع احمر الشفاه من الانهيار. مع محدد الشفاه ميس تو ام، هناك خيار الوان غني متوافق مع كل لون من احمر الشفاه.',
-  descriptionEn: 'Women’s lip liner has an easy application thanks to its special formula that helps you define your lips and at the same time prevents your lipstick from falling apart. With Miss2m lip liner, there is a rich color option that is compatible with every color of your lipstick.',
-  keyBenefitsAr: ['تطبيق سهل بتركيبة خاصة', 'يحدد الشفاه ويمنع سيلان الروج', 'الوان غنية متوافقة مع كل الوان الروج', 'شفاه أكثر بروزا'],
-  keyBenefitsEn: ['Easy Application Special Formula', 'Defines Lips & Prevents Lipstick Bleeding', 'Rich Color Compatible With Every Lipstick', 'More Prominent Lips'],
-  ingredientsAr: 'تركيبة خاصة لتحديد الشفاه',
-  ingredientsEn: 'Special formula lip liner',
+  descriptionAr: 'يتميز محدد الشفاه النسائي بتطبيق سهل بفضل تركيبته الخاصة.',
+  descriptionEn: 'Women’s lip liner has an easy application.',
+  keyBenefitsAr: ['تطبيق سهل', 'يحدد الشفاه', 'الوان غنية', 'شفاه أكثر بروزا'],
+  keyBenefitsEn: ['Easy Application', 'Defines Lips', 'Rich Color', 'More Prominent Lips'],
+  ingredientsAr: 'تركيبة خاصة - صنع في تركيا',
+  ingredientsEn: 'Special formula - Made in Turkey',
   shades: [
-    { id: '01', nameAr: '01', nameEn: '01', hex: '#A0205A' },
-    { id: '02', nameAr: '02', nameEn: '02', hex: '#B03060' },
-    { id: '03', nameAr: '03', nameEn: '03', hex: '#C07A7A' },
-    { id: '04', nameAr: '04', nameEn: '04', hex: '#A85A5A' },
-    { id: '05', nameAr: '05', nameEn: '05', hex: '#A03050' },
-    { id: '06', nameAr: '06', nameEn: '06', hex: '#9A6A5A' },
-    { id: '07', nameAr: '07', nameEn: '07', hex: '#8B4A5A' },
-    { id: '08', nameAr: '08', nameEn: '08', hex: '#B85A4A' },
-    { id: '09', nameAr: '09', nameEn: '09', hex: '#8B6A5A' },
-    { id: '10', nameAr: '10', nameEn: '10', hex: '#A02040' },
-    { id: '11', nameAr: '11', nameEn: '11', hex: '#9A5A5A' },
-    { id: '12', nameAr: '12', nameEn: '12', hex: '#8B6A5A' },
-    { id: '13', nameAr: '13', nameEn: '13', hex: '#6A3A2A' },
-    { id: '14', nameAr: '14', nameEn: '14', hex: '#A02040' },
-    { id: '15', nameAr: '15', nameEn: '15', hex: '#5A3A2A' },
-    { id: '16', nameAr: '16', nameEn: '16', hex: '#8B6A5A' },
-    { id: '17', nameAr: '17', nameEn: '17', hex: '#7A5A4A' }
+    { id: '01', nameAr: '01 - CALIFORNIA', nameEn: '01 CALIFORNIA', hex: '#9E2D4D', image: '/images/854/01-CALIFORNIA.jpg' , stock: 35},
+    { id: '02', nameAr: '02 - CORAL', nameEn: '02 CORAL', hex: '#C84A6C', image: '/images/854/02-CORAL.jpg' , stock: 35},
+    { id: '03', nameAr: '03 - PEACHY', nameEn: '03 PEACHY', hex: '#D9A19B', image: '/images/854/03-PEACHY.jpg' , stock: 35},
+    { id: '04', nameAr: '04 - ROSEY PINK', nameEn: '04 ROSEY PINK', hex: '#B76A6E', image: '/images/854/04-ROSEY PINK.jpg' , stock: 35},
+    { id: '05', nameAr: '05 - CARMEN PINK', nameEn: '05 CARMEN PINK', hex: '#C93D5E', image: '/images/854/05-CARMEN PINK.jpg', stock: 35 },
+    { id: '06', nameAr: '06 - BROWN PINK', nameEn: '06 BROWN PINK', hex: '#8B5A6B', image: '/images/854/06- BROWN PINK.jpg', stock: 35 },
+    { id: '07', nameAr: '07 - FRENCH ROSE', nameEn: '07 FRENCH ROSE', hex: '#A64D6A', image: '/images/854/07-FRENCH ROSE.jpg', stock: 35 },
+    { id: '08', nameAr: '08', nameEn: '08', hex: '#C93A5A', image: '/images/854/08.jpg' , stock: 35},
+    { id: '09', nameAr: '09 - PEANUT BROWN', nameEn: '09 PEANUT BROWN', hex: '#A66B5B', image: '/images/854/09- PEANUT BROWN.jpg' , stock: 35},
+    { id: '10', nameAr: '10 - VENICE RED', nameEn: '10 VENICE RED', hex: '#B91E3B', image: '/images/854/10-VENICE RED.jpg' , stock: 35},
+    { id: '11', nameAr: '11 - SOFT PINK', nameEn: '11 SOFT PINK', hex: '#9C6B64', image: '/images/854/11-SOFT PINK.jpg', stock: 35 },
+    { id: '12', nameAr: '12 - LATTE COFFEE', nameEn: '12 LATTE COFFEE', hex: '#8B5E4F', image: '/images/854/12-LATTE COFFEE.jpg', stock: 35 },
+    { id: '13', nameAr: '13', nameEn: '13', hex: '#6A3B32', image: '/images/854/13.jpg' , stock: 35},
+    { id: '14', nameAr: '14', nameEn: '14', hex: '#8B1E3A', image: '/images/854/14.jpg', stock: 35 },
+    { id: '15', nameAr: '15', nameEn: '15', hex: '#6B3E35', image: '/images/854/15.jpg', stock: 35 },
+    { id: '16', nameAr: '16', nameEn: '16', hex: '#8B5A4B', image: '/images/854/16.jpg', stock: 35 },
+    { id: '17', nameAr: '17', nameEn: '17', hex: '#6B3B33', image: '/images/854/17.jpg' , stock: 35}
   ],
   origin: 'Made in Turkey',
-  inStock: true
-},
-  {
-  id: 'miss2m-color-dream-mp560',
-  nameAr: 'قلم احمر شفاه مطفي - كولور دريم MP560',
-  nameEn: 'MISS2M Color Dream Matte Lipstick Pen MP560',
-  category: 'lips',
-  subcategoryAr: 'قلم روج مطفي',
-  subcategoryEn: 'Matte Lipstick Pen',
-  price: 2.00,
-  originalPrice: 3.00,
-  rating: 4.9,
-  reviewsCount: 198,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/SHhveg1d.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/GM1tDemn.jpg',
-  gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/SHhveg1d.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/GM1tDemn.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/6qPVdwS8.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/12plq8O7L.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/FlqwPg1d.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/IvtZ7TMX.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/9mZF4k6d.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/191J1n4wa.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/1717Nd4at.jpg'
-  ],
-  badge: 'new',
-  descriptionAr: 'قلم احمر شفاه من ميس تو ام كولور دريم ، سهل التطبيق بتركيبته الناعمة غير اللامعة، له درجات الوان مختلفة مع هيكلها الخاص الذي يزيد من الثبات والراحة معك طوال اليوم. الفيتامينات التي تمنع جفاف شفتيك.',
-  descriptionEn: 'Miss2m Color Dream Lipstick Pen, which is easy to apply with its soft matte formula, has different color tones. With its special structure that increases permanence, comfort is with you all day long. Vitamin contents that prevent drying on your lips are with you.',
-  keyBenefitsAr: ['تركيبة مطفية ناعمة', 'ثبات عالي وراحة طوال اليوم', 'فيتامينات تمنع جفاف الشفاه', 'سهل التطبيق'],
-  keyBenefitsEn: ['Soft Matte Formula', 'High Permanence & Comfort All Day', 'Vitamin Contents Anti-Drying', 'Easy To Apply'],
-  ingredientsAr: 'تركيبة مطفية ناعمة مع فيتامينات',
-  ingredientsEn: 'Soft matte formula with vitamins',
-  shades: [
-    { id: '01', nameAr: '01', nameEn: '01', hex: '#D46A5A' },
-    { id: '02', nameAr: '02', nameEn: '02', hex: '#C75A5A' },
-    { id: '03', nameAr: '03', nameEn: '03', hex: '#B02A3A' },
-    { id: '04', nameAr: '04', nameEn: '04', hex: '#A94A5A' },
-    { id: '06', nameAr: '06', nameEn: '06', hex: '#B85A6A' },
-    { id: '07', nameAr: '07', nameEn: '07', hex: '#E93A5A' },
-    { id: '09', nameAr: '09', nameEn: '09', hex: '#7A4A3A' },
-    { id: '10', nameAr: '10', nameEn: '10', hex: '#A85A4A' },
-    { id: '11', nameAr: '11', nameEn: '11', hex: '#9A4A3A' },
-    { id: '12', nameAr: '12', nameEn: '12', hex: '#8B3A2A' },
-    { id: '13', nameAr: '13', nameEn: '13', hex: '#A65A4A' },
-    { id: '14', nameAr: '14', nameEn: '14', hex: '#8B4A3A' }
-  ],
-  origin: 'Made in Turkey',
-  inStock: true
+  stock: 595,
+inStock: true
 },
 
 {
-  id: 'miss2m-volumizing-matte-mp500',
-  nameAr: 'ملمع شفاه مطفي طويل الثبات - فوليومايزنج مات MP500',
-  nameEn: 'MISS2M Volumizing Matte Long Lasting Lipgloss MP500',
-  category: 'lips',
-  subcategoryAr: 'ملمع مطفي',
-  subcategoryEn: 'Matte Long Lasting Lipgloss',
-  price: 2.50,
-  originalPrice: 5.00,
-  rating: 4.9,
-  reviewsCount: 245,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/fQbOw1vm.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/15yIHRD9K.png',
-  gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/fQbOw1vm.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/15yIHRD9K.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/YZn133dD.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/L35jP5KZ.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/bklyojel.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/3z0jpOJJ.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/g34mwpwt.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/Vu4AvHHW.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/1lcOsOgm.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/gle1g8IV.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/FwkeWL5G.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/1kgkc5cY.jpg'
-  ],
-  badge: 'bestseller',
-  descriptionAr: 'اختبري سهولة المات الدائم مع ملمع الشفاه المطفي فوليومايزنج مات من ميس تو ام. دعي شفاهك تتلون طوال اليوم بفضل تركيبته المصطبغة المكثفة ومحتواه الذي يزيد من ثباته. خيارات واسعة بالوان غنية وشائعة.',
-  descriptionEn: 'Experience its matte and permanent ease with Miss2m Volumizing Matte Lipgloss. Let your lips be colored all day long with its intense pigment structure and content that increases permanence. You have many options with rich and popular color alternatives.',
-  keyBenefitsAr: ['مطفي و ثابت طوال اليوم', 'تركيبة مصطبغة مكثفة', 'الوان غنية ومتنوعة 31 لون'],
-  keyBenefitsEn: ['Matte & Long Lasting', 'Intense Pigment Structure', '31 Rich Color Alternatives'],
-  ingredientsAr: 'تركيبة مصطبغة عالية الثبات',
-  ingredientsEn: 'Intense pigment, long lasting formula',
-  shades: [
-    { id: '101', nameAr: '101', nameEn: '101', hex: '#C86B75' },
-    { id: '102', nameAr: '102', nameEn: '102', hex: '#B87A8A' },
-    { id: '103', nameAr: '103', nameEn: '103', hex: '#D46A6A' },
-    { id: '104', nameAr: '104', nameEn: '104', hex: '#A94A4A' },
-    { id: '105', nameAr: '105', nameEn: '105', hex: '#8B2A4A' },
-    { id: '106', nameAr: '106', nameEn: '106', hex: '#C97A7A' },
-    { id: '107', nameAr: '107', nameEn: '107', hex: '#A33A3A' },
-    { id: '108', nameAr: '108', nameEn: '108', hex: '#8B4A5A' },
-    { id: '109', nameAr: '109', nameEn: '109', hex: '#B03050' },
-    { id: '110', nameAr: '110', nameEn: '110', hex: '#A66A6A' },
-    { id: '111', nameAr: '111', nameEn: '111', hex: '#7A4A3A' },
-    { id: '112', nameAr: '112', nameEn: '112', hex: '#8B4A5A' },
-    { id: '113', nameAr: '113', nameEn: '113', hex: '#B85A4A' },
-    { id: '114', nameAr: '114', nameEn: '114', hex: '#A65A3A' },
-    { id: '115', nameAr: '115', nameEn: '115', hex: '#9A4A6A' },
-    { id: '116', nameAr: '116', nameEn: '116', hex: '#C02A4A' },
-    { id: '117', nameAr: '117', nameEn: '117', hex: '#9A4A3A' },
-    { id: '118', nameAr: '118', nameEn: '118', hex: '#A85A3A' },
-    { id: '119', nameAr: '119', nameEn: '119', hex: '#8B3A2A' },
-    { id: '120', nameAr: '120', nameEn: '120', hex: '#D48A8A' },
-    { id: '121', nameAr: '121', nameEn: '121', hex: '#9A7A6A' },
-    { id: '122', nameAr: '122', nameEn: '122', hex: '#8B6A5A' },
-    { id: '123', nameAr: '123', nameEn: '123', hex: '#A88A7A' },
-    { id: '124', nameAr: '124', nameEn: '124', hex: '#B88A8A' },
-    { id: '125', nameAr: '125', nameEn: '125', hex: '#A86A8A' },
-    { id: '126', nameAr: '126', nameEn: '126', hex: '#8B5A3A' },
-    { id: '127', nameAr: '127', nameEn: '127', hex: '#7A4A2A' },
-    { id: '128', nameAr: '128', nameEn: '128', hex: '#9A6A6A' },
-    { id: '129', nameAr: '129', nameEn: '129', hex: '#8B4A3A' },
-    { id: '130', nameAr: '130', nameEn: '130', hex: '#A85A3A' },
-    { id: '131', nameAr: '131', nameEn: '131', hex: '#9A4A3A' }
-  ],
-  origin: 'Made in Turkey',
-  inStock: true
-},
-  {
-  id: 'miss2m-chic-shine-mp502',
-  nameAr: 'ملمع شفاه لامع للغاية - شيك شاين MP502',
-  nameEn: 'MISS2M Chic Shine Lipgloss MP502',
-  category: 'lips',
-  subcategoryAr: 'ملمع شفاه لامع',
-  subcategoryEn: 'Extreme Shine Lipgloss',
-  price: 2.50,
-  originalPrice: 4.00,
-  rating: 4.9,
-  reviewsCount: 210,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/nhLzFnQk.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/ZKl4rM4j.png',
-  gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/nhLzFnQk.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/ZKl4rM4j.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/n0K4tUce.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/2EojPVnD.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/Qg5XnvEU.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/lbWFnSwe.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/pcd3V08f.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/wz2pQbyS.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/M7pHKEaq.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/s0VRQIqj.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/raTCMkfC.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/VEHMvehb.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/n0DpRoSh.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/15LknkYyR.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/0JQ4Fn8j.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/5wUElFgK.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/OltTQyHh.jpg'
-  ],
-  badge: 'new',
-  descriptionAr: 'ملمع شفاه يمنحك لمعان فائق ومظهر شفاه رطبة وجذابة، لا غنى عنه في حقيبة مكياجك. يمنحك اقصى درجات الحجم والاشراقة لمكياج شفاه متعدد الاستخدامات. بالوان متنوعة من الطبيعي الى اللامع.',
-  descriptionEn: 'A lip gloss that gives shine for gorgeous lips that look wet is a must-have. It offers maximum volume and radiance for versatile lip makeup. Lip glosses that give excessive shine have different colors, from natural to glossy.',
-  keyBenefitsAr: ['لمعان فائق Wet Look', 'حجم واشراقة قصوى', 'الوان متنوعة لكل الاطلالات'],
-  keyBenefitsEn: ['Extreme Shine Wet Look', 'Maximum Volume & Radiance', 'Versatile Colors'],
-  ingredientsAr: 'تركيبة لامعة مرطبة تمنح مظهر شفاه رطبة.',
-  ingredientsEn: 'Shiny moisturizing formula for wet look lips.',
-  shades: [
-    { id: '101', nameAr: '101', nameEn: '101', hex: '#D9364A' },
-    { id: '102', nameAr: '102', nameEn: '102', hex: '#A91E32' },
-    { id: '103', nameAr: '103', nameEn: '103', hex: '#E68A8E' },
-    { id: '104', nameAr: '104', nameEn: '104', hex: '#B46A4A' },
-    { id: '105', nameAr: '105', nameEn: '105', hex: '#E89CA8' },
-    { id: '106', nameAr: '106', nameEn: '106', hex: '#7A4A3A' },
-    { id: '107', nameAr: '107 شفاف', nameEn: '107 Clear', hex: '#F5F0EF' },
-    { id: '108', nameAr: '108', nameEn: '108', hex: '#F2C6B8' },
-    { id: '109', nameAr: '109', nameEn: '109', hex: '#C07A72' },
-    { id: '110', nameAr: '110', nameEn: '110', hex: '#8B5A44' },
-    { id: '111', nameAr: '111', nameEn: '111', hex: '#9C4A3A' },
-    { id: '112', nameAr: '112', nameEn: '112', hex: '#B85A6A' },
-    { id: '113', nameAr: '113', nameEn: '113', hex: '#A34A5A' },
-    { id: '114', nameAr: '114', nameEn: '114', hex: '#8B2D3B' }
-  ],
-  origin: 'Made in Turkey',
-  inStock: true
-},
+    id: "miss2m-mp560",
+    nameAr: "قلم روج مطفي كولور دريم - MP560",
+    nameEn: "MISS2M Color Dream Matte Lipstick Pen MP560",
+    category: "lips",
+    subcategoryAr: "قلم روج مطفي",
+    subcategoryEn: "Matte Lipstick Pen",
+  
+    price: 2.00,
+    originalPrice: 3.00,
+    rating: 4.9,
+    reviewsCount: 198,
+    image: "/images/mp560/01.jpg",
+    hoverImage: "/images/mp560/01.jpg",
+    gallery: [
+      "/images/mp560/01.jpg",
+      "/images/mp560/02.jpg",
+      "/images/mp560/03.jpg",
+      "/images/mp560/04.jpg",
+      "/images/mp560/06.jpg",
+      "/images/mp560/07.jpg",
+      "/images/560/09.webp",
+      "/images/mp560/10.jpg",
+      "/images/mp560/11.jpg",
+      "/images/mp560/12.jpg",
+      "/images/mp560/13.jpg",
+      "/images/mp560/14.jpg"
+    ],
+    shades: [
+      { id: "01", nameAr: "درجة 01", nameEn: "Shade 01", hex: "#C99A8A", image: "/images/mp560/01.jpg", stock: 35 },
+      { id: "02", nameAr: "درجة 02", nameEn: "Shade 02", hex: "#BE7A7A", image: "/images/mp560/02.jpg", stock: 35 },
+      { id: "03", nameAr: "درجة 03", nameEn: "Shade 03", hex: "#B56A65", image: "/images/mp560/03.jpg" , stock: 35},
+      { id: "04", nameAr: "درجة 04", nameEn: "Shade 04", hex: "#9E5A68", image: "/images/mp560/04.jpg", stock: 35 },
+      { id: "06", nameAr: "درجة 06", nameEn: "Shade 06", hex: "#A63A44", image: "/images/mp560/06.jpg", stock: 35 },
+      { id: "07", nameAr: "درجة 07", nameEn: "Shade 07", hex: "#C12D40", image: "/images/mp560/07.jpg" , stock: 35},
+      { id: "09", nameAr: "درجة 09", nameEn: "Shade 09", hex: "#8F4E52", image: "/images/560/09.webp", stock: 35 },
+      { id: "10", nameAr: "درجة 10", nameEn: "Shade 10", hex: "#9C5C36", image: "/images/560/10.jpg", stock: 35 },
+      { id: "11", nameAr: "درجة 11", nameEn: "Shade 11", hex: "#A85E48", image: "/images/560/11.jpg", stock: 35 },
+      { id: "12", nameAr: "درجة 12", nameEn: "Shade 12", hex: "#8E3A4A", image: "/images/560/12.jpg", stock: 35 },
+      { id: "13", nameAr: "درجة 13", nameEn: "Shade 13", hex: "#7D4A33", image: "/images/560/13.jpg", stock: 35 },
+      { id: "14", nameAr: "درجة 14", nameEn: "Shade 14", hex: "#9A5D45", image: "/images/560/14.jpg", stock: 35 }
+    ],
+    descriptionAr: "قلم احمر شفاه مطفي من MISS2M بتركيبة ناعمة وثبات عالي مع فيتامينات تمنع جفاف الشفاه",
+    descriptionEn: "MISS2M Color Dream Matte Lipstick Pen with soft matte formula and high staying power",
+    keyBenefitsAr: ["تركيبة مطفية ناعمة", "ثبات عالي", "فيتامينات تمنع جفاف الشفاه", "سهل التطبيق"],
+    keyBenefitsEn: ["Soft Matte Formula", "High Staying Power", "Vitamins Prevent Dryness", "Easy Application"],
+    ingredientsAr: "مكونات طبيعية و فيتامينات - صنع في تركيا",
+    ingredientsEn: "Natural ingredients and vitamins - Made in Turkey",
+    origin: "Made in Turkey",
+    stock: 490,
+inStock: true ,
+    badge: "bestseller"
+  },
+
+
   {
   id: 'miss2m-chic-plumper-mp504',
   nameAr: 'ملمع شفاه مكبر فوري - شيك بلامبر MP504',
@@ -326,33 +397,38 @@ export const PRODUCTS: Product[] = [
   originalPrice: 4.00,
   rating: 4.8,
   reviewsCount: 185,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/1cakIllS.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/wKDSTRnC.png',
+  image: '/images/504/101.jpg',
+  hoverImage: '/images/504/102.webp',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/1cakIllS.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/fR7FNj51.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/tCNCVkLy.jpg'
+    '/images/504/101.jpg',
+    '/images/504/102.webp',
+    '/images/504/103.webp',
+    '/images/504/104.webp',
+    '/images/504/105.webp',
+    '/images/504/106.webp',
+    '/images/504/107.webp',
+    '/images/504/108.webp'
   ],
   badge: 'new',
-  descriptionAr: 'ملمع شفاه بتأثير تكبير فوري يعطي حجم فوري بفضل المنثول والتوابل. الفيتامينات والمعادن تعطي ترطيب مكثف. تركيبة ناعمة وسهلة التطبيق، يجعل شفاهك أكثر إشراقاً وامتلاءً.',
-  descriptionEn: 'Plumper Fuller Effect lip gloss that gives instant volume allows you to plump your lips in minutes thanks to menthol and spice ingredients. Vitamins and minerals have intense moisturizing effect. Soft structure and easy-to-apply applicator.',
+  descriptionAr: 'ملمع شفاه بتأثير تكبير فوري يعطي حجم فوري بفضل المنثول والتوابل.',
+  descriptionEn: 'Plumper Fuller Effect lip gloss that gives instant volume.',
   keyBenefitsAr: ['تكبير فوري خلال دقائق', 'ترطيب مكثف بالفيتامينات', 'شفاه أكثر إشراقاً وامتلاءً', 'تطبيق سهل'],
   keyBenefitsEn: ['Instant volume in minutes', 'Intense moisturizing', 'Brighter & fuller lips', 'Easy applicator'],
   ingredientsAr: 'منثول، توابل، فيتامينات ومعادن مرطبة.',
   ingredientsEn: 'Menthol, spice ingredients, vitamins & minerals.',
   shades: [
-    { id: '101', nameAr: '101', nameEn: '101', hex: '#E48D8A' },
-    { id: '102', nameAr: '102 شفاف', nameEn: '102 Clear', hex: '#F0E6E3' },
-    { id: '103', nameAr: '103', nameEn: '103', hex: '#D46A6A' },
-    { id: '104', nameAr: '104', nameEn: '104', hex: '#7A4A3A' },
-    { id: '105', nameAr: '105', nameEn: '105', hex: '#8B5A44' },
-    { id: '106', nameAr: '106', nameEn: '106', hex: '#A65C3A' },
-    { id: '107', nameAr: '107', nameEn: '107', hex: '#E93A4A' },
-    { id: '108', nameAr: '108', nameEn: '108', hex: '#B02A4A' }
+    { id: '101', nameAr: 'درجة 101', nameEn: 'Shade 101', hex: '#D3757C', image: '/images/504/101.jpg', stock: 35 },
+    { id: '102', nameAr: 'درجة 102 شفاف', nameEn: 'Shade 102 Clear', hex: '#F2E8E6', image: '/images/504/102.webp', stock: 35 },
+    { id: '103', nameAr: 'درجة 103', nameEn: 'Shade 103', hex: '#D36B6E', image: '/images/504/103.webp' , stock: 35},
+    { id: '104', nameAr: 'درجة 104', nameEn: 'Shade 104', hex: '#99645E', image: '/images/504/104.webp' , stock: 35},
+    { id: '105', nameAr: 'درجة 105', nameEn: 'Shade 105', hex: '#92524C', image: '/images/504/105.webp', stock: 35 },
+    { id: '106', nameAr: 'درجة 106', nameEn: 'Shade 106', hex: '#AD594D', image: '/images/504/106.webp', stock: 35 },
+    { id: '107', nameAr: 'درجة 107', nameEn: 'Shade 107', hex: '#E15664', image: '/images/504/107.webp' , stock: 35},
+    { id: '108', nameAr: 'درجة 108', nameEn: 'Shade 108', hex: '#B53855', image: '/images/504/108.webp', stock: 35 }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true
-},
+stock: 280,
+inStock: true},
   {
   id: 'miss2m-careful-lipstick-mp562',
   nameAr: 'روج كيرفل المطفي المخملي - MP562',
@@ -364,36 +440,46 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.00,
   rating: 4.9,
   reviewsCount: 210,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/1fVbiYDpj.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/13vs44sgF.jpg',
+  image: '/images/562/01.png',
+  hoverImage: '/images/562/01.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/1fVbiYDpj.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/13vs44sgF.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/vdhrGo0H.png'
+    '/images/562/01.png',
+    '/images/562/02.png',
+    '/images/562/03.png',
+    '/images/562/04.png',
+    '/images/562/05.png',
+    '/images/562/06.png',
+    '/images/562/07.png',
+    '/images/562/08.png',
+    '/images/562/09.jpg',
+    '/images/562/10.png',
+    '/images/562/11.png',
+    '/images/562/12.jpg'
   ],
   badge: 'bestseller',
-  descriptionAr: 'يتم تطبيقه بسهولة بفضل تركيبته المخملية المطفية والناعمة. هذا الروج المطفي سيضيف سحراً لأسلوبك مع درجات الألوان المناسبة لكل بشرة. يعطي لون طبيعي بدون كثافة عالية.',
-  descriptionEn: 'It is easily applied with its velvety, matte and soft structure. This matte lipstick will add glamour to your style with the appropriate color tones for every skin. It gives natural-looking color without intensity.',
-  keyBenefitsAr: ['مطفي مخملي وناعم', 'ألوان مناسبة لكل لون بشرة', 'لون طبيعي بدون ثقل', '12 لون حصري'],
-  keyBenefitsEn: ['Velvety matte & soft', 'Suitable for every skin tone', 'Natural-looking color', '12 exclusive shades'],
+  descriptionAr: 'يتم تطبيقه بسهولة بفضل تركيبته المخملية المطفية والناعمة. هذا الروج المطفي سيضيف سحراً لأسلوبك مع درجات الألوان المناسبة لكل بشرة يعطي لون طبيعي بدون كثافة عالية.',
+  descriptionEn: 'Easy to apply thanks to its velvety matte and soft formula. This matte lipstick adds charm with suitable shades for every skin tone.',
+  keyBenefitsAr: ['مطفي مخملي وناعم', 'ألوان مناسبة لكل لون بشرة', 'لون طبيعي بدون تقل', '12 لون حصري'],
+  keyBenefitsEn: ['Velvety matte & soft', 'Suitable for every skin tone', 'Natural color without heavy coverage', '12 exclusive colors'],
   ingredientsAr: 'تركيبة كريمية مطفية مخملية.',
-  ingredientsEn: 'Creamy matte velvety formula.',
+  ingredientsEn: 'Velvety matte creamy formula.',
   shades: [
-    { id: '01', nameAr: '01', nameEn: '01', hex: '#E4988E' },
-    { id: '02', nameAr: '02', nameEn: '02', hex: '#D86B65' },
-    { id: '03', nameAr: '03', nameEn: '03', hex: '#C28C7D' },
-    { id: '04', nameAr: '04', nameEn: '04', hex: '#A56A5A' },
-    { id: '05', nameAr: '05', nameEn: '05', hex: '#E78A7A' },
-    { id: '06', nameAr: '06', nameEn: '06', hex: '#C26B75' },
-    { id: '07', nameAr: '07', nameEn: '07', hex: '#B94E63' },
-    { id: '08', nameAr: '08', nameEn: '08', hex: '#7A4A3A' },
-    { id: '09', nameAr: '09', nameEn: '09', hex: '#A88C82' },
-    { id: '10', nameAr: '10', nameEn: '10', hex: '#B86B5A' },
-    { id: '11', nameAr: '11', nameEn: '11', hex: '#C4909A' },
-    { id: '12', nameAr: '12', nameEn: '12', hex: '#9E5A60' }
+    { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D17876', image: '/images/562/01.png', stock: 35 },
+    { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#CC7777', image: '/images/562/02.png', stock: 35 },
+    { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#C86B62', image: '/images/562/03.png' , stock: 35},
+    { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#AD7873', image: '/images/562/04.png' , stock: 35},
+    { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#EC6D64', image: '/images/562/05.png' , stock: 35},
+    { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#C36C75', image: '/images/562/06.png' , stock: 35},
+    { id: '07', nameAr: 'درجة 07', nameEn: 'Shade 07', hex: '#C04F60', image: '/images/562/07.png' , stock: 35},
+    { id: '08', nameAr: 'درجة 08', nameEn: 'Shade 08', hex: '#976961', image: '/images/562/08.png' , stock: 35},
+    { id: '09', nameAr: 'درجة 09', nameEn: 'Shade 09', hex: '#C08476', image: '/images/562/09.jpg' , stock: 35},
+    { id: '10', nameAr: 'درجة 10', nameEn: 'Shade 10', hex: '#BC5A57', image: '/images/562/10.png', stock: 35 },
+    { id: '11', nameAr: 'درجة 11', nameEn: 'Shade 11', hex: '#D8797E', image: '/images/562/11.png', stock: 35 },
+    { id: '12', nameAr: 'درجة 12', nameEn: 'Shade 12', hex: '#BE615A', image: '/images/562/12.jpg', stock: 35 }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true
+  stock: 420,
+inStock: true
 },
 // 2. قسم العيون (Eyes)
 // ==========================================
@@ -409,15 +495,13 @@ export const PRODUCTS: Product[] = [
   originalPrice: 8.00,
   rating: 5.0,
   reviewsCount: 147,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/10HC9k4eH.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/LAliVXMl.png',
+  image: '/images/902/01.png',
+  hoverImage: '/images/902/01.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/10HC9k4eH.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/LAliVXMl.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/162jlrGsB.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/13ngFG3fD.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/100dNYAzT.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/tOtt3XAO.png'
+    '/images/902/01.png',
+    '/images/902/011.png',
+    '/images/902/0111.png',
+    
   ],
   badge: 'bestseller',
   descriptionAr: 'باليت رباعية الألوان سهلة التطبيق جداً. 4 خطوات فقط لمكياج عيون مثالي، مناسبة للمبتدئين. كل صبغة ناعمة مخمليا ويمكن استخدامها جاف أو رطب.',
@@ -427,13 +511,14 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'ظلال عيون بودرة مخملية، أصباغ عالية التركيز.',
   ingredientsEn: 'Velvety Powder Eyeshadow, High Pigment.',
   shades: [
-    { id: '01', nameAr: '01', nameEn: '01', hex: '#D8B4B0' },
-    { id: '02', nameAr: '02', nameEn: '02', hex: '#A67C78' }
+    { id: '01', nameAr: '01', nameEn: '01', hex: '#D8B4B0', stock: 35 },
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true
+  stock: 35,
+inStock: true
 },
 // منتج 2: MP903
+
 {
   id: 'miss2m-chic-shadow-palette-mp903',
   nameAr: 'باليت ظلال العيون شيك 4 ألوان - MP903',
@@ -445,13 +530,12 @@ export const PRODUCTS: Product[] = [
   originalPrice: 8.00,
   rating: 5.0,
   reviewsCount: 132,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/FDJVDkYw.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/ho0I2a3o.png',
+  image: '/images/902/02.png',
+  hoverImage: '/images/902/02.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/FDJVDkYw.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/ho0I2a3o.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/f14SDiim.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/164YMhMwM.png'
+    '/images/902/02.png',
+    '/images/902/022.png',
+    '/images/902/0222.png',
   ],
   badge: 'new',
   descriptionAr: 'باليت رباعية الألوان سهلة التطبيق جداً. 4 خطوات فقط لمكياج عيون مثالي، مناسبة للمبتدئين. كل صبغة ناعمة مخمليا ويمكن استخدامها جاف أو رطب.',
@@ -461,12 +545,200 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'ظلال عيون بودرة مخملية، أصباغ عالية التركيز.',
   ingredientsEn: 'Velvety Powder Eyeshadow, High Pigment.',
   shades: [
-    { id: '01', nameAr: '01', nameEn: '01', hex: '#D2B48C' },
-    { id: '02', nameAr: '02', nameEn: '02', hex: '#8B5A2B' }
+    { id: '02', nameAr: '02', nameEn: '02', hex: '#8B5A2B', stock: 35 }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true
+  stock: 35,
+inStock: true
 },
+
+{
+    id: 'miss2m-volumizing-matte-lipgloss',
+    nameAr: 'قلوس مطفي فولومايزينج مات - MISS2M Volumizing Matte',
+    nameEn: 'MISS2M Volumizing Matte Lipgloss MP500',
+    category: 'lips',
+    subcategoryAr: 'قلوس مات',
+    subcategoryEn: 'Matte Gloss',
+    price: 2.50,
+    originalPrice: 6.00,
+    rating: 4.9,
+    reviewsCount: 214,
+    image: '/images/500/101.jpg',
+    hoverImage: '/images/500/101.jpg',
+    gallery: [
+      '/images/500/101.jpg',
+      '/images/500/102.jpg',
+      '/images/500/103.jpg',
+      '/images/500/104.jpg',
+      '/images/500/105.jpg',
+      '/images/500/106.jpg',
+      '/images/500/107.jpg',
+      '/images/500/108.jpg',
+      '/images/500/109.jpg',
+      '/images/500/110.jpg',
+      '/images/500/111.jpg',
+      '/images/500/112.jpg',
+      '/images/500/113.jpg',
+      '/images/500/114.jpg',
+      '/images/500/115.jpg',
+      '/images/500/116.jpg',
+      '/images/500/117.jpg',
+      '/images/500/118.jpg',
+      '/images/500/119.jpg',
+      '/images/500/120.jpg',
+      '/images/500/121.jpg',
+      '/images/500/122.jpg',
+      '/images/500/123.jpg',
+      '/images/500/124.jpg',
+      '/images/500/125.jpg',
+      '/images/500/126.jpg',
+      '/images/500/127.jpg',
+      '/images/500/128.jpg',
+      '/images/500/129.jpg',
+      '/images/500/130.jpg',
+      '/images/500/131.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'مات مخملي وثابت مع MISS2M Volumizing Matte Lipgloss MP500. تركيبة غنية بألوان مركزة تمنح شفتيك مظهراً ممتلئاً مطفياً يدوم طويلاً بلمسة واحدة، خفيفة ومريحة بدون تشقق. 31 درجة ترند من النيود للعنابي.',
+    descriptionEn: 'Velvety matte and long-lasting with MISS2M Volumizing Matte Lipgloss MP500. A rich, highly pigmented formula that gives a volumized matte look in one swipe, lightweight and comfortable without cracking. 31 trendy shades from nude to burgundy.',
+    keyBenefitsAr: [
+      'مات مخملي Volumizing Matte',
+      'ثبات طويل Long Lasting',
+      'مظهر شفاه ممتلئة وألوان غنية',
+      '31 درجة ترند من النيود للغامق',
+      'ملمس خفيف وغير مشقق'
+    ],
+    keyBenefitsEn: [
+      'Velvety Volumizing Matte finish',
+      'Long lasting stay',
+      'Plumped look with rich color',
+      '31 trendy shades nude to deep',
+      'Lightweight non-cracking texture'
+    ],
+    ingredientsAr: 'بوليمرات مات، صبغات عالية التركيز، زيوت مرطبة، فيتامين E.',
+    ingredientsEn: 'Matte Polymers, High Pigment Colors, Moisturizing Oils, Vitamin E.',
+    shades: [
+      { id: '101', nameAr: '101', nameEn: '101', hex: '#C97A7A', image: '/images/500/101.jpg', stock: 35 },
+      { id: '102', nameAr: '102', nameEn: '102', hex: '#B76B7A', image: '/images/500/102.jpg', stock: 35 },
+      { id: '103', nameAr: '103', nameEn: '103', hex: '#C95D5D', image: '/images/500/103.jpg', stock: 35 },
+      { id: '104', nameAr: '104', nameEn: '104', hex: '#A85A5A', image: '/images/500/104.jpg' , stock: 35},
+      { id: '105', nameAr: '105', nameEn: '105', hex: '#C96A7A', image: '/images/500/105.jpg', stock: 35 },
+      { id: '106', nameAr: '106', nameEn: '106', hex: '#A05A60', image: '/images/500/106.jpg', stock: 35 },
+      { id: '107', nameAr: '107', nameEn: '107', hex: '#9E3A3A', image: '/images/500/107.jpg', stock: 35 },
+      { id: '108', nameAr: '108', nameEn: '108', hex: '#A04A5A', image: '/images/500/108.jpg', stock: 35 },
+      { id: '109', nameAr: '109', nameEn: '109', hex: '#9E2A3A', image: '/images/500/109.jpg', stock: 35 },
+      { id: '110', nameAr: '110', nameEn: '110', hex: '#8E3A3A', image: '/images/500/110.jpg' , stock: 35},
+      { id: '111', nameAr: '111', nameEn: '111', hex: '#8E4A3A', image: '/images/500/111.jpg' , stock: 35},
+      { id: '112', nameAr: '112', nameEn: '112', hex: '#9E5A5A', image: '/images/500/112.jpg', stock: 35 },
+      { id: '113', nameAr: '113', nameEn: '113', hex: '#A85A4A', image: '/images/500/113.jpg', stock: 35 },
+      { id: '114', nameAr: '114', nameEn: '114', hex: '#7A3A3A', image: '/images/500/114.jpg' , stock: 35},
+      { id: '115', nameAr: '115', nameEn: '115', hex: '#6A3A2A', image: '/images/500/115.jpg' , stock: 35},
+      { id: '116', nameAr: '116', nameEn: '116', hex: '#D12A4A', image: '/images/500/116.jpg' , stock: 35},
+      { id: '117', nameAr: '117', nameEn: '117', hex: '#9E4A4A', image: '/images/500/117.jpg' , stock: 35},
+      { id: '118', nameAr: '118', nameEn: '118', hex: '#A85A3A', image: '/images/500/118.jpg' , stock: 35},
+      { id: '119', nameAr: '119', nameEn: '119', hex: '#9E4A3A', image: '/images/500/119.jpg', stock: 35 },
+      { id: '120', nameAr: '120', nameEn: '120', hex: '#D68A8A', image: '/images/500/120.jpg' , stock: 35},
+      { id: '121', nameAr: '121', nameEn: '121', hex: '#9E7A6A', image: '/images/500/121.jpg' , stock: 35},
+      { id: '122', nameAr: '122', nameEn: '122', hex: '#B89A8A', image: '/images/500/122.jpg' , stock: 35},
+      { id: '123', nameAr: '123', nameEn: '123', hex: '#C4A49A', image: '/images/500/123.jpg' , stock: 35},
+      { id: '124', nameAr: '124', nameEn: '124', hex: '#9E7A6A', image: '/images/500/124.jpg', stock: 35 },
+      { id: '125', nameAr: '125', nameEn: '125', hex: '#B07A7A', image: '/images/500/125.jpg' , stock: 35},
+      { id: '126', nameAr: '126', nameEn: '126', hex: '#7A4A3A', image: '/images/500/126.jpg' , stock: 35},
+      { id: '127', nameAr: '127', nameEn: '127', hex: '#8E5A4A', image: '/images/500/127.jpg' , stock: 35},
+      { id: '128', nameAr: '128', nameEn: '128', hex: '#9E6A6A', image: '/images/500/128.jpg', stock: 35 },
+      { id: '129', nameAr: '129', nameEn: '129', hex: '#8E4A3A', image: '/images/500/129.jpg', stock: 35 },
+      { id: '130', nameAr: '130', nameEn: '130', hex: '#8E3A2A', image: '/images/500/130.jpg', stock: 35 },
+      { id: '131', nameAr: '131', nameEn: '131', hex: '#6A3A2A', image: '/images/500/131.jpg', stock: 35 },
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+  stock: 4585,
+inStock: true
+  },
+  {
+    id: 'miss2m-shine-chic-lipgloss',
+    nameAr: 'قلوس شاين لامع شيك - MISS2M Shine Chic',
+    nameEn: 'MISS2M Shine Chic Lipgloss',
+    category: 'lips',
+    subcategoryAr: 'قلوس شاين',
+    subcategoryEn: 'Shine Gloss',
+    price: 2.50,
+    originalPrice: 6.00,
+    rating: 4.9,
+    reviewsCount: 189,
+    image: '/images/502/101.jpg',
+    hoverImage: '/images/502/101.jpg',
+    gallery: [
+      '/images/502/101.jpg',
+      '/images/502/102.jpg',
+      '/images/502/103.jpg',
+      '/images/502/104.jpg',
+      '/images/502/105.jpg',
+      '/images/502/106.jpg',
+      '/images/502/107.jpg',
+      '/images/502/108.jpg',
+      '/images/502/109.jpg',
+      '/images/502/110.jpg',
+     '/images/502/111.jpg',
+      '/images/502/112.jpg',
+      '/images/502/113.jpg',
+      '/images/502/114.jpg',
+
+
+    ],
+    badge: 'new',
+    descriptionAr: 'لمعة شيك وبراقة مع MISS2M Shine Chic Lipgloss. تركيبة لامعة تمنح شفتيك مظهراً ممتلئاً ورطباً بلمسة واحدة، ثبات متوسط مع لون واضح وإحساس غير لزج. مثالي للاستخدام اليومي فوق الروج أو لوحده.',
+    descriptionEn: 'Chic and glossy shine with MISS2M Shine Chic Lipgloss. A luminous formula that gives your lips a plumped, hydrated look in one swipe. Medium stay with vivid color and non-sticky feel. Perfect for daily use alone or over lipstick.',
+    keyBenefitsAr: [
+      'لمعة عالية Shine Chic',
+      'مظهر شفاه ممتلئة ورطبة',
+      '14 درجة لامعة من النيود للأحمر',
+      'ملمس خفيف غير لزج',
+      'يمكن استخدامه فوق المات'
+    ],
+    keyBenefitsEn: [
+      'High shine Chic finish',
+      'Plumped & hydrated lip look',
+      '14 glossy shades nude to red',
+      'Lightweight non-sticky texture',
+      'Can be used over matte lipstick'
+    ],
+    ingredientsAr: 'بولي بوتين، زيوت مرطبة، صبغات لامعة، فيتامين E.',
+    ingredientsEn: 'Polybutene, Moisturizing Oils, Shine Pigments, Vitamin E.',
+    shades: [
+      { id: '101', nameAr: '101', nameEn: '101', hex: '#C93A45', image: '/images/502/101.jpg', stock: 35 // صورة 1
+},
+      { id: '102', nameAr: '102', nameEn: '102', hex: '#B11D35', image: '/images/502/102.jpg', stock: 35 // صورة 1
+},
+      { id: '103', nameAr: '103', nameEn: '103', hex: '#D65A65' , image: '/images/502/103.jpg', stock: 35 // صورة 1
+},
+      { id: '104', nameAr: '104', nameEn: '104', hex: '#A85A3A' , image: '/images/502/104.jpg' , stock: 35// صورة 1
+},
+      { id: '105', nameAr: '105', nameEn: '105', hex: '#D18E8E' , image: '/images/502/105.jpg' , stock: 35// صورة 1
+},
+      { id: '106', nameAr: '106', nameEn: '106', hex: '#7A3E2A' , image: '/images/502/106.jpg', stock: 35 // صورة 1
+},
+      { id: '107', nameAr: '107 شفاف', nameEn: '107 Clear', hex: '#F5F5F5' , image: '/images/502/107.jpg' , stock: 35// صورة 1
+},
+      { id: '108', nameAr: '108', nameEn: '108', hex: '#E9B9A8' , image: '/images/502/108.jpg' , stock: 35// صورة 1
+},
+      { id: '109', nameAr: '109', nameEn: '109', hex: '#B86A6A' , image: '/images/502/109.jpg' , stock: 35// صورة 1
+},
+      { id: '110', nameAr: '110', nameEn: '110', hex: '#7A4A3A' , image: '/images/502/110.jpg' , stock: 35// صورة 1
+},
+      { id: '111', nameAr: '111', nameEn: '111', hex: '#9E4A32' , image: '/images/502/111.jpg' , stock: 35// صورة 1
+},
+      { id: '112', nameAr: '112', nameEn: '112', hex: '#B86A7A' , image: '/images/502/112.jpg' , stock: 35// صورة 1
+},
+      { id: '113', nameAr: '113', nameEn: '113', hex: '#B95A5A' , image: '/images/502/113.jpg' , stock: 35// صورة 1
+},
+      { id: '114', nameAr: '114', nameEn: '114', hex: '#8E2A35' , image: '/images/502/114.jpg' , stock: 35// صورة 1
+},
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+    stock: 490,
+inStock: true
+  },
+
 {
   id: 'miss2m-forever-styling-brows-mp701',
   nameAr: 'باليت الحواجب فوريفر ستايلينج - MISS2M MP701',
@@ -478,15 +750,15 @@ export const PRODUCTS: Product[] = [
   originalPrice: 8.00,
   rating: 5.0,
   reviewsCount: 112,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/2XQdRlt9.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/rocsBezM.png',
+  image: '/images/701/01.jpg',
+  hoverImage: '/images/701/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/2XQdRlt9.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/rocsBezM.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/16vZNee5u.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/rjgBXvuG.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/16QmFNrAa.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/ZRjj34BI.png'
+    '/images/701/01.jpg',   // 1
+    '/images/701/011.jpg',  // 2
+    '/images/701/0111.jpg', // 3
+    '/images/701/02.jpg',  // 4
+    '/images/701/022.jpg',  // 5
+    '/images/701/0222.jpg'   // 6 - كله ضل
   ],
   badge: 'bestseller',
   descriptionAr: 'في خطوة واحدة ولكل امرأة شابة من جميع ألوان البشرة تبحث عن حواجب كاملة المظهر ومنظمة جيدا.',
@@ -506,11 +778,24 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'بودرة حواجب مضغوطة، شمع تثبيت، هايلايتر.',
   ingredientsEn: 'Pressed Eyebrow Powder, Fixing Wax, Highlighter.',
   shades: [
-    { id: '01', nameAr: '01 - بلوند', nameEn: '01 - Blonde Set', hex: '#D2B48C' },
-    { id: '02', nameAr: '02 - براون', nameEn: '02 - Brown Set', hex: '#8D6E63' }
+    { 
+      id: '01', 
+      nameAr: '01 - بلوند', 
+      nameEn: '01 - Blonde Set', 
+      hex: '#D2B48C',
+      image: '/images/701/011.jpg', stock: 35 // صورة 4
+    },
+    { 
+      id: '02', 
+      nameAr: '02 - براون', 
+      nameEn: '02 - Brown Set', 
+      hex: '#8D6E63',
+      image: '/images/701/022.jpg', stock: 35 // صورة 1
+    }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 70,
+inStock: true
 },
 {
   id: 'miss2m-tatto-eyebrow-pencil-mp851',
@@ -519,18 +804,17 @@ export const PRODUCTS: Product[] = [
   category: 'eyes',
   subcategoryAr: 'قلم حواجب',
   subcategoryEn: 'Eyebrow Pencil',
-  price: 2.00,
+  price: 1.50,
   originalPrice: 4.00,
   rating: 4.9,
   reviewsCount: 94,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/uOXxpUMs.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/FJwtu5ZT.png',
+  image: '/images/851/200.png',
+  hoverImage: '/images/851/200.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/uOXxpUMs.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/1ds79tKF8.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/FJwtu5ZT.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/z4VK8mVd.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/PfyhKwjZ.png'
+    '/images/851/200.png',   // 1 - ضل
+    '/images/851/201.png',
+    '/images/851/202.png', // 2 - ضل
+    // 3 و 4 و 5 انشالوا وصاروا درجات
   ],
   badge: 'bestseller',
   descriptionAr: 'قلم الحواجب من ميس 2 ام، الذي يساعد على تشكيل حواجبنا، وهو الجزء الأكثر لفتا للانتباه في المكياج، له درجات ألوان مختلفة وميزات تطبيق سهلة، دائمة طوال اليوم ولا تلوث.',
@@ -549,14 +833,32 @@ export const PRODUCTS: Product[] = [
   ],
   ingredientsAr: 'شمع ملون، أصباغ ثابتة، تركيبة تاتو طويلة الأمد.',
   ingredientsEn: 'Colored Wax, Longlasting Pigments, Tatto Formula.',
-    shades: [
-    { id: '200', nameAr: '200 - شوكليت', nameEn: '200 - Chocolate', hex: '#8B6F5E' },
-    { id: '201', nameAr: '201 - اسبريسو', nameEn: '201 - Espresso', hex: '#5C4033' },
-    { id: '202', nameAr: '202 - موكا', nameEn: '202 - Mocha', hex: '#5D2E2E' } // بني محمر غامق - نفس الصورة
+  shades: [
+    { 
+      id: '200', 
+      nameAr: '200 - شوكليت', 
+      nameEn: '200 - Chocolate', 
+      hex: '#8B6F5E',
+      image: '/images/851/2000.png', stock: 35 // صورة 3
+    },
+    { 
+      id: '201', 
+      nameAr: '201 - اسبريسو', 
+      nameEn: '201 - Espresso', 
+      hex: '#5C4033',
+      image: '/images/851/2001.png', stock: 35 // صورة 4
+    },
+    { 
+      id: '202', 
+      nameAr: '202 - موكا', 
+      nameEn: '202 - Mocha', 
+      hex: '#5D2E2E',
+      image: '/images/851/2002.png', stock: 35 // صورة 5
+    }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
-},
+stock: 105,
+inStock: true},
 {
   id: 'miss2m-chic-eyebrow-gel-mp303',
   nameAr: 'جل تثبيت الحواجب شيك - MISS2M MP303',
@@ -564,15 +866,17 @@ export const PRODUCTS: Product[] = [
   category: 'eyes',
   subcategoryAr: 'جل حواجب',
   subcategoryEn: 'Eyebrow Gel',
-  price: 3.00,
+  price: 4.00,
   originalPrice: 5.00,
   rating: 4.9,
   reviewsCount: 63,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/MbxhPtft.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/kYwVw1C2.png',
+  image: '/images/303/303.png',
+  hoverImage: '/images/303/303.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/MbxhPtft.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/kYwVw1C2.png'
+    '/images/303/303.png',
+    '/images/303/304.png',
+    '/images/303/305.png',
+
   ],
   badge: 'bestseller',
   descriptionAr: 'مثالي لتثبيت مثالي وطويل الأمد. يساعد على تمشيط الحواجب في الاتجاه الصحيح دون ترك مظهر دهني. يمكن استخدامه كقاعدة لتظليل الحواجب. يثبت الحواجب دون أن يجعلها قاسية.',
@@ -592,10 +896,11 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'جل شفاف مثبت، تركيبة غير دهنية.',
   ingredientsEn: 'Transparent Fixing Gel, Non-Oily Formula.',
   shades: [
-    { id: 'transparent', nameAr: 'شفاف', nameEn: 'Transparent', hex: '#FFFFFF' }
+    { id: 'transparent', nameAr: 'شفاف', nameEn: 'Transparent', hex: '#FFFFFF' , stock: 35}
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+  stock: 35,
+inStock: true
 },
 {
   id: 'miss2m-chic-brow-mascara-mp302',
@@ -608,18 +913,15 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.00,
   rating: 4.9,
   reviewsCount: 72,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/EeLYZY8Q.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/YN4GoZb7.png',
+  image: '/images/302/01.png',
+  hoverImage: '/images/701/01.png',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/EeLYZY8Q.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/YN4GoZb7.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/A0Damgni.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/7mJBjkLy.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/15OMBMdNp.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/42kHWT6P.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/T2bZQznQ.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/9ReU5ycP.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/275m5exd.png'
+    '/images/302/01.png',  // 1 - ضل
+    '/images/302/011.png',  // 2 - ضل
+    '/images/302/02.png',  // 4 - ضل
+    '/images/302/022.png', // 5 - ضل
+    '/images/302/03.png',  // 7 - ضل
+    '/images/302/033.png'   // 8 - ضل
   ],
   badge: 'bestseller',
   descriptionAr: 'مسكارا Colorful Eyebrow Mascara تمنحك حواجب مثالية بسهولة. هذه المسكارا الكريمية كجل ملون للحواجب، فهي لا تضيف اللون فحسب، بل تثبت الحواجب أيضاً. مناسبة لمن يرغب في ملء المناطق الخفيفة وكذلك لمن يبحث عن حواجب أكثر كثافة وتحديداً. إذا كنتِ تفضلين مظهراً طبيعياً قدر الإمكان، فإن هذه المسكارا وحدها تكفي!',
@@ -639,12 +941,312 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'شمع ملون، بوليمر مثبت، أصباغ بنية.',
   ingredientsEn: 'Tinted Wax, Fixing Polymer, Brown Pigments.',
   shades: [
-    { id: '01', nameAr: '01 - ميلكي شوكليت', nameEn: '01 - Milky Chocolate', hex: '#8D6E5E' },
-    { id: '02', nameAr: '02 - كاكاو شوكليت', nameEn: '02 - Kakao Chocolate', hex: '#6D4C41' },
-    { id: '03', nameAr: '03 - بيتر شوكليت', nameEn: '03 - Bitter Chocolate', hex: '#4E342E' }
+    { id: '01', nameAr: '01 - ميلكي شوكليت', nameEn: '01 - Milky Chocolate', hex: '#8D6E5E', image: '/images/302/011.png', stock: 35 }, // صورة 3
+    { id: '02', nameAr: '02 - كاكاو شوكليت', nameEn: '02 - Kakao Chocolate', hex: '#6D4C41', image: '/images/302/022.png', stock: 35 }, // صورة 6
+    { id: '03', nameAr: '03 - بيتر شوكليت', nameEn: '03 - Bitter Chocolate', hex: '#4E342E', image: '/images/302/033.png', stock: 35 } // صورة 9
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 105,
+inStock: true
+},
+{
+  id: 'miss2m-wet-dry-powder-mp253',
+  nameAr: 'بودرة ويت آند دراي - MISS2M MP253',
+  nameEn: 'MISS2M Wet & Dry Powder MP253',
+  category: 'face',
+  subcategoryAr: 'بودرة مضغوطة',
+  subcategoryEn: 'Pressed Powder',
+  price: 3.50,
+  originalPrice: 5.00,
+  rating: 4.8,
+  reviewsCount: 94,
+  image: '/images/253/1.png',
+  hoverImage: '/images/253/6.png',
+  gallery: [
+    '/images/253/1.png',       // 01
+    '/images/253/2-1.PNG',     // 02
+    '/images/253/3-1.PNG',     // 03
+    '/images/253/4 (2).PNG',   // 04
+    '/images/253/5.png',       // 05
+    '/images/253/6.png'        // 06
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'بودرة WET & DRY POWDER التي يمكن تطبيقها جافة ورطبة تمنح بشرتك مظهراً حريرياً ناعماً مع ترطيب البشرة. تركيبة تركية خفيفة تغطي المسام وتمنحك لمسة مخملية مطفية تدوم طوال اليوم دون تكتل.',
+  descriptionEn: 'WET & DRY POWDER which can be applied wet and dry gives your skin a silky appearance while moisturizing your skin. Lightweight Turkish formula blurs pores and gives a long-lasting velvety matte finish.',
+  keyBenefitsAr: [
+    'استعمال مزدوج - جافة ورطبة',
+    'مظهر حريري ناعم مع ترطيب',
+    'تغطية مسام ولمسة مخملية مطفية',
+    '6 درجات تناسب كل ألوان البشرة'
+  ],
+  keyBenefitsEn: [
+    'Dual use - wet & dry application',
+    'Silky appearance while moisturizing',
+    'Pore blurring velvety matte finish',
+    '6 shades for all skin tones'
+  ],
+  ingredientsAr: 'تلك، سيليكا، ميكا، زيوت مرطبة.',
+  ingredientsEn: 'Talc, Silica, Mica, Moisturizing Oils.',
+  shades: [
+    { id: '01', nameAr: '01 - فاتح جداً', nameEn: '01 - Light', hex: '#F5D5B8', image: '/images/253/1.png' , stock: 35},
+    { id: '02', nameAr: '02 - طبيعي فاتح', nameEn: '02 - Natural Light', hex: '#E8C4A3', image: '/images/253/2-1.PNG' , stock: 35},
+    { id: '03', nameAr: '03 - بيج طبيعي', nameEn: '03 - Natural Beige', hex: '#DDB592', image: '/images/253/3-1.PNG', stock: 35 },
+    { id: '04', nameAr: '04 - عسلي', nameEn: '04 - Honey', hex: '#C99C7D', image: '/images/253/4 (2).PNG' , stock: 35},
+    { id: '05', nameAr: '05 - حنطي', nameEn: '05 - Medium', hex: '#B88564', image: '/images/253/5.png' , stock: 35},
+    { id: '06', nameAr: '06 - حنطي دافئ', nameEn: '06 - Warm Medium', hex: '#A47155', image: '/images/253/6.png', stock: 35 }
+  ],
+  origin: 'Made in Turkey | صنع في تركيا',
+ stock: 210,
+inStock: true
+},
+{
+  id: 'miss2m-loose-powder-mp264',
+  nameAr: 'بودرة ماجيك لوس باودر - MISS2M MP264',
+  nameEn: 'MISS2M Magic Loose Powder MP264',
+  category: 'face',
+  subcategoryAr: 'بودرة سائبة',
+  subcategoryEn: 'Loose Powder',
+  price: 5.00,
+  originalPrice: 8.00,
+  rating: 4.9,
+  reviewsCount: 86,
+  image: '/images/264/1.PNG',
+  hoverImage: '/images/264/2.PNG',
+  gallery: [
+    '/images/264/1.PNG',
+    '/images/264/1.2.PNG',
+    '/images/264/2.PNG',
+    '/images/264/2.1.PNG',
+    '/images/264/3.PNG',
+    '/images/264/3.1.PNG',
+    '/images/264/4.PNG',
+    '/images/264/4.1.PNG',
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'بودرة سائبة خفيفة للغاية، ماجيك لتثبيت المكياج بثباتية تدوم طويلاً وتعمل على تنعيم البشرة والتحكم في لمعانها للحصول على بشرة موحدة طوال اليوم، تناسب جميع أنواع البشرة.',
+  descriptionEn: 'An ultra-lightweight, magical setting powder that provides a long-lasting finish, smooths the skin, and controls shine for an even complexion all day long; suitable for all skin types.',
+  keyBenefitsAr: [
+    'خفيفة جداً لتثبيت المكياج',
+    'تنعيم البشرة والتحكم باللمعان',
+    'توحيد لون البشرة طوال اليوم',
+    'تناسب جميع أنواع البشرة'
+  ],
+  keyBenefitsEn: [
+    'Ultra-lightweight setting powder',
+    'Smooths skin & controls shine',
+    'Even complexion all day long',
+    'Suitable for all skin types'
+  ],
+  ingredientsAr: 'تلك، سيليكا، ميكا خفيفة، بوليمر مثبت.',
+  ingredientsEn: 'Talc, Silica, Light Mica, Fixing Polymer.',
+  shades: [
+    { id: '01', nameAr: '01 - فاتح', nameEn: '01 - Light', hex: '#F2D3B8', image: '/images/264/1.PNG' , stock: 35},
+    { id: '02', nameAr: '02 - طبيعي فاتح', nameEn: '02 - Natural Light', hex: '#E8C0A0', image: '/images/264/2.PNG' , stock: 35},
+    { id: '03', nameAr: '03 - بيج', nameEn: '03 - Beige', hex: '#D9AD8B', image: '/images/264/3.PNG', stock: 35 },
+    { id: '04', nameAr: '04 - عسلي دافئ', nameEn: '04 - Warm Honey', hex: '#C99A7A', image: '/images/264/4.PNG' , stock: 35}
+  ],
+  origin: 'Made in Turkey | صنع في تركيا',
+stock: 140,
+inStock: true
+},
+{
+  id: 'miss2m-magic-every-lash-mp711',
+  nameAr: 'مسكارا ماجيك ايفري لاش - MISS2M MP711',
+  nameEn: 'MISS2M Magic Every Lash Mascara MP711',
+  category: 'eyes',
+  subcategoryAr: 'مسكارا',
+  subcategoryEn: 'Mascara',
+  price: 3.50,
+  originalPrice: 7.00,
+  rating: 4.9,
+  reviewsCount: 112,
+  image: '/images/711/01.PNG',
+  hoverImage: '/images/711/02.PNG',
+  gallery: [
+    '/images/711/01.PNG',
+    '/images/711/02.PNG',
+  ],
+  badge: 'new',
+  descriptionAr: 'بفضل الفرشاة السحرية، تعطي الرموش كثافة فورية وفصل مثالي للرموش. لمسة سحرية تضفيها على كل رمش.',
+  descriptionEn: 'Magic volume brush: Instant volume, flawless separation. A magical touch to every lash.',
+  keyBenefitsAr: [
+    'كثافة فورية للرموش',
+    'فصل مثالي بدون تكتل',
+    'لمسة سحرية لكل رمش',
+    'فرشاة ماجيك فوليوم'
+  ],
+  keyBenefitsEn: [
+    'Instant volume',
+    'Flawless separation - no clumping',
+    'Magical touch to every lash',
+    'Magic volume brush'
+  ],
+  ingredientsAr: 'شمع، أصباغ سوداء، بوليمر مكثف.',
+  ingredientsEn: 'Wax, Black Pigments, Volumizing Polymer.',
+  shades: [],
+  origin: 'Made in Turkey | صنع في تركيا',
+ stock: 35,
+inStock: true
+},
+{
+  id: 'miss2m-curluxe-lashes-mp712',
+  nameAr: 'مسكارا كيرلوكس اكستريم كيرل - MISS2M MP712',
+  nameEn: 'MISS2M Curluxe Lashes Extreme Curl Mascara MP712',
+  category: 'eyes',
+  subcategoryAr: 'مسكارا',
+  subcategoryEn: 'Mascara',
+  price: 3.50,
+  originalPrice: 7.00,
+  rating: 4.9,
+  reviewsCount: 98,
+  image: '/images/712/01.PNG',
+  hoverImage: '/images/712/02.PNG',
+  gallery: [
+    '/images/712/01.PNG',
+    '/images/712/02.PNG',
+    '/images/712/03.PNG',
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'تأثير فائق بلمسة واحدة، انحناء مذهل، جاذبية آسرة، انحناء مثالي، وطول رائع.',
+  descriptionEn: 'Maximum impact in a single stroke, striking curl, captivating effect, flawless curl, magnificent length.',
+  keyBenefitsAr: [
+    'تأثير فائق من أول لمسة',
+    'انحناء مذهل وجذاب',
+    'طول رائع وكثافة',
+    'فرشاة انحناء مثالي'
+  ],
+  keyBenefitsEn: [
+    'Maximum impact in one stroke',
+    'Striking & captivating curl',
+    'Magnificent length',
+    'Flawless curl brush'
+  ],
+  ingredientsAr: 'شمع، ألياف مطولة، بوليمر كيرل.',
+  ingredientsEn: 'Wax, Lengthening Fibers, Curl Polymer.',
+  shades: [],
+  origin: 'Made in Turkey | صنع في تركيا',
+  stock: 35,
+inStock: true
+},
+{
+  id: 'miss2m-velour-eyes-lashes-mp713',
+  nameAr: 'مسكارا فيلور آيز لاشز - MISS2M MP713',
+  nameEn: 'MISS2M Velour Eyes Lashes Mascara MP713',
+  category: 'eyes',
+  subcategoryAr: 'مسكارا',
+  subcategoryEn: 'Mascara',
+  price: 3.50,
+  originalPrice: 7.00,
+  rating: 4.8,
+  reviewsCount: 105,
+  image: '/images/713/01.PNG',
+  hoverImage: '/images/713/02.PNG',
+  gallery: [
+    '/images/713/01.PNG',
+    '/images/713/02.PNG',
+    '/images/713/03.PNG',
+  ],
+  badge: 'new',
+  descriptionAr: 'كثافة مذهلة، ورموش طويلة ومحددة بلمسة واحدة. كثافة مخملية وتأثير آسر.',
+  descriptionEn: 'Impressive volume, long and defined lashes in a single stroke. Velvety volume, captivating effect.',
+  keyBenefitsAr: [
+    'حجم مذهل بلمسة واحدة',
+    'طول وتحديد مثالي',
+    'كثافة مخملية',
+    'تأثير آسر'
+  ],
+  keyBenefitsEn: [
+    'Impressive volume in one stroke',
+    'Long and defined lashes',
+    'Velvety volume',
+    'Captivating effect'
+  ],
+  ingredientsAr: 'شمع، ألياف مخملية، بوليمر فوليوم.',
+  ingredientsEn: 'Wax, Velvety Fibers, Volume Polymer.',
+  shades: [],
+  origin: 'Made in Turkey | صنع في تركيا',
+stock: 35,
+inStock: true
+},
+{
+  id: 'miss2m-bolde-lashes-mp714',
+  nameAr: 'مسكارا بولدي لاشز اكستريم فوليوم - MISS2M MP714',
+  nameEn: 'MISS2M Bolde Lashes Extreme Volume Mascara MP714',
+  category: 'eyes',
+  subcategoryAr: 'مسكارا',
+  subcategoryEn: 'Mascara',
+  price: 3.50,
+  originalPrice: 7.00,
+  rating: 4.9,
+  reviewsCount: 118,
+  image: '/images/714/01.PNG',
+  hoverImage: '/images/714/02.PNG',
+  gallery: [
+    '/images/714/01.PNG',
+    '/images/714/02.PNG',
+    '/images/714/03.PNG',
+  ],
+  badge: 'bestseller',
+  descriptionAr: 'فرشاة تفصل الرموش وتطيلها بنقة فائقة - شعرة بشعرة - وتتميز بتصميم سيليكون خاص يمنحك رموشاً محددة بلمسة واحدة.',
+  descriptionEn: 'A brush that perfectly separates and lengthens lashes one by one—featuring a special silicone design for defined lashes in a single stroke.',
+  keyBenefitsAr: [
+    'فصل وتطويل شعرة بشعرة',
+    'تصميم سيليكون خاص',
+    'رموش محددة بلمسة واحدة',
+    'فوليوم اكستريم'
+  ],
+  keyBenefitsEn: [
+    'Separates & lengthens one by one',
+    'Special silicone design',
+    'Defined lashes in one stroke',
+    'Extreme Volume'
+  ],
+  ingredientsAr: 'سيليكون، شمع، بوليمر فوليوم.',
+  ingredientsEn: 'Silicone, Wax, Volume Polymer.',
+  shades: [],
+  origin: 'Made in Turkey | صنع في تركيا',
+ stock: 35,
+inStock: true
+},
+{
+  id: 'miss2m-nature-whisper-mp715',
+  nameAr: 'مسكارا نيتشر ويسبر - MISS2M MP715',
+  nameEn: 'MISS2M Nature Whisper Mascara MP715',
+  category: 'eyes',
+  subcategoryAr: 'مسكارا',
+  subcategoryEn: 'Mascara',
+  price: 3.50,
+  originalPrice: 7.00,
+  rating: 4.8,
+  reviewsCount: 76,
+  image: '/images/715/01.PNG',
+  hoverImage: '/images/715/02.PNG',
+  gallery: [
+    '/images/715/01.PNG',
+    '/images/715/02.PNG',
+    '/images/715/03.PNG',
+  ],
+  badge: 'new',
+  descriptionAr: 'فرشاة انحناء الرموش بشكل طبيعي، فرشاة تبرز الجمال الطبيعي، وتمنح كل رمش لمسة رقيقة.',
+  descriptionEn: 'Natural curl brush. A brush that reveals natural beauty. Gentle touch to each lash.',
+  keyBenefitsAr: [
+    'انحناء طبيعي للرموش',
+    'تبرز الجمال الطبيعي',
+    'لمسة رقيقة لكل رمش',
+    'مظهر طبيعي ناعم'
+  ],
+  keyBenefitsEn: [
+    'Natural curl brush',
+    'Reveals natural beauty',
+    'Gentle touch to each lash',
+    'Soft natural look'
+  ],
+  ingredientsAr: 'شمع طبيعي، ألياف ناعمة، بوليمر انحناء.',
+  ingredientsEn: 'Natural Wax, Soft Fibers, Curl Polymer.',
+  shades: [],
+  origin: 'Made in Turkey | صنع في تركيا',
+stock: 35,
+inStock: true
 },
 {
   id: 'miss2m-careful-transparent-mascara-mp304',
@@ -653,16 +1255,15 @@ export const PRODUCTS: Product[] = [
   category: 'eyes',
   subcategoryAr: 'جل حواجب',
   subcategoryEn: 'Eyebrow Gel',
-  price: 3.00,
+  price: 2.50,
   originalPrice: 5.00,
   rating: 4.8,
   reviewsCount: 58,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/aUNW2lsf.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/9AG5ibf0.png',
+  image: '/images/304/01.jpg',
+  hoverImage: '/images/304/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/aUNW2lsf.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/9AG5ibf0.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/5WrkSZxI.png'
+    '/images/304/01.jpg',
+    '/images/304/02.jpg',
   ],
   badge: 'trending',
   descriptionAr: 'مسكارا Careful Transparent Eyebrow & Eyelash Mascara الشفافة تكشف الأناقة الطبيعية للحواجب والرموش. تركيبتها الشفافة والخفيفة تمنح تشكيلاً مثالياً مع كل استخدام وتوفر مظهراً ثابتاً وأنيقاً طوال اليوم. توفر تأثيراً شفافاً وراقياً، ثباتاً طويلاً، عناية لطيفة، تطبيقاً سهلاً، واستخداماً متعدداً للحواجب والرموش.',
@@ -682,53 +1283,13 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'جل شفاف، بوليمر مثبت، تركيبة خفيفة.',
   ingredientsEn: 'Transparent Gel, Fixing Polymer, Lightweight Formula.',
   shades: [
-    { id: 'transparent', nameAr: 'شفاف', nameEn: 'Transparent', hex: '#F5F5F5' }
+    { id: 'transparent', nameAr: 'شفاف', nameEn: 'Transparent', hex: '#F5F5F5', stock: 35 }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+  stock: 35,
+inStock: true
 },
-{
-  id: 'miss2m-line-marker-eyeliner-mp855',
-  nameAr: 'آيلاينر ماركر لاين الترا كاربون بلاك - MISS2M MP855',
-  nameEn: 'MISS2M Line Marker Eyeliner Ultra Carbon Black MP855',
-  category: 'eyes',
-  subcategoryAr: 'آيلاينر',
-  subcategoryEn: 'Eyeliner',
-  price: 2.50,
-  originalPrice: 5.00,
-  rating: 4.9,
-  reviewsCount: 81,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/18FGtk0nh.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/6l3eQzQj.jpg',
-  gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/18FGtk0nh.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/6l3eQzQj.jpg'
-  ],
-  badge: 'bestseller',
-  descriptionAr: 'سيكون لون الآيلاينر البلاستيكي المكثف من ميس 2 ام هو منتج المكياج المفضل لديك، مع مقاومته للماء وميزة ثباته طوال اليوم. هو مناسب لداخل وخارج الجانب من العيون.',
-  descriptionEn: 'Miss2m plastic eyeliner intense black color will be your favourite make up product, with its water-resistance and lasting feature all day long. It is suitable for in and out side of eyes.',
-  keyBenefitsAr: [
-    'لون أسود كثيف الترا كاربون',
-    'مقاوم للماء وثابت طوال اليوم',
-    'مناسب داخل وخارج العين',
-    'طرف ماركر دقيق لرسم سهل'
-  ],
-  keyBenefitsEn: [
-    'Intense Ultra Carbon Black color',
-    'Water-resistant and lasting all day',
-    'Suitable for in and out side of eyes',
-    'Precise marker tip'
-  ],
-  ingredientsAr: 'أصباغ كاربون سوداء، تركيبة مقاومة للماء.',
-  ingredientsEn: 'Carbon Black Pigments, Water-resistant Formula.',
-  shades: [
-    { id: 'ultra-black', nameAr: 'الترا بلاك', nameEn: 'Ultra Black', hex: '#000000' },
-    { id: 'carbon-black', nameAr: 'كاربون بلاك', nameEn: 'Carbon Black', hex: '#0A0A0A' },
-    { id: 'ultra-brown', nameAr: 'الترا براون', nameEn: 'Ultra Brown', hex: '#5C3A2A' }
-  ],
-  origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
-},
+
 {
   id: 'miss2m-superior-eye-pencil-mp852',
   nameAr: 'قلم عيون سوبيريور مطفي 24 ساعة - MISS2M MP852',
@@ -736,25 +1297,26 @@ export const PRODUCTS: Product[] = [
   category: 'eyes',
   subcategoryAr: 'كحل',
   subcategoryEn: 'Eye Pencil',
-  price: 2.00,
+  price: 1.00,
   originalPrice: 4.00,
   rating: 4.8,
   reviewsCount: 67,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/dl4JnsWc.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/5URfqLsy.png',
+  image: '/images/852/01.1.jpg',
+  hoverImage: '/images/852/01.2.png',
   gallery: [
-  'https://cdn.imagetourls.com/uploads/tyImg/dl4JnsWc.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/5URfqLsy.png',
-  'https://cdn.imagetourls.com/uploads/tyImg/cSsSf010.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/ssgdFDMI.png',
-  'https://cdn.imagetourls.com/uploads/tyImg/bPwopyU7.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/ohCiTe3W.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/i5fofRBJ.png',
-  'https://cdn.imagetourls.com/uploads/tyImg/3G7hZxKI.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/SCQzWhSl.png',
-  'https://cdn.imagetourls.com/uploads/tyImg/fGTjhEcL.jpg',
-  'https://cdn.imagetourls.com/uploads/tyImg/1aNzBIGne.png' // <-- هاي آخر صورة الجديدة
-],
+    '/images/852/01.1.jpg',
+    '/images/852/01.2.png',
+    '/images/852/02.1.jpg',
+    '/images/852/02.2.png',
+    '/images/852/3.1.jpg',
+    '/images/852/3.2.webp',
+    '/images/852/4.1.jpg',
+    '/images/852/4.2.png',
+    '/images/852/5.1.jpg',
+    '/images/852/5.2.png',
+    '/images/852/6.1.jpg',
+    '/images/852/6.2.png'
+  ],
   badge: 'new',
   descriptionAr: 'من السهل جداً الحصول على المظهر المثير الذي تريده بفضل التطبيق السهل لقلم عيون ميس 2 ام سوبيريور مع خيار اللون المطفي الغني. ثبات 24 ساعة.',
   descriptionEn: 'It is very easy to create the striking looks you want thanks to the soft application of Miss2m superior eye pencil with its rich matte/pearl color option. Longlasting 24 hrs.',
@@ -773,16 +1335,18 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'شمع ناعم، أصباغ مطفية غنية.',
   ingredientsEn: 'Soft Wax, Rich Matte Pigments.',
   shades: [
-    { id: '01', nameAr: '01 - الترا بلاك', nameEn: '01 - Ultra Black', hex: '#000000' },
-    { id: '02', nameAr: '02 - أخضر سلطان', nameEn: '02 - Sultan Green', hex: '#0B4D3A' },
-    { id: '03', nameAr: '03 - سنو وايت', nameEn: '03 - Snow White', hex: '#FFFFFF' },
-    { id: '04', nameAr: '04 - سكاي بلو', nameEn: '04 - Sky Blue', hex: '#1E5A9C' },
-    { id: '05', nameAr: '05 - شوكولاتة براون', nameEn: '05 - Chocolate Brown', hex: '#4B2E26' },
-    { id: '06', nameAr: '06 - سكين كلر', nameEn: '06 - Skin Color', hex: '#E8C4A8' }
+    { id: '01', nameAr: '01 - الترا بلاك', nameEn: '01 - Ultra Black', hex: '#000000', image: '/images/852/01.2.png', stock: 35 },
+    { id: '02', nameAr: '02 - أخضر سلطان', nameEn: '02 - Sultan Green', hex: '#0B4D3A', image: '/images/852/02.2.png', stock: 35 },
+    { id: '03', nameAr: '03 - سنو وايت', nameEn: '03 - Snow White', hex: '#FFFFFF', image: '/images/852/3.2.webp', stock: 35 },
+    { id: '04', nameAr: '04 - سكاي بلو', nameEn: '04 - Sky Blue', hex: '#1E5A9C', image: '/images/852/4.2.png' , stock: 35},
+    { id: '05', nameAr: '05 - شوكولاتة براون', nameEn: '05 - Chocolate Brown', hex: '#4B2E26', image: '/images/852/5.2.png', stock: 35 },
+    { id: '06', nameAr: '06 - سكين كلر', nameEn: '06 - Skin Color', hex: '#E8C4A8', image: '/images/852/6.2.png' , stock: 35}
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+ stock: 210,
+inStock: true
 },
+
 {
   id: 'miss2m-eye-art-pencil-mp850',
   nameAr: 'قلم كحل عيون ديب بلاك مقاوم للماء - MISS2M MP850',
@@ -794,11 +1358,11 @@ export const PRODUCTS: Product[] = [
   originalPrice: 4.00,
   rating: 4.9,
   reviewsCount: 93,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/EjGCHC5S.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/QD2dfOmk.png',
+  image: '/images/850/01.jpg',
+  hoverImage: '/images/850/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/EjGCHC5S.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/QD2dfOmk.png'
+    '/images/850/01.jpg',
+    '/images/850/02.jpg'
   ],
   badge: 'bestseller',
   descriptionAr: 'قلم رسم العين من ميس 2 ام ، الذي يتم تطبيقه بسهولة فائقة بفضل طرف الفرشاة الصغيرة، يكون دائماً معك. الجفاف السريع بتركيبته السوداء الكربونية، وعدم التلطخ وثباتية المظهر المطفي طوال اليوم هي من بين أبرز ميزاته. وهو مقاوم للماء.',
@@ -818,10 +1382,11 @@ export const PRODUCTS: Product[] = [
   ingredientsAr: 'أصباغ كربون سوداء، شمع مقاوم للماء.',
   ingredientsEn: 'Carbon Black Pigments, Waterproof Wax.',
   shades: [
-    { id: '100', nameAr: 'ديب بلاك - 100', nameEn: '100-Deep Black', hex: '#000000' }
+    { id: '100', nameAr: 'ديب بلاك - 100', nameEn: '100-Deep Black', hex: '#000000', stock: 35 }
   ],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 35,
+inStock: true
 },
 {
   id: 'miss2m-magic-max-iliner-mp352',
@@ -834,15 +1399,15 @@ export const PRODUCTS: Product[] = [
   originalPrice: 4.00,
   rating: 4.8,
   reviewsCount: 54,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/idE4SNDw.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/oy7Y7bCK.jpg',
+  image: '/images/352/01.jpg',
+  hoverImage: '/images/352/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/idE4SNDw.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/oy7Y7bCK.jpg'
+    '/images/352/01.jpg',
+    '/images/352/02.jpg'
   ],
   badge: 'new',
-  descriptionAr: 'بودرة نهائية ضبابية ومطفية غير لامعة للتصحيح على جميع درجات البشرة. ما الذي يمثل الخطوة الأخيرة في روتين مكياجك؟ هذه البودرة المضغوطة تنعم وتقلل اللمعان مع تغطية مطفية طبيعية ومتساوية تغطي البقع على الوجه. ديبلاينر ماجيك ماكس برأس رفيع ودقيق لرسم آيلاينر مثالي وثابت.',
-  descriptionEn: 'A very blurry and Matte Finish Powder for lightening on all skin tones. What does the last step in your makeup routine? This compact powder smooths and reduces shine with natural matte even coverage covering the spots on the face. Magic Max Dipliner with ultra fine precise tip for perfect and long-lasting eyeliner.',
+  descriptionAr: 'آيلاينر ماجيك ماكس MP352 من MISS2M هو سر الآيلاينر المثالي، يتميز بتركيبة سائلة فائقة السواد تجف بسرعة وتمنحك ثبات يدوم طوال اليوم دون تلطيخ أو سيلان، مقاوم للماء والدموع، مزود بريشة مرنة ودقيقة تساعدك على رسم خطوط حادة ومجنحة باحترافية سواء كنت مبتدئة أو محترفة.',
+  descriptionEn: 'MISS2M Magic Max Eyeliner MP352 is the secret to the perfect eyeliner. It features an ultra-intense black liquid formula that dries quickly and delivers all-day wear without smudging or smearing. Waterproof and tear-proof, it comes with a flexible, ultra-precise tip that helps you create sharp, winged lines like a pro, whether youre a beginner or an expert.',
   keyBenefitsAr: [
     'رأس رفيع ودقيق لرسم احترافي',
     'سواد فاحم وثابت طويلاً',
@@ -859,7 +1424,8 @@ export const PRODUCTS: Product[] = [
   ingredientsEn: 'Waterproof Black Pigments, Fast-Drying Formula.',
   shades: [],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 35,
+inStock: true
 },
 {
   id: 'miss2m-perfect-curl-mascara-mp301',
@@ -872,12 +1438,11 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.00,
   rating: 4.8,
   reviewsCount: 62,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/18vDSkS4N.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/mfLctRQj.png',
+  image: '/images/301/01.jpg',
+  hoverImage: '/images/301/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/18vDSkS4N.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/mfLctRQj.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/10yD450M9.png'
+    '/images/301/01.jpg',
+    '/images/301/02.jpg'
   ],
   badge: 'trending',
   descriptionAr: 'مسكارا بيرفكت كيرل هي مسكارا توفر حجماً غير عادي وتجعيد للرموش. تخلق مسكارا بيرفكت كيرل رموش كثيفة وملتفة للغاية بفضل فرشاة مسكارا كبيرة الحجم والمسطورة، والتي تخلق تجعيداً فورياً بمجرد وضعها. من أجل تعظيم تأثير الفصل الفردي وتجعيد الرموش، تم وضع الشعيرات الفردية على الفرشاة قطرياً.',
@@ -898,8 +1463,10 @@ export const PRODUCTS: Product[] = [
   ingredientsEn: 'Curling Wax, Volumizing Fibers, Large Curl Brush.',
   shades: [],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+  stock: 35,
+inStock: true
 },
+
 {
   id: 'miss2m-lash-show-mascara-mp720',
   nameAr: 'مسكارا لاش شو 2X فوليوم - MISS2M MP720',
@@ -911,12 +1478,11 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.00,
   rating: 4.9,
   reviewsCount: 76,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/12DSiAlNk.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/OQ7JeEM1.png',
+  image: '/images/720/01.jpg',
+  hoverImage: '/images/720/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/12DSiAlNk.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/OQ7JeEM1.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/McTb0sjw.png'
+    '/images/720/01.jpg',
+    '/images/720/02.jpg'
   ],
   badge: 'bestseller',
   descriptionAr: 'لتظهر رموشك جمالها الأسود الفاحم، حان الوقت لإظهار رموشك مسكارا ميس 2 ام فورايفر لاش شو 2X مصنعة بتقنية خاصة تجعل عيونك أكثر بروزاً والرموش طويلة وكثيفة، تركيبتها سريعة الجفاف بمساعدة فرشاتها السيليكونية التي توفر استخداماً مريحاً.',
@@ -937,7 +1503,8 @@ export const PRODUCTS: Product[] = [
   ingredientsEn: 'Volumizing Wax, Black Pigments, Fast-Drying Formula.',
   shades: [],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 35,
+inStock: true
 },
 {
   id: 'miss2m-xxl-volumizer-mascara-mp710',
@@ -950,12 +1517,11 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.50,
   rating: 4.9,
   reviewsCount: 88,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/nlkXvwVg.jpg',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/N9f98F9m.png',
+  image: '/images/710/01.jpg',
+  hoverImage: '/images/710/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/nlkXvwVg.jpg',
-    'https://cdn.imagetourls.com/uploads/tyImg/N9f98F9m.png',
-    'https://cdn.imagetourls.com/uploads/tyImg/RbGbjeFO.png'
+    '/images/710/01.jpg',
+    '/images/710/02.jpg'
   ],
   badge: 'bestseller',
   descriptionAr: 'عندما تفكر في المسكارا ، فإن أول ما يتبادر إلى الذهن هو الحصول على رموش طويلة وكثيفة. مسكارا ميس 2 ام XXL فولومايزر ، التي يمكنك من خلالها إطالة رموشك بفرشاتها السيليكونية الخاصة وزيادة الحجم إلى الضعف على الأقل في نفس الوقت، هي فقط من أجلك. مع تركيبة شديدة السواد، عيون أكثر تميزاً تنتظرك.',
@@ -976,7 +1542,8 @@ export const PRODUCTS: Product[] = [
   ingredientsEn: 'Natural Wax, Intense Black Pigments, Advanced Silicone Brush.',
   shades: [],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+stock: 35,
+inStock: true
 },
 
   // ==========================================
@@ -995,10 +1562,10 @@ export const PRODUCTS: Product[] = [
   originalPrice: 5.50,
   rating: 4.9,
   reviewsCount: 41,
-  image: 'https://cdn.imagetourls.com/uploads/tyImg/4Ziqi8OC.png',
-  hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/4Ziqi8OC.png',
+  image: '/images/202/01.jpg',
+  hoverImage: '/images/201/01.jpg',
   gallery: [
-    'https://cdn.imagetourls.com/uploads/tyImg/4Ziqi8OC.png'
+    '/images/201/01.jpg'
   ],
   badge: 'new',
   descriptionAr: 'بخاخ تثبيت المكياج كيرفول من MISS2M بتركيبة خفيفة ومنعشة يثبت مكياجك لساعات طويلة دون أن يثقل البشرة. يمنحك لمسة نهائية طبيعية ومشرقة ويحافظ على نضارة مكياجك طوال اليوم، مع تركيبة صديقة للبشرة لا تسد المسام.',
@@ -1019,7 +1586,8 @@ export const PRODUCTS: Product[] = [
   ingredientsEn: 'Aqua, Glycerin, Moisturizing and Makeup Fixing Agents.',
   shades: [],
   origin: 'Made in Turkey | صنع في تركيا',
-  inStock: true,
+  stock: 35,
+inStock: true
 },
   {
 
@@ -1043,17 +1611,15 @@ export const PRODUCTS: Product[] = [
 
     reviewsCount: 43,
 
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/yAFF2vld.png',
+    image: 'images/907/01.jpg',
 
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/vzU63qXg.png',
+    hoverImage: 'images/907/01.jpg',
 
     gallery: [
 
-      'https://cdn.imagetourls.com/uploads/tyImg/yAFF2vld.png',
+      'images/907/01.jpg',
 
-      'https://cdn.imagetourls.com/uploads/tyImg/vzU63qXg.png',
-
-      'https://cdn.imagetourls.com/uploads/tyImg/14w5HJXJ0.png'
+      'images/907/02.jpg',
 
     ],
 
@@ -1093,19 +1659,16 @@ export const PRODUCTS: Product[] = [
 
     shades: [
 
-      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#EA7C4B' },
+      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#EA7C4B', stock: 35 },
 
-      { id: '2', nameAr: 'درجة 2', nameEn: 'Shade 2', hex: '#D6897E' },
-
-      { id: '3', nameAr: 'درجة 3', nameEn: 'Shade 3', hex: '#C29F86' },
-
-      { id: '4', nameAr: 'درجة 4', nameEn: 'Shade 4', hex: '#E2C2A9' }
+     
 
     ],
 
     origin: 'Made in Turkey | صنع في تركيا',
 
-    inStock: true,
+   stock: 35,
+inStock: true
 
   },
 
@@ -1131,17 +1694,16 @@ export const PRODUCTS: Product[] = [
 
     reviewsCount: 40,
 
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/IfQdgvF7.png',
+    image: '/images/906/01.jpg',
 
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/eHm5uLFf.png',
+    hoverImage: '/images/906/01.jpg',
 
     gallery: [
 
-      'https://cdn.imagetourls.com/uploads/tyImg/IfQdgvF7.png',
+      '/images/906/01.jpg',
 
-      'https://cdn.imagetourls.com/uploads/tyImg/eHm5uLFf.png',
+      '/images/906/02.jpg',
 
-      'https://cdn.imagetourls.com/uploads/tyImg/WICwnuqg.png'
 
     ],
 
@@ -1181,19 +1743,16 @@ export const PRODUCTS: Product[] = [
 
     shades: [
 
-      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#6A4D3B' },
+      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#6A4D3B', stock: 35 },
 
-      { id: '2', nameAr: 'درجة 2', nameEn: 'Shade 2', hex: '#E29A90' },
-
-      { id: '3', nameAr: 'درجة 3', nameEn: 'Shade 3', hex: '#EEDAC7' },
-
-      { id: '4', nameAr: 'درجة 4', nameEn: 'Shade 4', hex: '#F3F2EB' }
+   
 
     ],
 
     origin: 'Made in Turkey | صنع في تركيا',
 
-    inStock: true,
+   stock: 35,
+inStock: true
 
   },
 
@@ -1219,17 +1778,16 @@ export const PRODUCTS: Product[] = [
 
     reviewsCount: 39,
 
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/aaCipaoZ.png',
+    image: '/images/900/01.jpg',
 
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/dD0SvkJJ.png',
+    hoverImage: '/images/900/01.jpg',
 
     gallery: [
 
-      'https://cdn.imagetourls.com/uploads/tyImg/aaCipaoZ.png',
+      '/images/900/01.jpg',
 
-      'https://cdn.imagetourls.com/uploads/tyImg/dD0SvkJJ.png',
+      '/images/900/02.jpg',
 
-      'https://cdn.imagetourls.com/uploads/tyImg/OksoVMTs.png'
 
     ],
 
@@ -1269,19 +1827,16 @@ export const PRODUCTS: Product[] = [
 
     shades: [
 
-      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#C2886E' },
+      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#C2886E' , stock: 35},
 
-      { id: '2', nameAr: 'درجة 2', nameEn: 'Shade 2', hex: '#D98982' },
-
-      { id: '3', nameAr: 'درجة 3', nameEn: 'Shade 3', hex: '#E59A83' },
-
-      { id: '4', nameAr: 'درجة 4', nameEn: 'Shade 4', hex: '#C68266' }
+  
 
     ],
 
     origin: 'Made in Turkey | صنع في تركيا',
 
-    inStock: true,
+   stock: 35,
+inStock: true
 
   }, 
   {
@@ -1295,12 +1850,11 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6.00,
     rating: 4.9,
     reviewsCount: 45,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/RSm1mpuD.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/fZbgRy0U.png',
+    image: '/images/901/011.jpg',
+    hoverImage: '/images/901/011.jpg',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/RSm1mpuD.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/fZbgRy0U.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/15xm6jPp4.png'
+      '/images/901/011.jpg',
+      '/images/901/01.jpg',
     ],
     badge: 'new',
     descriptionAr: 'أكمل مكياجك بمنتج واحد. تغطية عيوب على الوجه مع ٢ ملامح خاصة على لوحة ، ثم وضع اللمسات الأخيرة على ماكياج الخاص بك مع ٢ ظلال من الإضاءة[cite: 8].',
@@ -1320,14 +1874,13 @@ export const PRODUCTS: Product[] = [
     ingredientsAr: 'مكونات بودرة ناعمة ومتطورة، أصباغ تلوين وإضاءة آمنة على البشرة.',
     ingredientsEn: 'Smooth advanced powder ingredients, Skin-safe pigmentation and illumination agents.',
     shades: [
-      { id: '1', nameAr: 'درجة كنتور 1', nameEn: 'Contour Shade 1', hex: '#B89778' },
-      { id: '2', nameAr: 'درجة كنتور 2', nameEn: 'Contour Shade 2', hex: '#8C674A' },
-      { id: '3', nameAr: 'درجة هايلايتر 1', nameEn: 'Highlighter Shade 1', hex: '#EED9C4' },
-      { id: '4', nameAr: 'درجة هايلايتر 2', nameEn: 'Highlighter Shade 2', hex: '#DFBA99' }
+      { id: '1', nameAr: 'درجة كنتور 1', nameEn: 'Contour Shade 1', hex: '#B89778', stock: 35 },
+     
      
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
+stock: 35,
+inStock: true
   },
   {
     id: 'miss2m-chic-bright-palette-mp905',
@@ -1340,12 +1893,11 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6.00,
     rating: 4.9,
     reviewsCount: 42,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/AxsxRYPV.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/17YzBEOxn.png',
+    image: '/images/905/1.png',
+    hoverImage: '/images/905/1.png',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/AxsxRYPV.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/17YzBEOxn.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/5vIw2ojS.png'
+      '/images/905/1.png',
+      '/images/905/011.png',
     ],
     badge: 'new',
     descriptionAr: 'لوحة وجه بأربعة ظلال هايلايتر ساطعة للحصول على لمعان أنيق قابل للتخصيص — في تناغم الألوان الذي يوسع حدود السطوع. شيك هي مجموعة أساسيات مكياج مصممة لتناسب جميع ألوان البشرة. يتم تكثيف هذه القوام فائقة الدقة بأصباع متلألئة متألقة يمكن ارتداؤها بمفردها أو مزجها معا للحصول على مظهر قابل للتخصيص ، من توهج طبيعي وصحي إلى وميض شديد[cite: 7].',
@@ -1365,312 +1917,300 @@ export const PRODUCTS: Product[] = [
     ingredientsAr: 'بودرة فائقة الدقة، أصباغ لؤلؤية ومضيئة متقدمة، ومكونات آمنة وناعمة على البشرة.',
     ingredientsEn: 'Ultra-fine powder ingredients, Advanced luminous pearlescent pigments, Skin-safe smooth agents.',
     shades: [
-      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#EBB4A2' },
-      { id: '2', nameAr: 'درجة 2', nameEn: 'Shade 2', hex: '#EBE6D1' },
-      { id: '3', nameAr: 'درجة 3', nameEn: 'Shade 3', hex: '#E7E0C9' },
-      { id: '4', nameAr: 'درجة 4', nameEn: 'Shade 4', hex: '#BC825B' }
-     
+      { id: '1', nameAr: 'درجة 1', nameEn: 'Shade 1', hex: '#EBB4A2', stock: 35 }, 
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
+  stock: 35,
+inStock: true
   },
-  {
-    id: 'miss2m-chic-bright-highlighter-mp451',
-    nameAr: 'تشيك برايت هايلايتر - MISS2M MP451',
-    nameEn: 'MISS2M Chic Bright Special Colors / Highlighter MP451',
-    category: 'face',
-    subcategoryAr: 'هايلايتر',
-    subcategoryEn: 'Highlighter',
-    price: 3.00,
-    originalPrice: 5.00,
-    rating: 4.9,
-    reviewsCount: 37,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/2r0N4MfD.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/IDUa2W7O.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/2r0N4MfD.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/IDUa2W7O.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/dQY0JhKC.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/AkWvKDtI.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/u157N5kG.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/4cUOtDR8.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/g1ysA4Sq.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/h4i3NwmO.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/PdvzJCrp.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/lCvAhKDm.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/2cd2IHyz.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/veNW6L7x.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'تركيبة كريمية تبني وتمزج بسلاسة على البشرة دون أن تبدو لامعة. ينعكس الضوء النقي من كل زاوية للحصول على توهج أكثر طبيعية ومضيئة[cite: 6].',
-    descriptionEn: 'The creamy formula builds and blends seamlessly on skin without looking glittery. Pure light is reflected from every angle for the most natural, luminous glow[cite: 6].',
-    keyBenefitsAr: [
-      'تركيبة كريمية تندمج بسلاسة على البشرة دون مظهر متكتل أو براق بشكل مبالغ فيه[cite: 6]',
-      'تعكس الضوء النقي من كل زاوية للحصول على توهج طبيعي ومضيء[cite: 6]',
-      'سهلة الدمج وقابلة للبناء للحصول على الإطلالة المثالية',
-      'مناسبة لإبراز ملامح الوجه بلمسة ساحرة'
-    ],
-    keyBenefitsEn: [
-      'Creamy formula builds and blends seamlessly on skin without looking glittery[cite: 6]',
-      'Reflects pure light from every angle for the most natural, luminous glow[cite: 6]',
-      'Easy to blend and buildable for a customized luminous look',
-      'Ideal for highlighting facial features with a charming touch'
-    ],
-    ingredientsAr: 'مكونات كريمية ناعمة، أصباغ مضيئة نقية وآمنة على البشرة.',
-    ingredientsEn: 'Smooth creamy formula ingredients, Pure luminous skin-safe pigments.',
-    shades: [
-      { id: '40', nameAr: 'درجة 40', nameEn: 'Shade 40', hex: '#EED9C4' },
-      { id: '41', nameAr: 'درجة 41', nameEn: 'Shade 41', hex: '#F2E8CB' },
-      { id: '42', nameAr: 'درجة 42', nameEn: 'Shade 42', hex: '#E8B2A2' },
-      { id: '43', nameAr: 'درجة 43', nameEn: 'Shade 43', hex: '#A87454' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-emotion-connect-highlighter-mp452',
-    nameAr: 'هايليتر إيموشن - MISS2M MP452',
-    nameEn: 'MISS2M Emotion Connect Highlighter MP452',
-    category: 'face',
-    subcategoryAr: 'هايلايتر',
-    subcategoryEn: 'Highlighter',
-    price: 3.00,
-    originalPrice: 5.00,
-    rating: 4.9,
-    reviewsCount: 36,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/eGJJPD6q.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/17885vV0k.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/eGJJPD6q.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/17885vV0k.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/Hcq9cDFO.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/3L0rFIKU.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/XapKcY3u.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/7FosFFlE.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/HgN96lmF.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/BDsG9GXh.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/5mRDhvPl.png' 
-],
-    badge: 'new',
-    descriptionAr: 'تبحث عن منتج من شأنه أن تعزز جمالك وإضافة توهج اشعاعا لبشرتك؟ ايموشن هايليتر. يعكس هذا الهايلايتر الخاص الضوء الطبيعي لبشرتك ، ويحدد ملامح وجهك ويمنحك لمعانا مذهلا.خلق هايلايتر العاطفة عجائب على بشرتك بتركيبته سهلة التطبيق وملمسه الحريري. يوفر توهجا طبيعيا وصحيا ، مما يجعل كل لحظة أكثر خصوصية وساحرة.رفع جمالك مع تألق المبهر والإشراق الطبيعي.',
-    descriptionEn: 'Looking for a product that will enhance your beauty and add a radiant glow to your skin? Meet Emotion Highlighter. This special highlighter reflects your skin’s natural light, defining your facial features and giving you a stunning shine. Emotion Highlighter creates wonders on your skin with its easy-to-apply formula and silky texture. It provides a natural and healthy glow, making every moment more special and enchanting. Elevate your beauty with a dazzling shine and natural radiance.',
-    keyBenefitsAr: [
-      'يعكس الضوء الطبيعي للبشرة ويحدد ملامح الوجه بلمعان مذهل',
-      'تركيبة سهلة التطبيق وملمس حريري ناعم يمنح توهجاً صحياً وطبيعياً',
-      'يضيف لمسة ساحرة ومميزة لتعزيز جمالك وإشراقتك',
-      'مثالي للاستخدام اليومي ليصبح جزءاً أساسياً من روتين مكياجك'
-    ],
-    keyBenefitsEn: [
-      'Reflects skin natural light and defines facial features with stunning shine',
-      'Easy-to-apply formula with silky texture for a natural and healthy glow',
-      'Adds an enchanting and special touch to enhance your beauty and radiance',
-      'Ideal for daily use to become an essential part of your makeup routine'
-    ],
-    ingredientsAr: 'مكونات بودرة حريرية ناعمة، أصباغ لؤلؤية مضيئة، وعوامل ترطيب آمنة على البشرة.',
-    ingredientsEn: 'Silky smooth powder ingredients, Luminous pearlescent pigments, Skin-safe moisturizing agents.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#F3E5AB' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E6C2A6' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#FFFDD0' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#C28B78' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-magic-max-liquid-highlighter-mp453',
-    nameAr: 'هايلايتر سائل ماجيك ماكس - MISS2M MP453',
-    nameEn: 'MISS2M Magic Max Liquid Highlighter MP453',
-    category: 'face',
-    subcategoryAr: 'هايلايتر',
-    subcategoryEn: 'Liquid Highlighter',
-    price: 3.00,
-    originalPrice: 5.00,
-    rating: 4.9,
-    reviewsCount: 35,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/YSkU0jUT.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/lkxtIjsh.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/YSkU0jUT.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/lkxtIjsh.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/lQnaQOrW.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1dAJDCjW8.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/snbdO8Il.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/15dN2UizA.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/tO1X23eK.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/RnYkAC4f.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'مع ماجيك ماكس هايلايتر سائل يعطي للبشرة مظهراً لامعاً ومشمعاً على الوجه[cite: 4].',
-    descriptionEn: 'With Magic Max Liquid Highlighter, it gives the skin a shiny and radiant appearance on the face[cite: 4].',
-    keyBenefitsAr: [
-      'يمنح البشرة مظهراً لامعاً ومشمعاً وإشراقة طبيعية على الوجه[cite: 4]',
-      'تركيبة سائلة خفيفة وسهلة الدمج لتوزيع متساوٍ ومثالي',
-      'يضيف لمسة متوهجة وجذابة لمكياجك',
-      'مناسب لجميع أنواع البشرة لإبراز ملامح وجهك'
-    ],
-    keyBenefitsEn: [
-      'Gives the skin a shiny and radiant appearance on the face[cite: 4]',
-      'Lightweight and easy-to-blend liquid formula for even application',
-      'Adds a glowing and attractive touch to your makeup',
-      'Suitable for all skin types to highlight facial features'
-    ],
-    ingredientsAr: 'ماء، أصباغ لؤلؤية مضيئة، مكونات مرطبة وعالية الجودة آمنة على البشرة.',
-    ingredientsEn: 'Aqua, Luminous Pearlescent Pigments, Moisturizing and High-Quality Skin-Safe Ingredients.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#E5E4E0' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#D7A78C' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#E8B3A8' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#C28B73' },
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-chic-blush-palette-mp904',
-    nameAr: 'لوحة أحمر الخدود الأنيقة - MISS2M MP904',
-    nameEn: 'MISS2M Chic Blush Palette MP904',
-    category: 'face',
-    subcategoryAr: 'بلاشر',
-    subcategoryEn: 'Blush Palette',
-    price: 4.00,
-    originalPrice: 6.00,
-    rating: 4.9,
-    reviewsCount: 38,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/egw4j3I6.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/1hdUNnhHP.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/egw4j3I6.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1hdUNnhHP.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/12D0KyAWI.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/6acBnKss.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/zheTVR2D.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/Yo8peGIf.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/hu3FH7K4.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/gRXlw62J.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/kRL8lD0P.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/12eBWfTnP.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'لوحة استحي جميلة لوضع أفضل تدفق إلى الأمام وتحقيق نظرة احمر خجلا لا تشوبه شائبة في كل مرة يضم أربعة الحمرة[cite: 3]. توفر لوحة الخدود الأنيقة أربعة ظلال خد طويلة الأمد وجذابة عالميا تمنحك مظهرا صحيا ومتوهجا[cite: 3]. تحتوي هذه اللوحة على أربعة خدود ناعم مخملي يمكن استخدامه بمفرده أو طبقات بسلاسة للحصول على إشراقة فريدة من نوعها[cite: 3].',
-    descriptionEn: 'A lovely blush palette to put your best flush forward and achieve a flawless blushed look every time featuring four blushes[cite: 3]. The CHIC Blush Palette provides four long-lasting, universally flattering cheek shades that will give you a healthy-looking, glowing flush[cite: 3]. This palette contains four velvety-smooth blush that can be used alone or layered seamlessly for a one-of-a-kind radiance[cite: 3].',
-    keyBenefitsAr: [
-      'تضم أربعة ألوان أحمر خدود مخملية ناعمة لتوفير إشراقة فريدة[cite: 3]',
-      'ظلال طويلة الأمد وجذابة عالمياً تمنح مظهراً صحياً ومتوهجاً[cite: 3]',
-      'يمكن استخدام كل لون بمفرده أو دمجهما معاً بطبقات سلسة[cite: 3]',
-      'تحقيق نظرة أحمر خجلاً لا تشوبه شائبة في كل مرة[cite: 3]'
-    ],
-    keyBenefitsEn: [
-      'Features four velvety-smooth cheek shades for a unique radiance[cite: 3]',
-      'Long-lasting and universally flattering shades for a healthy, glowing look[cite: 3]',
-      'Can be used alone or layered seamlessly for versatile styles[cite: 3]',
-      'Achieves a flawless blushed look every time[cite: 3]'
-    ],
-    ingredientsAr: 'أصباغ بودرة مخملية ناعمة، مكونات آمنة وعالية الجودة تناسب جميع أنواع البشرة.',
-    ingredientsEn: 'Velvety-smooth powder pigments, Safe and high-quality ingredients suitable for all skin types.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D87A68' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#D2797C' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#C25D52' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#CD787D' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-careful-radiance-concealer-mp751-03',
-    nameAr: 'كونسيلر كيرفول ناتشورال راديانس - MISS2M MP751',
-    nameEn: 'MISS2M Careful Full Natural Radiance Cover Concealer',
-    category: 'face',
-    subcategoryAr: 'كونسيلر',
-    subcategoryEn: 'Concealer',
-    price: 3.00,
-    originalPrice:5.00,
-    rating: 4.9,
-    reviewsCount: 45,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/8ZFrPrvx.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/61M50Dqf.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/8ZFrPrvx.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/61M50Dqf.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1c4rzdMzZ.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'كونسيلر إيموشن الجديد من ميس ٢ إم يمنحك البشرة على الفور للحصول على إظهر منعش ومشوق! يفي ويضيء، تفتيح البشرة، لؤلؤ لامع للحصول على توهج منعش، تغطية كاملة وخالية من العيوب.',
-    descriptionEn: 'The new Emotion Concealer from Miss2M instantly illuminates the skin for a fresh and radiant look! Conceals and illuminates, skin brightening, radiance pearls for a fresh glow, full and flawless coverage.',
-    keyBenefitsAr: [
-      'يخفي الهالات والعيوب ويضيء البشرة فوراً',
-      'يحتوي على لؤلؤ لامع لمنح البشرة توهجاً منعشاً ومشرقاً',
-      'تغطية كاملة وخالية من العيوب بمظهر طبيعي',
-      'تركيبة خفيفة ومريحة للاستخدام اليومي'
-    ],
-    keyBenefitsEn: [
-      'Instantly illuminates skin for a fresh and radiant look',
-      'Conceals imperfections and brightens the skin',
-      'Contains radiance pearls for a fresh glow',
-      'Full and flawless coverage'
-    ],
-    ingredientsAr: 'ماء، لؤلؤ مضيء، صبغات معدنية نقية، عوامل ترطيب وتفتيح.',
-    ingredientsEn: 'Aqua, Radiance Pearls, Pure Mineral Pigments, Moisturizing and Brightening Agents.',
-    shades: [
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8B095' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-emotion-connect-powder-mp252',
-    nameAr: 'بودرة إيموشن كونكت - MISS2M',
-    nameEn: 'MISS2M Emotion Connect Powder',
-    category: 'face',
-    subcategoryAr: 'بودرة',
-    subcategoryEn: 'Powder',
-    price: 3.00,
-    originalPrice: 5.00,
-    rating: 4.9,
-    reviewsCount: 64,
-    image: 'https://pdftourl.net/images/1790545453104-e31eab60-3d04-4802-9910-c7fa40402a23.png',
-    hoverImage: 'https://pdftourl.net/images/1790545497036-68b5d8a8-82cb-4ca5-99de-650dec7f2ec8.png',
-    gallery: [
-      'https://pdftourl.net/images/1790545453104-e31eab60-3d04-4802-9910-c7fa40402a23.png',
-      'https://pdftourl.net/images/1790545497036-68b5d8a8-82cb-4ca5-99de-650dec7f2ec8.png',
-      'https://pdftourl.net/images/1790545513496-cf304203-f752-46d7-b9ca-34a25e949473.png',
-      'https://pdftourl.net/images/1790545551569-53f5ec79-bd1d-4b14-b270-73f205024fae.png',
-      'https://pdftourl.net/images/1790545568939-0d45414d-5072-467a-84dc-221c9c4cf58a.png',
-      'https://pdftourl.net/images/1790545590753-a6aa5e39-59df-46c6-ba62-1184b8b9bb34.png',
-      'https://pdftourl.net/images/1790545614712-20a8cd45-ba01-4583-82d8-a8845fa9200b.png',
-      'https://pdftourl.net/images/1790545658096-2acbe6e4-364c-4ef5-8068-283239761524.png',
-      'https://pdftourl.net/images/1790545694539-4747988b-04fe-4f6d-afb8-470b01e14f0d.png',
-      'https://pdftourl.net/images/1790545711104-36984d22-0e18-47bb-8bf8-12da852ba736.png',
-      'https://pdftourl.net/images/1790545726245-c7d59a96-3279-4f52-80a2-71ab98df59a3.png',
-      'https://pdftourl.net/images/1790545741864-bac05ab3-e150-4c77-97ef-7bd084ef1d92.png'
-    ],
-    badge: 'bestseller',
-    descriptionAr: 'هل أنت مستعد لإضافة لمسة رومانسية إلى روتينك اليومي للعناية بالبشرة؟ قواب بودرة إيموشن. هذه التركيبة الخاصة لا تجلب النعومة والنضارة لبشرتك فحسب، بل تغلف روحك أيضا بالهدوء. بودرة العاطفة هي منتج فريد يكشف عن جمال بشرتك الطبيعي مع توفير راحة طويلة الأمد طوال اليوم. قوامها الخفيف ورائحة اللطيفة ينقلك إلى عالم الأحلام مع كل استخدام، لستة ناعمة: بودرة العاطفة تترك بشرتك ناعمة مخملية، مما يضمن لك الشعور بالانتعاش والراحة طوال اليوم. لمسة نهائية طبيعية غير لامعة: تمتص الزيت الزائد، مما يمنح بشرتك مظهراً طبيعياً غير لامع، مما يجعل你想 تبدو منعشاً ونابضاً بالحياة في جميع الأوقات. لطيف والحساس: بمكوناتة الطبيعية، فهو مناسب حتى للبشرة الأكثر حساسية. إنه يهتم ببشرتك بلطف دون إثقالها.',
-    descriptionEn: 'Are you ready to add a romantic touch to your daily skincare routine? Meet Emotion Powder. This special formula not only brings softness and freshness to your skin but also wraps your soul in tranquility. Emotion Powder is a unique product that reveals your skin’s natural beauty while providing long-lasting comfort throughout the day. Its light texture and pleasant scent transport you to a dream world with every use. Soft Touch: Emotion Powder leaves your skin feeling velvety soft, ensuring you feel fresh and comfortable all day long. Natural Matte Finish: It absorbs excess oil, giving your skin a natural, matte look, keeping you looking fresh and vibrant at all times. Gentle and Sensitive: With its natural ingredients, it is suitable even for the most sensitive skin. It cares for your skin gently without weighing it down.',
-    keyBenefitsAr: [
-      'تمنح البشرة نعومة مخملية ونضارة فائقة',
-      'لمسة نهائية طبيعية غير لامعة تمتص الزيت الزائد',
-      'تركيبة خفيفة ومريحة تناسب حتى البشرة الأكثر حساسية',
-      'راحة وثبات طويل الأمد طوال اليوم'
-    ],
-keyBenefitsEn: [
-      'Leaves skin feeling velvety soft and fresh',
-      'Natural matte finish that absorbs excess oil',
-      'Light texture suitable for the most sensitive skin',
-      'Long-lasting comfort throughout the day'
-    ],
-    ingredientsAr: 'مكونات طبيعية نقية، عوامل مطفية وممتصة للزيوت الزائدة.',
-    ingredientsEn: 'Pure Natural Ingredients, Mattifying and Oil-Absorbing Agents.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED9C4' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E4C3AB' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8B095' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#D09E83' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+{
+    id: 'miss2m-chic-bright-highlighter-mp451',
+    nameAr: 'تشيك برايت هايلايتر - MISS2M MP451',
+    nameEn: 'MISS2M Chic Bright Special Colors / Highlighter MP451',
+    category: 'face',
+    subcategoryAr: 'هايلايتر',
+    subcategoryEn: 'Highlighter',
+    price: 3.00,
+    originalPrice: 5.00,
+    rating: 4.9,
+    reviewsCount: 37,
+    image: '/images/451/40.1.png',
+    hoverImage: '/images/451/40.2.png',
+    gallery: [
+      '/images/451/40.1.png', // 1 - رجعتها
+      '/images/451/40.2.png', // 2 - رجعتها
+      '/images/451/41.1.png',
+      '/images/451/41.2.png',
+      '/images/451/42.1.png',
+      '/images/451/42.2.png',
+      '/images/451/43.1.png',
+      '/images/451/43.2.png'
+    ],
+    badge: 'new',
+    descriptionAr: 'تركيبة كريمية تبني وتمزج بسلاسة على البشرة دون أن تبدو لامعة.',
+    descriptionEn: 'The creamy formula builds and blends seamlessly on skin.',
+    keyBenefitsAr: [
+      'تركيبة كريمية تندمج بسلاسة على البشرة',
+      'تعكس الضوء النقي من كل زاوية',
+      'سهلة الدمج وقابلة للبناء',
+      'مناسبة لإبراز ملامح الوجه'
+    ],
+    keyBenefitsEn: [
+      'Creamy formula builds and blends seamlessly',
+      'Reflects pure light from every angle',
+      'Easy to blend and buildable',
+      'Ideal for highlighting'
+    ],
+    ingredientsAr: 'مكونات كريمية ناعمة، أصباغ مضيئة نقية.',
+    ingredientsEn: 'Smooth creamy formula, Pure luminous pigments.',
+    shades: [
+      { id: '40', nameAr: 'درجة 40', nameEn: 'Shade 40', hex: '#E7C5A7', image: '/images/451/40.2.png', stock: 35 },
+      { id: '41', nameAr: 'درجة 41', nameEn: 'Shade 41', hex: '#E6D9B8', image: '/images/451/41.2.png' , stock: 35},
+      { id: '42', nameAr: 'درجة 42', nameEn: 'Shade 42', hex: '#E8A89A', image: '/images/451/42.2.png' , stock: 35},
+      { id: '43', nameAr: 'درجة 43', nameEn: 'Shade 43', hex: '#9E6745', image: '/images/451/43.2.png' , stock: 35}
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+  stock: 140,
+inStock: true
+},
+ {
+    id: 'miss2m-emotion-connect-highlighter-mp452',
+    nameAr: 'هايليتر إيموشن - MISS2M MP452',
+    nameEn: 'MISS2M Emotion Connect Highlighter MP452',
+    category: 'face',
+    subcategoryAr: 'هايلايتر',
+    subcategoryEn: 'Highlighter',
+    price: 3.00,
+    originalPrice: 5.00,
+    rating: 4.9,
+    reviewsCount: 36,
+    image: '/images/452/01.jpg',
+    hoverImage: '/images/452/02.jpg',
+    gallery: [
+      '/images/452/01.jpg',
+      '/images/452/02.jpg',
+      '/images/452/03.jpg',
+      '/images/452/04.jpg'
+    ],
+    badge: 'new',
+    descriptionAr: 'تبحث عن منتج من شأنه أن تعزز جمالك وإضافة توهج اشعاعا لبشرتك؟ ايموشن هايليتر. يعكس هذا الهايلايتر الخاص الضوء الطبيعي لبشرتك ، ويحدد ملامح وجهك ويمنحك لمعانا مذهلا.',
+    descriptionEn: 'Looking for a product that will enhance your beauty and add a radiant glow to your skin? Meet Emotion Highlighter.',
+    keyBenefitsAr: [
+      'يعكس الضوء الطبيعي للبشرة ويحدد ملامح الوجه بلمعان مذهل',
+      'تركيبة سهلة التطبيق وملمس حريري ناعم',
+      'يضيف لمسة ساحرة ومميزة لتعزيز جمالك',
+      'مثالي للاستخدام اليومي'
+    ],
+    keyBenefitsEn: [
+      'Reflects skin natural light and defines facial features',
+      'Easy-to-apply formula with silky texture',
+      'Adds an enchanting touch',
+      'Ideal for daily use'
+    ],
+    ingredientsAr: 'مكونات بودرة حريرية ناعمة، أصباغ لؤلؤية مضيئة.',
+    ingredientsEn: 'Silky smooth powder, Luminous pearlescent pigments.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D4B89A', image: '/images/452/01.jpg', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#CFA68B', image: '/images/452/02.jpg', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#FFFDD0', image: '/images/452/03.jpg', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#8D5A44', image: '/images/452/04.jpg', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 140,
+inStock: true},
+{
+    id: 'miss2m-magic-max-liquid-highlighter-mp453',
+    nameAr: 'هايلايتر سائل ماجيك ماكس - MISS2M MP453',
+    nameEn: 'MISS2M Magic Max Liquid Highlighter MP453',
+    category: 'face',
+    subcategoryAr: 'هايلايتر',
+    subcategoryEn: 'Liquid Highlighter',
+    price: 3.00,
+    originalPrice: 5.00,
+    rating: 4.9,
+    reviewsCount: 35,
+    image: '/images/453/01.jpg',
+    hoverImage: '/images/453/02.jpg',
+    gallery: [
+      '/images/453/01.jpg', // 01 - نفس اللي بالصورة
+      '/images/453/02.jpg', // 02
+      '/images/453/03.jpg', // 03
+      '/images/453/04.jpg', // 04
+      '/images/453/05.jpg'// 05
+     
+    ],
+    badge: 'new',
+    descriptionAr: 'مع ماجيك ماكس هايلايتر سائل يعطي للبشرة مظهراً لامعاً ومشمعاً على الوجه.',
+    descriptionEn: 'With Magic Max Liquid Highlighter, it gives the skin a shiny and radiant appearance on the face.',
+    keyBenefitsAr: [
+      'يمنح البشرة مظهراً لامعاً ومشمعاً وإشراقة طبيعية على الوجه',
+      'تركيبة سائلة خفيفة وسهلة الدمج لتوزيع متساوٍ ومثالي',
+      'يضيف لمسة متوهجة وجذابة لمكياجك',
+      'مناسب لجميع أنواع البشرة لإبراز ملامح وجهك'
+    ],
+    keyBenefitsEn: [
+      'Gives the skin a shiny and radiant appearance on the face',
+      'Lightweight and easy-to-blend liquid formula for even application',
+      'Adds a glowing and attractive touch to your makeup',
+      'Suitable for all skin types to highlight facial features'
+    ],
+    ingredientsAr: 'ماء، أصباغ لؤلؤية مضيئة، مكونات مرطبة وعالية الجودة آمنة على البشرة.',
+    ingredientsEn: 'Aqua, Luminous Pearlescent Pigments, Moisturizing and High-Quality Skin-Safe Ingredients.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D9D5C5', image: '/images/453/01.jpg', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#D7A78C', image: '/images/453/02.jpg', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#E8B3A8', image: '/images/453/03.jpg', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#C28B73', image: '/images/453/04.jpg' , stock: 35},
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#D99A7E', image: '/images/453/05.jpg' , stock: 35}
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+    stock: 175,
+inStock: true
+},
+ {
+    id: 'miss2m-chic-blush-palette-mp904',
+    nameAr: 'لوحة أحمر الخدود الأنيقة - MISS2M MP904',
+    nameEn: 'MISS2M Chic Blush Palette MP904',
+    category: 'face',
+    subcategoryAr: 'بلاشر',
+    subcategoryEn: 'Blush Palette',
+    price: 4.00,
+    originalPrice: 6.00,
+    rating: 4.9,
+    reviewsCount: 38,
+    image: '/images/904/01.png',
+    hoverImage: '/images/904/01.png',
+    gallery: [
+      '/images/904/01.png',   // 1
+      '/images/904/011.png',  // 2
+      '/images/904/02.png',  // 3 -> درجة 01
+      '/images/904/022.png',   // 4
+      '/images/904/03.png',   // 5 -> درجة 02
+      '/images/904/033.png',   // 6
+      '/images/904/04.png',   // 7
+      '/images/904/044.png',   // 8 -> درجة 03
+    ],
+    badge: 'new',
+    descriptionAr: 'لوحة استحي جميلة لوضع أفضل تدفق إلى الأمام وتحقيق نظرة احمر خجلا لا تشوبه شائبة في كل مرة يضم أربعة الحمرة[cite: 3]. توفر لوحة الخدود الأنيقة أربعة ظلال خد طويلة الأمد وجذابة عالميا تمنحك مظهرا صحيا ومتوهجا[cite: 3]. تحتوي هذه اللوحة على أربعة خدود ناعم مخملي يمكن استخدامه بمفرده أو طبقات بسلاسة للحصول على إشراقة فريدة من نوعها[cite: 3].',
+    descriptionEn: 'A lovely blush palette to put your best flush forward and achieve a flawless blushed look every time featuring four blushes[cite: 3]. The CHIC Blush Palette provides four long-lasting, universally flattering cheek shades that will give you a healthy-looking, glowing flush[cite: 3]. This palette contains four velvety-smooth blush that can be used alone or layered seamlessly for a one-of-a-kind radiance[cite: 3].',
+    keyBenefitsAr: [
+      'تضم أربعة ألوان أحمر خدود مخملية ناعمة لتوفير إشراقة فريدة[cite: 3]',
+      'ظلال طويلة الأمد وجذابة عالمياً تمنح مظهراً صحياً ومتوهجاً[cite: 3]',
+      'يمكن استخدام كل لون بمفرده أو دمجهما معاً بطبقات سلسة[cite: 3]',
+      'تحقيق نظرة أحمر خجلاً لا تشوبه شائبة في كل مرة[cite: 3]'
+    ],
+    keyBenefitsEn: [
+      'Features four velvety-smooth cheek shades for a unique radiance[cite: 3]',
+      'Long-lasting and universally flattering shades for a healthy, glowing look[cite: 3]',
+      'Can be used alone or layered seamlessly for versatile styles[cite: 3]',
+      'Achieves a flawless blushed look every time[cite: 3]'
+    ],
+    ingredientsAr: 'أصباغ بودرة مخملية ناعمة، مكونات آمنة وعالية الجودة تناسب جميع أنواع البشرة.',
+    ingredientsEn: 'Velvety-smooth powder pigments, Safe and high-quality ingredients suitable for all skin types.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D87A68', image: '/images/904/011.png' , stock: 35},
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#D2797C', image: '/images/904/022.png', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#C25D52', image: '/images/904/033.png', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#CD787D', image: '/images/904/044.png', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+    stock: 140,
+inStock: true
+},
+{
+    id: 'miss2m-careful-radiance-concealer-mp751',
+    nameAr: 'كونسيلر كيرفول ناتشورال راديانس - MISS2M MP751',
+    nameEn: 'MISS2M Careful Full Natural Radiance Cover Concealer',
+    category: 'face',
+    subcategoryAr: 'كونسيلر',
+    subcategoryEn: 'Concealer',
+    price: 3.00,
+    originalPrice: 5.00,
+    rating: 4.9,
+    reviewsCount: 45,
+    image: '/images/751/c.jpg',
+    hoverImage: '/images/751/c.jpg',
+    gallery: [
+     '/images/751/c.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'كونسيلر إيموشن الجديد من ميس ٢ إم يمنحك البشرة على الفور للحصول على إظهر منعش ومشوق! يفي ويضيء، تفتيح البشرة، لؤلؤ لامع للحصول على توهج منعش، تغطية كاملة وخالية من العيوب.',
+    descriptionEn: 'The new Emotion Concealer from Miss2M instantly illuminates the skin for a fresh and radiant look! Conceals and illuminates, skin brightening, radiance pearls for a fresh glow, full and flawless coverage.',
+    keyBenefitsAr: [
+      'يخفي الهالات والعيوب ويضيء البشرة فوراً',
+      'يحتوي على لؤلؤ لامع لمنح البشرة توهجاً منعشاً ومشرقاً',
+      'تغطية كاملة وخالية من العيوب بمظهر طبيعي',
+      'تركيبة خفيفة ومريحة للاستخدام اليومي'
+    ],
+    keyBenefitsEn: [
+      'Instantly illuminates skin for a fresh and radiant look',
+      'Conceals imperfections and brightens the skin',
+      'Contains radiance pearls for a fresh glow',
+      'Full and flawless coverage'
+    ],
+    ingredientsAr: 'ماء، لؤلؤ مضيء، صبغات معدنية نقية، عوامل ترطيب وتفتيح.',
+    ingredientsEn: 'Aqua, Radiance Pearls, Pure Mineral Pigments, Moisturizing and Brightening Agents.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#F2D5B8' , image: '/images/751/01.jpg', stock: 35},
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E8C0A0' , image: '/images/751/02.jpg', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8A888' , image: '/images/751/03.jpg' , stock: 35},
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#D9AFA1' , image: '/images/751/04.jpg', stock: 35 },
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#D5B090' , image: '/images/751/05.jpg', stock: 35 },
+      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#C99A7A' , image: '/images/751/06.jpg', stock: 35 },
+    
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 210,
+inStock: true},
+ {
+    id: 'miss2m-emotion-connect-powder-mp252',
+    nameAr: 'بودرة إيموشن كونكت - MISS2M',
+    nameEn: 'MISS2M Emotion Connect Powder',
+    category: 'face',
+    subcategoryAr: 'بودرة',
+    subcategoryEn: 'Powder',
+    price: 3.00,
+    originalPrice: 5.00,
+    rating: 4.9,
+    reviewsCount: 64,
+    image: '/images/252/01.jpg',
+    hoverImage: '/images/252/01.jpg',
+    gallery: [
+      '/images/252/01.jpg', // 1
+      '/images/252/011.jpg', // 2 -> درجة 01
+      '/images/252/02.jpg', // 3
+      '/images/252/022.jpg', // 4
+      '/images/252/03.jpg', // 5 -> درجة 02
+      '/images/252/033.jpg', // 6
+      '/images/252/04.jpg', // 7
+      '/images/252/044.jpg', // 8 -> درجة 03
+    ],
+    badge: 'bestseller',
+    descriptionAr: 'هل أنت مستعد لإضافة لمسة رومانسية إلى روتينك اليومي للعناية بالبشرة؟ قواب بودرة إيموشن. هذه التركيبة الخاصة لا تجلب النعومة والنضارة لبشرتك فحسب، بل تغلف روحك أيضا بالهدوء. بودرة العاطفة هي منتج فريد يكشف عن جمال بشرتك الطبيعي مع توفير راحة طويلة الأمد طوال اليوم. قوامها الخفيف ورائحة اللطيفة ينقلك إلى عالم الأحلام مع كل استخدام، لستة ناعمة: بودرة العاطفة تترك بشرتك ناعمة مخملية، مما يضمن لك الشعور بالانتعاش والراحة طوال اليوم. لمسة نهائية طبيعية غير لامعة: تمتص الزيت الزائد، مما يمنح بشرتك مظهراً طبيعياً غير لامع، مما يجعل你想 تبدو منعشاً ونابضاً بالحياة في جميع الأوقات. لطيف والحساس: بمكوناتة الطبيعية، فهو مناسب حتى للبشرة الأكثر حساسية. إنه يهتم ببشرتك بلطف دون إثقالها.',
+    descriptionEn: 'Are you ready to add a romantic touch to your daily skincare routine? Meet Emotion Powder. This special formula not only brings softness and freshness to your skin but also wraps your soul in tranquility. Emotion Powder is a unique product that reveals your skin’s natural beauty while providing long-lasting comfort throughout the day. Its light texture and pleasant scent transport you to a dream world with every use. Soft Touch: Emotion Powder leaves your skin feeling velvety soft, ensuring you feel fresh and comfortable all day long. Natural Matte Finish: It absorbs excess oil, giving your skin a natural, matte look, keeping you looking fresh and vibrant at all times. Gentle and Sensitive: With its natural ingredients, it is suitable even for the most sensitive skin. It cares for your skin gently without weighing it down.',
+    keyBenefitsAr: [
+      'تمنح البشرة نعومة مخملية ونضارة فائقة',
+      'لمسة نهائية طبيعية غير لامعة تمتص الزيت الزائد',
+      'تركيبة خفيفة ومريحة تناسب حتى البشرة الأكثر حساسية',
+      'راحة وثبات طويل الأمد طوال اليوم'
+    ],
+    keyBenefitsEn: [
+      'Leaves skin feeling velvety soft and fresh',
+      'Natural matte finish that absorbs excess oil',
+      'Light texture suitable for the most sensitive skin',
+      'Long-lasting comfort throughout the day'
+    ],
+    ingredientsAr: 'مكونات طبيعية نقية، عوامل مطفية وممتصة للزيوت الزائدة.',
+    ingredientsEn: 'Pure Natural Ingredients, Mattifying and Oil-Absorbing Agents.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED9C4', image: '/images/252/011.jpg', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E4C3AB', image: '/images/252/022.jpg' , stock: 35},
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8B095', image: '/images/252/033.jpg', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#D09E83', image: '/images/252/044.jpg', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 140,
+inStock: true},
   {
     id: 'miss2m-magic-max-primer-base-mp204',
     nameAr: 'برايمر ماجيك ماكس - MISS2M',
@@ -1682,15 +2222,15 @@ keyBenefitsEn: [
     originalPrice: 7.00,
     rating: 4.9,
     reviewsCount: 70,
-    image: 'https://pdftourl.net/images/1790544669266-f154671c-e635-4ad3-a530-a188d64daa7e.jpg',
-    hoverImage: 'https://pdftourl.net/images/1790544713874-bf0b6d21-f04d-4e7f-985c-4ff474c4d4da.png',
+    image: '/images/204/01.jpg',
+    hoverImage: '/images/204/01.jpg',
     gallery: [
-      'https://pdftourl.net/images/1790544669266-f154671c-e635-4ad3-a530-a188d64daa7e.jpg',
-      'https://pdftourl.net/images/1790544713874-bf0b6d21-f04d-4e7f-985c-4ff474c4d4da.png',
-      'https://pdftourl.net/images/1790544739582-78f532bd-fe02-420c-805c-0d69a2af9d71.png',
-      'https://pdftourl.net/images/1790544941800-122699fd-1516-44be-9105-c8fcd09d1074.png',
-      'https://pdftourl.net/images/1790544957108-fd871ac0-d9a4-48be-9cdc-d2d034d4c335.png',
-      'https://pdftourl.net/images/1790544978023-fc3fbf7b-194d-4397-80fa-1ef2e0f76de9.png'
+      '/images/204/01.jpg',
+      '/images/204/011.jpg',
+      '/images/204/02.jpg',
+      '/images/204/022.jpg',
+      '/images/204/03.jpg',
+      '/images/204/033.jpg'
     ],
     badge: 'bestseller',
     descriptionAr: 'تملأ القاعدة المصنوعة من السيليكون العيوب مثل المسام والخطوط الدقيقة حتى ينساب المكياج بسلاسة وبدون عيوب.',
@@ -1708,13 +2248,13 @@ keyBenefitsEn: [
     ingredientsAr: 'قاعدة سيليكون نقية مطورة، عوامل تنعيم وتعبئة المسام.',
     ingredientsEn: 'Advanced Pure Silicone Base, Pore-Smoothing Agents.',
     shades: [
-      { id: '01', nameAr: 'فضي - 01', nameEn: '01 - Silver', hex: '#E0E0E0' },
-      { id: '02', nameAr: 'ذهبي - 02', nameEn: '02 - Gold', hex: '#E5C158' },
-      { id: '03', nameAr: 'أبيض - 03', nameEn: '03 - White', hex: '#F5F5F5' }
+      { id: '01', nameAr: 'فضي - 01', nameEn: '01 - Silver', hex: '#E0E0E0',image: '/images/204/011.jpg', stock: 35 },
+      { id: '02', nameAr: 'ذهبي - 02', nameEn: '02 - Gold', hex: '#E5C158',image: '/images/204/022.jpg', stock: 35 },
+      { id: '03', nameAr: 'أبيض - 03', nameEn: '03 - White', hex: '#F5F5F5',image: '/images/204/033.jpg', stock: 35 }
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+stock: 105,
+inStock: true  },
   {
     id: 'miss2m-forever-primer-base-mp201',
     nameAr: 'برايمر فورايفر - MISS2M',
@@ -1726,13 +2266,12 @@ keyBenefitsEn: [
     originalPrice: 8.00,
     rating: 4.9,
     reviewsCount: 65,
-    image: 'https://pdftourl.net/images/1790544445781-7899bc96-fe7d-4046-8452-fcee56e0fa48.jpg',
-    hoverImage: 'https://pdftourl.net/images/1790544470206-cec2b9ca-46bf-4190-885e-2d3a5e55618b.jpg',
+    image: '/images/201/01.jpg',
+    hoverImage: '/images/204/01.jpg',
     gallery: [
-      'https://pdftourl.net/images/1790544445781-7899bc96-fe7d-4046-8452-fcee56e0fa48.jpg',
-      'https://pdftourl.net/images/1790544470206-cec2b9ca-46bf-4190-885e-2d3a5e55618b.jpg',
-      'https://pdftourl.net/images/1790544486538-8d1df460-9f3a-4818-8be2-569346725981.png',
-      'https://pdftourl.net/images/1790544526526-85471a43-53d6-494c-8662-ee3365e0d6fb.png'
+      '/images/201/01.jpg',
+      '/images/201/02.jpg',
+      '/images/201/03.jpg'
     ],
     badge: 'bestseller',
     descriptionAr: 'الأفضل للبشرة الدهنية هو بريمير ميس2م المضاد لللمعان فهو يوازن الزيت الزائد لتقليل اللمعان، ويخلق أساساً ناعماً لمكياجك حتى لا ينزلق في وقت الظهيرة.',
@@ -1753,245 +2292,210 @@ keyBenefitsEn: [
     ingredientsEn: 'Lightweight Oil-Free Silicones, Skin Balancing Agents.',
     shades: [],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+stock: 35,
+inStock: true  },
   {
-    id: 'miss2m-careful-charming-mp162',
-    nameAr: 'كريم أساس كيرفول تشارمينغ - MISS2M',
-    nameEn: 'MISS2M Careful Charming Foundation',
-    category: 'face',
-    subcategoryAr: 'كريم أساس',
-    subcategoryEn: 'Foundation',
-    price: 6.00,
-    originalPrice: 8.00,
-    rating: 4.9,
-    reviewsCount: 76,
-    image: 'https://pdftourl.net/images/1790543762369-8e038fdc-7376-4a21-ace9-748735aec53d.jpg',
-    hoverImage: 'https://pdftourl.net/images/1790543804340-de8c0e35-0d9e-4cd5-a9bc-7217a61e06dd.jpg',
-    gallery: [
-      'https://pdftourl.net/images/1790543762369-8e038fdc-7376-4a21-ace9-748735aec53d.jpg',
-      'https://pdftourl.net/images/1790543804340-de8c0e35-0d9e-4cd5-a9bc-7217a61e06dd.jpg',
-      'https://pdftourl.net/images/1790543831409-fb996c72-ce39-423f-b14c-56c6c48ed830.jpg',
-      'https://pdftourl.net/images/1790543852955-765fa6c3-f0cf-4cfe-b927-aae0babe1fb8.jpg'
-    ],
-    badge: 'trending',
-    descriptionAr: 'تعرف على كريم الأساس السحري الشيق، الذي يكمل لون بشرتك تماماً مع مجموعة واسعة من خيارات الألوان المناسبة لكل لون بشرة، وتخلق نظرة طبيعية وخالية من العيوب من الآن. ملمس طبيعي مميز، وتركيبة خفيفة الوزن تتدلل بشرتك مع توفير تغطية طوال اليوم.',
-    descriptionEn: 'Meet Careful Magic Foundation, perfectly complementing your skin tone! With its wide range of shades suitable for every skin tone, achieving a natural and flawless look is now effortless. Its silky texture and lightweight formula pamper your skin while providing long-lasting coverage throughout the day.',
-    keyBenefitsAr: [
-      'يتطابق لون بشرتك مع خيارات الألوان المناسبة لكل لون بشرة',
-      'مظهر طبيعي: يمتزج بسلاسة مع بشرتك لتوفير نظرة طبيعية',
-      'نسيج خفيف الوزن وحريري: مريح للارتداء دون الشعور بثقل على بشرتك',
-      'تغطية عالية: يخفي العيوب ويوحد لون البشرة',
-      'ثبات طويل الأمد: يحافظ على النضارة طوال اليوم دون أن يتلاشى'
-    ],
-    keyBenefitsEn: [
-      'Matches Your Skin Tone with color options for every skin type',
-      'Natural Look: Blends seamlessly with a natural finish',
-      'Lightweight and Silky Texture for all-day comfort',
-      'High Coverage: Conceals imperfections and evens out skin tone',
-      'Long-Lasting: Maintains freshness throughout the day'
-    ],
-    ingredientsAr: 'ماء، مستخلصات مرطبة، سيليكونات خفيفة، صبغات معدنية نقية.',
-    ingredientsEn: 'Aqua, Moisturizing Extracts, Lightweight Silicones, Pure Mineral Pigments.',
-    shades: [],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-emotion-connect-mp161',
-    nameAr: 'كريم أساس إيموشن كونكت - MISS2M',
-    nameEn: 'MISS2M Emotion Connect Full Natural Cover Matte Foundation',
-    category: 'face',
-    subcategoryAr: 'كريم أساس',
-    subcategoryEn: 'Foundation',
-    price: 6.00,
-    originalPrice:7.00,
-    rating: 4.9,
-    reviewsCount: 82,
-    image: 'https://pdftourl.net/images/1790543409777-0a218137-15b8-478d-a60d-5173c2d0ae97.jpg',
-    hoverImage: 'https://pdftourl.net/images/1790543498797-e89f4022-19bc-4c0e-b09b-dcff74646f87.png',
-    gallery: [
-      'https://pdftourl.net/images/1790543409777-0a218137-15b8-478d-a60d-5173c2d0ae97.jpg',
-      'https://pdftourl.net/images/1790543498797-e89f4022-19bc-4c0e-b09b-dcff74646f87.png',
-      'https://www.image2url.com/r2/default/images/1790542572616-d16fa312-3562-43e9-b4d4-7abd69ef5105.png',
-      'https://www.image2url.com/r2/default/images/1790542579603-62344f46-e10b-4924-a44b-4058912c42fc.png',
-      'https://www.image2url.com/r2/default/images/1790542585090-3ee77dd6-fae6-46b7-8efd-ca8268dbc48b.png',
-      'https://www.image2url.com/r2/default/images/1790542589762-4e08d608-312e-4288-8477-9a54c77903ad.png',
-      'https://www.image2url.com/r2/default/images/1790542594946-ee9ac358-707a-4dc6-9e13-91f74b4966f8.png',
-      'https://www.image2url.com/r2/default/images/1790542600003-ad1a9dd9-b27c-46d6-ab5c-b6e4ab8590e7.png'
-    ],
-badge: 'new',
-    descriptionAr: 'بدون لمعة Emotion Connect كريم أساس بتركيبة احترافية خاصة تنساب على البشرة مما يمنح البشرة تغطية مثالية. قمنا بابتكار كريم الاساس يمنح البشرة ترطيب فائق و اضاءة مثالية تعطى البشرة المتعبة و الباهتة ترطيب و اشراقة فائقة. هو لطيف على البشرة و يمنحها لمسة خالية من اللمعان.',
-    descriptionEn: 'The radiant finish is just an overpowered dewy finish. It gives your skin an ultra-luminous appearance. Formulated with anti-aging foundations, it provides lasting wear, making the skin smooth, perfect and comfortable with a healthy looking glow.',
-    keyBenefitsAr: [
-      'تغطية طبيعية كاملة ومطفية (Full Natural Cover Matte)',
-      'ثبات فائقة ومقاوم للتلطخ (Super Longwear Transfer Resistant)',
-      'يمنح البشرة ترطيباً فائقاً وإشراقة فائقة',
-      'يناسب البشرة المتعبة والباهتة ويمنحها لمسة خالية من اللمعان'
-    ],
-    keyBenefitsEn: [
-      'Full natural cover matte finish',
-      'Super longwear and transfer resistant',
-      'Provides intense moisture and radiant complexion',
-      'Smooth, flawless and comfortable finish'
-    ],
-    ingredientsAr: 'ماء، سيليكونات خفيفة، صبغات معدنية، عوامل ترطيب وتغذية متطورة.',
-    ingredientsEn: 'Aqua, Lightweight Silicones, Mineral Pigments, Advanced Moisturizing Agents.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED9C4' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E4C3AB' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8B095' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#D09E83' },
-      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#C49072' },
-      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#B88060' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-careful-foundation-mp151',
-    nameAr: 'كريم أساس كيرفول إتش دي - MISS2M',
-    nameEn: 'MISS2M Careful Full HD Cover Foundation',
-    category: 'face',
-    subcategoryAr: 'كريم أساس',
-    subcategoryEn: 'Foundation',
-    price: 6.00,
-    originalPrice: 8.00,
-    rating: 4.8,
-    reviewsCount: 94,
-    image: 'https://www.image2url.com/r2/default/images/1790542462277-dd84e8f9-1442-4ba2-ab05-8dd40beccc6c.jpg',
-    hoverImage: 'https://www.image2url.com/r2/default/images/1790542490628-7a86546c-4495-4cda-a6f0-76dbcc09c487.jpg',
-    gallery: [
-      'https://www.image2url.com/r2/default/images/1790542462277-dd84e8f9-1442-4ba2-ab05-8dd40beccc6c.jpg',
-      'https://www.image2url.com/r2/default/images/1790542490628-7a86546c-4495-4cda-a6f0-76dbcc09c487.jpg',
-      'https://www.image2url.com/r2/default/images/1790542537165-8b826234-34e8-4679-bf38-42f1ec021743.jpg',
-      'https://www.image2url.com/r2/default/images/1790542572616-d16fa312-3562-43e9-b4d4-7abd69ef5105.png',
-      'https://www.image2url.com/r2/default/images/1790542579603-62344f46-e10b-4924-a44b-4058912c42fc.png',
-      'https://www.image2url.com/r2/default/images/1790542585090-3ee77dd6-fae6-46b7-8efd-ca8268dbc48b.png',
-      'https://www.image2url.com/r2/default/images/1790542589762-4e08d608-312e-4288-8477-9a54c77903ad.png',
-      'https://www.image2url.com/r2/default/images/1790542594946-ee9ac358-707a-4dc6-9e13-91f74b4966f8.png',
-      'https://www.image2url.com/r2/default/images/1790542600003-ad1a9dd9-b27c-46d6-ab5c-b6e4ab8590e7.png'
-    ],
-    badge: 'bestseller',
-    descriptionAr: 'بفضل تركيبته المتطورة يمنح البشرة مظهرًا فائق الإشراق وتغطية عالية بتركيبة خفيفة تدمج بشكل مثالي لتمنحك بشرة موحدة وصحية المظهر بثبات عالٍ يدوم طويلاً مع حماية SPF 20.',
-    descriptionEn: 'Created with a professional formula that glides onto skin, giving you perfect coverage with moisturizing and luminescent properties. Leaves skin radiant and hydrated with SPF 20.',
-    keyBenefitsAr: [
-      'تغطية كاملة وعالية الوضوح (Full HD)',
-      'يحتوي على خصائص مرطبة ومضادة للشيخوخة',
-      'حماية من الشمس بعامل حماية SPF 20',
-      'ثبات طويل الأمد وملمس مخملي'
-    ],
-    keyBenefitsEn: [
-      'Full HD high coverage',
-      'Contains moisturizing and anti-aging properties',
-      'With SPF 20 sun protection',
-      'Long-lasting wear with a natural look'
-    ],
-    ingredientsAr: 'ماء، سيليكونات مطورة، صبغات معدنية نقية، عوامل مرطبة ومغذية للبشرة.',
-    ingredientsEn: 'Aqua, Advanced Silicones, Pure Mineral Pigments, Moisturizing and Nourishing Agents.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED3BF' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E2C2AB' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D7B199' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#CCA188' },
-      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#C29377' },
-      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#B58364' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-forever-loose-powder-mp260',
-    nameAr: 'بودرة فورايفر السائبة المضادة للمعان - MISS2M MP260',
-    nameEn: 'MISS2M Forever Loose Powder Anti Shine MP260',
-    category: 'face',
-    subcategoryAr: 'بودرة سائبة',
-    subcategoryEn: 'Loose Powder',
-    price: 5.00,
-    originalPrice: 8.00,
-    rating: 4.9,
-    reviewsCount: 32,
-    image: 'https://pdftourl.net/images/1790547222693-276c8322-253d-4323-9277-dd8c97834121.png',
-    hoverImage: 'https://pdftourl.net/images/1790547292470-a94834bd-3ee9-4db5-be4e-93139735dffb.png',
-    gallery: [
-      'https://pdftourl.net/images/1790547222693-276c8322-253d-4323-9277-dd8c97834121.png',
-      'https://pdftourl.net/images/1790547267180-03471453-bf6c-4280-b783-cf0b1e986ca3.png',
-      'https://pdftourl.net/images/1790547292470-a94834bd-3ee9-4db5-be4e-93139735dffb.png',
-      'https://pdftourl.net/images/1790547379712-06199240-879e-4ffb-ad5b-071a7cc4c45f.png',
-      'https://pdftourl.net/images/1790547399488-816107ee-97d5-4ded-beae-5502a9995bda.png',
-      'https://pdftourl.net/images/1790547414642-53b7c6ef-19c1-4bb6-9cb4-c846da60f4de.png',
-      'https://pdftourl.net/images/1790547433531-0fb8a5f9-98b8-46ec-a963-7ea4c4e5d211.png',
-      'https://pdftourl.net/images/1790547454616-b37b1797-858d-4d21-918b-2fcbe8cebcbe.png',
-      'https://pdftourl.net/images/1790547471284-0cafd324-045b-4691-bc38-2151249ab05a.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'السماح للجلد بالتنفس بشكل طبيعي. احصلي على مكياج أساسي منعش وقابل للتنفس مع بودرة التثبيت الخاصة بنا. تسمح تركيبته الصديقة للبشرة والمنشطة لبشرتك بالبقاء رطبة دون انسداد المسام. استمتعي ببشرة فاتحة وطبيعية طوال اليوم.',
-    descriptionEn: 'Allow the skin to breathe naturally. Get a refreshed and breathable base makeup with our fixing powder. Its skin-friendly and invigorating formula allows your skin to stay hydrated without clogging your pores. Enjoy light and natural-looking skin all day long.',
-    keyBenefitsAr: [
-      'تمنح البشرة مظهراً منعشاً وقابلاً للتنفس',
-      'تساعد على تثبيت المكياج وتقليل اللمعان Anti Shine',
-      'تركيبة لطيفة لا تسد المسام وتحافظ على الترطيب',
-      'لمسة نهائية خفيفة وطبيعية تدوم طوال اليوم'
-    ],
-    keyBenefitsEn: [
-      'Provides a refreshed and breathable base makeup finish',
-      'Helps set makeup and reduce shine',
-      'Skin-friendly formula - stays hydrated without clogging pores',
-      'Light and natural-looking finish all day'
-    ],
-    ingredientsAr: 'بودرة معدنية خفيفة، سيليكا، عوامل ممتصة للزيوت.',
-    ingredientsEn: 'Light Mineral Powder, Silica, Oil-Absorbing Agents.',
-    shades: [
-      { id: '102', nameAr: 'درجة 102', nameEn: 'Shade 102', hex: '#D9A47E' },
-      { id: '103', nameAr: 'درجة 103 - بيج فاتح', nameEn: 'Shade 103', hex: '#E8C98B' },
-      { id: '104', nameAr: 'شفاف - 104', nameEn: '104 Transparent', hex: '#F4F4F4' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-  {
-    id: 'miss2m-careful-stick-contour-mp760',
-    nameAr: 'كونتور ستيك كيرفول - MISS2M MP760',
-    nameEn: 'MISS2M Careful Stick Contour MP760',
-    category: 'face',
-    subcategoryAr: 'كونتور',
-    subcategoryEn: 'Contour',
-    price: 3.00,
-    originalPrice: 4.00,
-    rating: 4.9,
-    reviewsCount: 38,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/4ulzi7oj.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/16tvgNv1H.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/4ulzi7oj.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/16tvgNv1H.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/pEWZS2jE.png',
-'https://cdn.imagetourls.com/uploads/tyImg/n331Kj7B.jpg'
-    ],
-    badge: 'new',
-    descriptionAr: 'مقدمة Careful Stick Contour لإبراز ملامح وجهك بشكل مثالي! تضمن لك عصا تحديد الوجه شكلها العملي وقوامها الكريمي سهولة التطبيق، مما يجعل تحديد الوجه أكثر ببساطة ومتعة في أي وقت مضى. مع خيارات الألوان المناسبة لكل لون بشرة، يمكنك تحقيق مظهر طبيعي وخال من العيوب من خلال إضافة عمق وبعد إلى وجهك.',
-    descriptionEn: 'Introducing the Careful Stick Contour to highlight your facial features perfectly! Its stick form and creamy texture ensure easy application, making contouring simpler and more enjoyable than ever before. With color options suitable for every skin tone, achieve a natural and flawless look by adding depth and dimension to your face.',
-    keyBenefitsAr: [
-      'إبراز ملامح وجهك وتحديدها بشكل مثالي وعملي',
-      'قوام كريمي ناعم يمنحك سهولة فائقة في الدمج والتطبيق',
-      'يضيف عمقاً وببعاداً لجمال وجهك بمظهر طبيعي وخالٍ من العيوب',
-      'تصميم عملي على شكل ستيك مناسب للاستخدام السريع واليومي'
-    ],
-    keyBenefitsEn: [
-      'Highlight and define facial features perfectly',
-      'Creamy texture ensures easy application and blending',
-      'Adds depth and dimension for a natural and flawless look',
-      'Practical stick form for quick and daily use'
-    ],
-    ingredientsAr: 'زيوت طبيعية مرطبة، شمع خفيف، صبغات معدنية نقية.',
-    ingredientsEn: 'Natural Moisturizing Oils, Lightweight Wax, Pure Mineral Pigments.',
-    shades: [
-      { id: 'light', nameAr: 'الدرجة الفاتحة', nameEn: 'Light Shade', hex: '#A67C52' },
-      { id: 'dark', nameAr: 'الدرجة الأغمق', nameEn: 'Dark Shade', hex: '#7D4E2D' }
+    id: 'miss2m-careful-charming-mp162',
+    nameAr: 'كريم أساس كيرفول تشارمينغ - MISS2M',
+    nameEn: 'MISS2M Careful Charming Foundation',
+    category: 'face',
+    subcategoryAr: 'كريم أساس',
+    subcategoryEn: 'Foundation',
+    price: 7.50,
+    originalPrice: 9.00,
+    rating: 4.9,
+    reviewsCount: 76,
+    image: '/images/162/01.jpg',
+    hoverImage: '/images/162/01.jpg',
+    gallery: [
+      '/images/162/01.jpg',
+      '/images/162/02.jpg',
+      '/images/162/03.jpg',
     ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+    badge: 'trending',
+    descriptionAr: 'تعرف على كريم الأساس السحري الشيق، الذي يكمل لون بشرتك تماماً مع مجموعة واسعة من خيارات الألوان المناسبة لكل لون بشرة، وتخلق نظرة طبيعية وخالية من العيوب من الآن. ملمس طبيعي مميز، وتركيبة خفيفة الوزن تتدلل بشرتك مع توفير تغطية طوال اليوم.',
+    descriptionEn: 'Meet Careful Magic Foundation, perfectly complementing your skin tone! With its wide range of shades suitable for every skin tone, achieving a natural and flawless look is now effortless. Its silky texture and lightweight formula pamper your skin while providing long-lasting coverage throughout the day.',
+    keyBenefitsAr: [
+      'يتطابق لون بشرتك مع خيارات الألوان المناسبة لكل لون بشرة',
+      'مظهر طبيعي: يمتزج بسلاسة مع بشرتك لتوفير نظرة طبيعية',
+      'نسيج خفيف الوزن وحريري: مريح للارتداء دون الشعور بثقل على بشرتك',
+      'تغطية عالية: يخفي العيوب ويوحد لون البشرة',
+      'ثبات طويل الأمد: يحافظ على النضارة طوال اليوم دون أن يتلاشى'
+    ],
+    keyBenefitsEn: [
+      'Matches Your Skin Tone with color options for every skin type',
+      'Natural Look: Blends seamlessly with a natural finish',
+      'Lightweight and Silky Texture for all-day comfort',
+      'High Coverage: Conceals imperfections and evens out skin tone',
+      'Long-Lasting: Maintains freshness throughout the day'
+    ],
+    ingredientsAr: 'ماء، مستخلصات مرطبة، سيليكونات خفيفة، صبغات معدنية نقية.',
+    ingredientsEn: 'Aqua, Moisturizing Extracts, Lightweight Silicones, Pure Mineral Pigments.',
+       shades: [
+      {
+        id: 'light',
+        nameAr: 'فاتح - Light',
+        nameEn: 'Light',
+        hex: '#EBC9A3',
+         stock: 35
+      },
+      {
+        id: 'medium',
+        nameAr: 'متوسط - Medium',
+        nameEn: 'Medium',
+        hex: '#D39C6E',
+         stock: 35
+      },
+      {
+        id: 'dark',
+        nameAr: 'غامق - Dark',
+        nameEn: 'Dark',
+        hex: '#A66A3D',
+        stock: 35
+      }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 105,
+inStock: true  },
+ {
+    id: 'miss2m-emotion-connect-mp161',
+    nameAr: 'كريم أساس إيموشن كونكت - MISS2M',
+    nameEn: 'MISS2M Emotion Connect Full Natural Cover Matte Foundation',
+    category: 'face',
+    subcategoryAr: 'كريم أساس',
+    subcategoryEn: 'Foundation',
+    price: 6.00,
+    originalPrice:9.00,
+    rating: 4.9,
+    reviewsCount: 82,
+    image: '/images/161/1.jpg',
+    hoverImage: '/images/161/1.jpg',
+    gallery: [
+      '/images/161/1.jpg',
+      '/images/161/2.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'بدون لمعة Emotion Connect كريم أساس بتركيبة احترافية خاصة تنساب على البشرة مما يمنح البشرة تغطية مثالية. قمنا بابتكار كريم الاساس يمنح البشرة ترطيب فائق و اضاءة مثالية تعطى البشرة المتعبة و الباهتة ترطيب و اشراقة فائقة. هو لطيف على البشرة و يمنحها لمسة خالية من اللمعان.',
+    descriptionEn: 'The radiant finish is just an overpowered dewy finish. It gives your skin an ultra-luminous appearance. Formulated with anti-aging foundations, it provides lasting wear, making the skin smooth, perfect and comfortable with a healthy looking glow.',
+    keyBenefitsAr: [
+      'تغطية طبيعية كاملة ومطفية (Full Natural Cover Matte)',
+      'ثبات فائقة ومقاوم للتلطخ (Super Longwear Transfer Resistant)',
+      'يمنح البشرة ترطيباً فائقاً وإشراقة فائقة',
+      'يناسب البشرة المتعبة والباهتة ويمنحها لمسة خالية من اللمعان'
+    ],
+    keyBenefitsEn: [
+      'Full natural cover matte finish',
+      'Super longwear and transfer resistant',
+      'Provides intense moisture and radiant complexion',
+      'Smooth, flawless and comfortable finish'
+    ],
+    ingredientsAr: 'ماء، سيليكونات خفيفة، صبغات معدنية، عوامل ترطيب وتغذية متطورة.',
+    ingredientsEn: 'Aqua, Lightweight Silicones, Mineral Pigments, Advanced Moisturizing Agents.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED9C4', image: '/images/161/01.png', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E4C3AB', image: '/images/161/02.png' , stock: 35},
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D8B095', image: '/images/161/03.png', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#D09E83', image: '/images/161/04.png', stock: 35 },
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#C49072', image: '/images/161/05.png' , stock: 35},
+      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#B88060', image: '/images/161/06.png', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 210,
+inStock: true},
+  {
+    id: 'miss2m-careful-foundation-mp151',
+    nameAr: 'كريم أساس كيرفول إتش دي - MISS2M',
+    nameEn: 'MISS2M Careful Full HD Cover Foundation',
+    category: 'face',
+    subcategoryAr: 'كريم أساس',
+    subcategoryEn: 'Foundation',
+    price: 6.00,
+    originalPrice: 8.00,
+    rating: 4.8,
+    reviewsCount: 94,
+    image: '/images/151/1.jpg',
+    hoverImage: '/images/151/1.jpg',
+    gallery: [
+      '/images/151/1.jpg',
+      '/images/151/2.jpg',
+    ],
+    badge: 'bestseller',
+    descriptionAr: 'بفضل تركيبته المتطورة يمنح البشرة مظهرًا فائق الإشراق وتغطية عالية بتركيبة خفيفة تدمج بشكل مثالي لتمنحك بشرة موحدة وصحية المظهر بثبات عالٍ يدوم طويلاً مع حماية SPF 20.',
+    descriptionEn: 'Created with a professional formula that glides onto skin, giving you perfect coverage with moisturizing and luminescent properties. Leaves skin radiant and hydrated with SPF 20.',
+    keyBenefitsAr: [
+      'تغطية كاملة وعالية الوضوح (Full HD)',
+      'يحتوي على خصائص مرطبة ومضادة للشيخوخة',
+      'حماية من الشمس بعامل حماية SPF 20',
+      'ثبات طويل الأمد وملمس مخملي'
+    ],
+    keyBenefitsEn: [
+      'Full HD high coverage',
+      'Contains moisturizing and anti-aging properties',
+      'With SPF 20 sun protection',
+      'Long-lasting wear with a natural look'
+    ],
+    ingredientsAr: 'ماء، سيليكونات مطورة، صبغات معدنية نقية، عوامل مرطبة ومغذية للبشرة.',
+    ingredientsEn: 'Aqua, Advanced Silicones, Pure Mineral Pigments, Moisturizing and Nourishing Agents.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#EED3BF', image: '/images/151/01.png', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E2C2AB', image: '/images/151/02.png', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#D7B199', image: '/images/151/03.png', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#CCA188', image: '/images/151/04.png', stock: 35 },
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#C29377', image: '/images/151/05.png' , stock: 35},
+      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#B58364', image: '/images/151/06.png', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 210,
+inStock: true},
+  {
+    id: 'miss2m-forever-loose-powder-mp260',
+    nameAr: 'بودرة فورايفر السائبة المضادة للمعان - MISS2M MP260',
+    nameEn: 'MISS2M Forever Loose Powder Anti Shine MP260',
+    category: 'face',
+    subcategoryAr: 'بودرة سائبة',
+    subcategoryEn: 'Loose Powder',
+    price: 5.00,
+    originalPrice: 8.00,
+    rating: 4.9,
+    reviewsCount: 32,
+    image: '/images/260/101.jpg',
+    hoverImage: '/images/260/102.png',
+    gallery: [
+      '/images/260/101.jpg',
+      '/images/260/102.png',
+      '/images/260/103.jpg',
+      '/images/260/104.jpg',
+      '/images/260/105.webp',
+      '/images/260/106.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'السماح للجلد بالتنفس بشكل طبيعي. احصلي على مكياج أساسي منعش وقابل للتنفس مع بودرة التثبيت الخاصة بنا. تسمح تركيبته الصديقة للبشرة والمنشطة لبشرتك بالبقاء رطبة دون انسداد المسام. استمتعي ببشرة فاتحة وطبيعية طوال اليوم.',
+    descriptionEn: 'Allow the skin to breathe naturally. Get a refreshed and breathable base makeup with our fixing powder. Its skin-friendly and invigorating formula allows your skin to stay hydrated without clogging your pores.',
+    keyBenefitsAr: [
+      'تمنح البشرة مظهراً منعشاً وقابلاً للتنفس',
+      'تساعد على تثبيت المكياج وتقليل اللمعان Anti Shine',
+      'تركيبة لطيفة لا تسد المسام وتحافظ على الترطيب',
+      'لمسة نهائية خفيفة وطبيعية تدوم طوال اليوم'
+    ],
+    keyBenefitsEn: [
+      'Provides a refreshed and breathable base makeup finish',
+      'Helps set makeup and reduce shine',
+      'Skin-friendly formula - stays hydrated without clogging pores',
+      'Light and natural-looking finish all day'
+    ],
+    ingredientsAr: 'بودرة معدنية خفيفة، سيليكا، عوامل ممتصة للزيوت.',
+    ingredientsEn: 'Light Mineral Powder, Silica, Oil-Absorbing Agents.',
+    shades: [
+      { id: '101', nameAr: 'درجة 101 - بيج طبيعي', nameEn: 'Shade 101', hex: '#E8C4A8', image: '/images/260/101.jpg' , stock: 35},
+      { id: '102', nameAr: 'درجة 102 - بيج دافئ', nameEn: 'Shade 102', hex: '#D9A78E', image: '/images/260/102.png', stock: 35 },
+      { id: '103', nameAr: 'درجة 103 - بيج فاتح', nameEn: 'Shade 103', hex: '#E8D5A3', image: '/images/260/103.jpg' , stock: 35},
+      { id: '104', nameAr: 'درجة 104 - شفاف', nameEn: '104 Transparent', hex: '#FFFFFF', image: '/images/260/104.jpg' , stock: 35},
+      { id: '105', nameAr: 'درجة 105 - زهري', nameEn: '105 Pink', hex: '#F8C6D0', image: '/images/260/105.webp', stock: 35 },
+      { id: '106', nameAr: 'درجة 106 - بانانا', nameEn: '106 Banana', hex: '#FFF2B0', image: '/images/260/106.jpg', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 210,
+inStock: true},
   {
     id: 'miss2m-emotion-connect-blush-mp402',
     nameAr: 'بلاشر إيموشن كونكت - MISS2M MP402',
@@ -2003,21 +2507,16 @@ badge: 'new',
     originalPrice: 5.00,
     rating: 4.9,
     reviewsCount: 52,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/PqOivLoQ.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/zPRqkBs1.png',
+    image: '/images/402/01.webp',
+    hoverImage: '/images/402/01.webp',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/PqOivLoQ.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/zPRqkBs1.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/sNT8mPCe.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/14Mgx97ej.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/tAbvywdM.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/b0Vs9Tr9.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/jHx8NJUT.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/0bX234v1.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/DY25ofKg.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/2DBepPJH.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/12L3fTQeo.png',
-'https://cdn.imagetourls.com/uploads/tyImg/14kVr5R6D.png'
+      '/images/402/01.webp',
+      '/images/402/02.webp',
+      '/images/402/03.jpg',
+      '/images/402/04.jpg',
+      '/images/402/05.jpg',
+      '/images/402/06.jpg',
+      '/images/402/07.jpg',
 ],
     badge: 'new',
     descriptionAr: 'يمنح الخدين لوناً طبيعياً وإشراقة صحية. تركيبته الحريرية والخفيفة تتيح تطبيقاً سهلاً وتمتزج بسلاسة مع البشرة. يحافظ على انتعاشه طوال اليوم. مناسب للبشرة الحساسة.',
@@ -2037,19 +2536,59 @@ badge: 'new',
     ingredientsAr: 'بودرة معدنية ناعمة، أصباغ طبيعية آمنة للبشرة الحساسة.',
     ingredientsEn: 'Soft Mineral Powder, Natural Skin-Safe Pigments.',
    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D89B82' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#C88366' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#E18E8C' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#E6A08D' },
-      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#D07E82' },
-      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#C98A70' },
-      { id: '07', nameAr: 'درجة 07', nameEn: 'Shade 07', hex: '#E297A7' }
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D89B82' , stock: 35},
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#C88366' , stock: 35},
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#E18E8C', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#E6A08D' , stock: 35},
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#D07E82' , stock: 35},
+      { id: '06', nameAr: 'درجة 06', nameEn: 'Shade 06', hex: '#C98A70' , stock: 35},
+      { id: '07', nameAr: 'درجة 07', nameEn: 'Shade 07', hex: '#E297A7' , stock: 35}
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+stock: 245,
+inStock: true  },
 
-
+{
+    id: 'miss2m-magic-max-fix-mp203',
+    nameAr: 'مثبت مكياج ماجيك ماكس فيكس - MISS2M MP203',
+    nameEn: 'MISS2M Magic Max Make Up Fixing Spray MP203',
+    category: 'face',
+    subcategoryAr: 'مثبت مكياج',
+    subcategoryEn: 'Fixing Spray',
+    price: 3.50,
+    originalPrice: 7.00,
+    rating: 4.8,
+    reviewsCount: 124,
+    image: '/images/203/01.jpg',
+    hoverImage: '/images/203/01.jpg',
+    gallery: [
+      '/images/203/01.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'يثبت مكياجك طوال اليوم مع Magic Max Fix Spray. يساعد في الحفاظ على مظهر منتعش وخالٍ من العيوب مع تقليل التلطخ والتلاشي. تركيبته الخفيفة لا تثقل البشرة وتمنح مظهراً طبيعياً. عطره المختار بعناية يمنحك لمسة من الانتعاش. يجف بسرعة دون ترك إحساس لزج. سهل الاستخدام بفضل بخاخه العملي. ملاحظة هامة: المنتج معطر - لا يناسب البشرة الحساسة.',
+    descriptionEn: 'Set your makeup all day with Magic Max Fix Spray. Helps maintain a fresh and flawless look while reducing smudging and fading. Its lightweight formula does not weigh down the skin and provides a natural finish. Its specially selected fragrance adds a refreshing touch. Dries quickly without leaving a sticky feeling. Easy to apply with its practical spray format. Important Note: Contains fragrance - Not suitable for sensitive skin.',
+    keyBenefitsAr: [
+      'يثبت المكياج طوال اليوم ويمنع التلطخ والتلاشي',
+      'تركيبة خفيفة الوزن لا تثقل البشرة',
+      'يمنح لمسة نهائية طبيعية ومنعشة',
+      'يجف بسرعة بدون ملمس لزج',
+      'بخاخ عملي سهل الاستخدام مع عطر منعش',
+      '⚠️ تنبيه: المنتج معطر ولا يناسب البشرة الحساسة'
+    ],
+    keyBenefitsEn: [
+      'Sets makeup all day and prevents smudging & fading',
+      'Lightweight formula - no heavy feeling',
+      'Natural flawless finish with refreshing fragrance',
+      'Quick-drying, non-sticky feel',
+      'Practical spray format for easy application',
+      '⚠️ Warning: Contains fragrance - Not suitable for sensitive skin'
+    ],
+    ingredientsAr: 'ماء، جلسرين، بروبيلين جلايكول، عطر (Parfum)، مواد مثبتة للمكياج. يحتوي على عطر.',
+    ingredientsEn: 'Aqua, Glycerin, Propylene Glycol, Parfum (Fragrance), Makeup Fixing Agents. Contains fragrance.',
+    shades: [],
+    origin: 'Made in Turkey | صنع في تركيا',
+stock: 35,
+inStock: true  },
 
   {
     id: 'miss2m-emotion-blush-palette-mp908',
@@ -2062,11 +2601,11 @@ badge: 'new',
     originalPrice: 7.00,
     rating: 4.9,
     reviewsCount: 41,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/1eYN1Kk1J.jpg',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/1gDdIUBVJ.jpg',
+    image: 'images/908/01.jpg',
+    hoverImage: 'images/908/01.jpg',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/1eYN1Kk1J.jpg',
-      'https://cdn.imagetourls.com/uploads/tyImg/1gDdIUBVJ.jpg'
+      'images/908/01.jpg',
+      'images/908/02.jpg'
     ],
     badge: 'new',
     descriptionAr: '3 خيارات من لوحات الألوان مصممة لتتناغام مع بشرتك. اكتشفي إشراقة طبيعية مع 8 درجات مختلفة في كل لوحة. تركيبته الحريرية تتيح تطبيقاً سهلاً وتمنح خديك مظهراً صحياً ومشرقاً. يكمل مكياجك مع الحفاظ على انتعاشه طوال اليوم.',
@@ -2086,65 +2625,61 @@ badge: 'new',
     ingredientsAr: 'بودرة معدنية ناعمة، أصباغ تجميلية آمنة.',
     ingredientsEn: 'Soft Mineral Powder, Safe Cosmetic Pigments.',
     shades: [
-      { id: '01', nameAr: 'اللوحة 01', nameEn: 'Palette 01', hex: '#D88478' }
+      { id: '01', nameAr: 'اللوحة 01', nameEn: 'Palette 01', hex: '#D88478', stock: 35 }
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
+   stock: 35,
+inStock: true
   },
 
-
-  {
-
-    id: 'miss2m-stick-blush-mp403',
-    nameAr: ' ستيك بلاش - MISS2M MP403',
-    nameEn: 'MISS2M Careful Stick Blush MP403',
-    category: 'face',
-    subcategoryAr: 'ستيك بلاش',
-    subcategoryEn: 'Stick Blush',
-    price: 3.50,
-    originalPrice: 5.50,
-    rating: 4.9,
-    reviewsCount: 45,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/ArN3RjC5.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/oe46qe5A.png',
-    gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/ArN3RjC5.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/oe46qe5A.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/hibfvYSw.png',
-'https://cdn.imagetourls.com/uploads/tyImg/YicFLL5g.png',
-'https://cdn.imagetourls.com/uploads/tyImg/wAepeL9s.png'
-    ],
-    badge: 'new',
-    descriptionAr: 'كارفور ستيك بلاش، الذهاب إلى الخدين مسح تماماً! يضمن شكله اللاصق وملمسه الكريمي تطبيقاً سهلاً، مما يجعل أحر الخدود أسهل وأكثر متعة من أي وقت مضى. مع مجموعة من الظلال العصرية المناسبة لكل لون بشرة، احصلي على مظهر طبيعي ومشرق من خلال إضافة لمسة من اللون والتوهج إلى خدك.',
-    descriptionEn: 'Careful Stick Blush, your go-to for perfectly flushed cheeks! Its stick format and creamy texture ensure effortless application, making blush easier and more enjoyable than ever before. With a range of trendy shades suitable for every skin tone, achieve a natural and radiant look by adding a touch of color and glow to your cheeks.',
-    keyBenefitsAr: [
-      'شكل ستيك عملي وملمس كريمي يضمن تطبيقاً سهلاً وسلساً',
-      'مجموعة من الظلال العصرية المناسبة لكل لون بشرة',
-      'يضيف لمسة من اللون والتوهج لإطلالة طبيعية ومشرقة',
-      'يجعل استخدام أحمر الخدود أسهل وأكثر متعة'
-    ],
-    keyBenefitsEn: [
-      'Practical stick format and creamy texture for effortless application',
-      'A range of trendy shades suitable for every skin tone',
-      'Adds a touch of color and glow for a natural and radiant look',
-      'Makes blush application easier and more enjoyable'
-    ],
-    ingredientsAr: 'تركيبة كريمية مرطبة، أصباغ تجميلية طبيعية وآمنة للبشرة.',
-    ingredientsEn: 'Creamy Moisturizing Formula, Natural and Skin-Safe Cosmetic Pigments.',
-    shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#E83E70' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#DE7CA5' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#BE788A' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#9C6353' },
-      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#F0999B' }
-    ],
-    origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-
-
-
-
+{
+    id: 'miss2m-stick-blush-mp403',
+    nameAr: 'ستيك بلاش - MISS2M MP403',
+    nameEn: 'MISS2M Careful Stick Blush MP403',
+    category: 'face',
+    subcategoryAr: 'ستيك بلاش',
+    subcategoryEn: 'Stick Blush',
+    price: 3.50,
+    originalPrice: 5.50,
+    rating: 4.9,
+    reviewsCount: 45,
+    image: '/images/403/01.jpg', // الغلاف = درجة 01
+    hoverImage: '/images/403/01.jpg',
+    gallery: [
+      '/images/403/01.jpg',
+      '/images/403/02.jpg',
+      '/images/403/03.jpg',
+      '/images/403/04.jpg',
+      '/images/403/05.jpg'
+    ],
+    badge: 'new',
+    descriptionAr: 'كارفور ستيك بلاش، الذهاب إلى الخدين مسح تماماً! يضمن شكله اللاصق وملمسه الكريمي تطبيقاً سهلاً، مما يجعل أحر الخدود أسهل وأكثر متعة من أي وقت مضى. مع مجموعة من الظلال العصرية المناسبة لكل لون بشرة، احصلي على مظهر طبيعي ومشرق من خلال إضافة لمسة من اللون والتوهج إلى خدك.',
+    descriptionEn: 'Careful Stick Blush, your go-to for perfectly flushed cheeks! Its stick format and creamy texture ensure effortless application, making blush easier and more enjoyable than ever before. With a range of trendy shades suitable for every skin tone, achieve a natural and radiant look by adding a touch of color and glow to your cheeks.',
+    keyBenefitsAr: [
+      'شكل ستيك عملي وملمس كريمي يضمن تطبيقاً سهلاً وسلساً',
+      'مجموعة من الظلال العصرية المناسبة لكل لون بشرة',
+      'يضيف لمسة من اللون والتوهج لإطلالة طبيعية ومشرقة',
+      'يجعل استخدام أحمر الخدود أسهل وأكثر متعة'
+    ],
+    keyBenefitsEn: [
+      'Practical stick format and creamy texture for effortless application',
+      'A range of trendy shades suitable for every skin tone',
+      'Adds a touch of color and glow for a natural and radiant look',
+      'Makes blush application easier and more enjoyable'
+    ],
+    ingredientsAr: 'تركيبة كريمية مرطبة، أصباغ تجميلية طبيعية وآمنة للبشرة.',
+    ingredientsEn: 'Creamy Moisturizing Formula, Natural and Skin-Safe Cosmetic Pigments.',
+    shades: [
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#E93D70', image: '/images/403/01.jpg' , stock: 35},
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E18AA8', image: '/images/403/02.jpg', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#B87D8C', image: '/images/403/03.jpg', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#9B6B5A', image: '/images/403/04.jpg', stock: 35 },
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#F2A0A4', image: '/images/403/05.jpg', stock: 35 }
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+    stock: 175,
+inStock: true
+},
 
  {
     id: 'miss2m-magic-max-liquid-blush-mp404',
@@ -2157,16 +2692,14 @@ badge: 'new',
     originalPrice: 5.00,
     rating: 4.9,
     reviewsCount: 36,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/VCkm62m5.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/yfoXwTTf.png',
+    image: '/images/404/01.jpg', // الغلاف - رح يضل 01 مثل ما بدك
+    hoverImage: '/images/404/01.jpg',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/VCkm62m5.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/yfoXwTTf.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/KTqGhrod.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1185AaRlt.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/14aKuKFDV.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/wmdaqmDP.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/QD7rgVb2.jpg'
+      '/images/404/01.jpg',
+      '/images/404/02.jpg',
+      '/images/404/03.jpg',
+      '/images/404/04.webp',
+      '/images/404/05.jpg'
     ],
     badge: 'new',
     descriptionAr: 'ماجيك ماكس ليكويد بلاش، خيارك الأمثل لخدود متوردة بشكل طبيعي ومثالي! يضمن تصميمه السائل وقوامه الكريمي السلس تطبيقاً سهلاً ومريحاً، مما يجعل دمج أحمر الخدود أكثر سهولة ومتعة من أي وقت مضى. مع مجموعة من الظلال العصرية المناسبة لكل لون بشرة، احصلي على مظهر طبيعي ومشرق يضيف لمسة من الحيوية والتوهج لخديك.',
@@ -2186,17 +2719,19 @@ badge: 'new',
     ingredientsAr: 'تركيبة سائلة مرطبة، أصباغ تجميلية طبيعية وآمنة للبشرة.',
     ingredientsEn: 'Hydrating Liquid Formula, Natural and Skin-Safe Cosmetic Pigments.',
     shades: [
-      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#C48A91' },
-      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#DE6E75' },
-      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#C2825B' },
-      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#E83E65' }
+      { id: '01', nameAr: 'درجة 01', nameEn: 'Shade 01', hex: '#D8899E', image: '/images/404/01.jpg', stock: 35 },
+      { id: '02', nameAr: 'درجة 02', nameEn: 'Shade 02', hex: '#E97B8A', image: '/images/404/02.jpg', stock: 35 },
+      { id: '03', nameAr: 'درجة 03', nameEn: 'Shade 03', hex: '#C9876A', image: '/images/404/03.jpg', stock: 35 },
+      { id: '04', nameAr: 'درجة 04', nameEn: 'Shade 04', hex: '#E93E67', image: '/images/404/04.webp', stock: 35 },
+      { id: '05', nameAr: 'درجة 05', nameEn: 'Shade 05', hex: '#A67C5E', image: '/images/404/05.jpg' , stock: 35}
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
+   stock: 175,
+inStock: true
+},
 
 
- {
+{
     id: 'miss2m-chic-blush-on-mp401',
     nameAr: 'تشيك بلاش أون - MISS2M MP401',
     nameEn: 'MISS2M Chic Blush On MP401',
@@ -2207,64 +2742,94 @@ badge: 'new',
     originalPrice: 5.00,
     rating: 4.9,
     reviewsCount: 40,
-    image: 'https://cdn.imagetourls.com/uploads/tyImg/Dm5kVcO3.png',
-    hoverImage: 'https://cdn.imagetourls.com/uploads/tyImg/1bC9iKqHH.png',
+    image: '/images/401/1.png',
+    hoverImage: '/images/401/1.png',
     gallery: [
-      'https://cdn.imagetourls.com/uploads/tyImg/Dm5kVcO3.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1bC9iKqHH.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/WxWybmSO.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/RE9d3Vwv.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/xD8hXACu.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/7nB1Rqnk.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/fGvGDniq.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/13zKpH6kp.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/15rEqg4Hf.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/XXUDX85X.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1ajXmLo9F.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/ReMrJIqF.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/12g5TtoNU.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1eXQ7Msxj.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/sNJdgc41.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/M01c5uNR.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/0tVVwVoA.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/2QA8hqKl.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/19CvHVevX.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/1a0IY9wHF.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/AkVbVkke.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/8puiWj0D.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/SeDPuzSJ.png',
-      'https://cdn.imagetourls.com/uploads/tyImg/dDdGmRpf.jpg'
+      '/images/401/1.png',
+      '/images/401/2.png',
+      '/images/401/3.png',
+      '/images/401/4.png',
+      '/images/401/5.png',
+      '/images/401/6.png',
+      '/images/401/7.png',
+      '/images/401/8.png',
+      '/images/401/9.jpg',
+      '/images/401/10.png',
+      '/images/401/11.png',
+      '/images/401/12.png',
+      '/images/401/13.webp',
+      '/images/401/14.png',
+      '/images/401/15.png',
+      '/images/401/16.png',
+      '/images/401/17.png',
+      '/images/401/18.png',
+      '/images/401/19.png',
+      '/images/401/20.png'
     ],
     badge: 'new',
-    descriptionAr: 'شيك بلاش أون هو بودرة أحمر خدود مضغوطة توفر لوناً صحياً لإطلاق أي لون بشرة. يحتوي على أصباغ بودرة دقيقة حريرية ورقيقة في ظلال غير لامعة ومتلألئة تضمن تطبيقاً سلسأ. توفر هذه الظلال الناعمة القابلة للبناء مجموعة واسعة من التأثيرات، من الألوان الشفافة إلى الملوناّت العضوية الثابتة القوية. يتميز كل ظل مبدع بمسحة وردية خفيفة للحصول على أحمر خدود طبيعي المظهر[cite: 6].',
-    descriptionEn: 'CHIC BLUSH ON is a pressed powder blush that delivers healthy-looking color to flatter any skin tone. It has a silky, superfine micronized powder pigments in matte and shimmering shades ensure a seamless application. These soft, buildable shades deliver a wide range of effects, from ulta-sheer to powerful pops of color. Each iconic shade features a subtle pink undertone for a natural-looking blush[cite: 6].',
-    keyBenefitsAr: [
-      'بودرة أحمر خدود مضغوطة توفر لوناً صحياً يناسب أي لون بشرة[cite: 6]',
-      'أصباغ بودرة دقيقة حريرية ورقيقة في ظلال غير لامعة ومتلألئة لتطبيق سلس[cite: 6]',
-      'ظلال ناعمة قابلة للبناء لتقديم تأثيرات متنوعة من الشفاف إلى القوي[cite: 6]',
-      'يتميز بمسحة وردية خفيفة لكل ظل للحصول على مظهر خدود طبيعي[cite: 6]'
-    ],
-    keyBenefitsEn: [
-      'Pressed powder blush delivering healthy-looking color for any skin tone[cite: 6]',
-      'Silky, superfine micronized powder pigments in matte and shimmering shades[cite: 6]',
-      'Soft, buildable shades for a wide range of effects[cite: 6]',
-      'Each iconic shade features a subtle pink undertone for a natural look[cite: 6]'
-    ],
-    ingredientsAr: 'بودرة ميكرونية دقيقة، أصباغ مات ومتلألئة نقية وآمنة على البشرة.',
-    ingredientsEn: 'Micronized Powder Pigments, Pure Safe Matte and Shimmering Pigments.',
+    descriptionAr: 'شيك بلاش أون هو بودرة أحمر خدود مضغوطة توفر لوناً صحياً.',
+    descriptionEn: 'CHIC BLUSH ON is a pressed powder blush.',
+    keyBenefitsAr: ['بودرة مضغوطة', 'أصباغ حريرية', 'مات ومتلألئ', 'تطبيق سلس'],
+    keyBenefitsEn: ['Pressed powder', 'Silky pigments', 'Matte & shimmer', 'Seamless'],
+    ingredientsAr: 'بودرة ميكرونية',
+    ingredientsEn: 'Micronized Powder',
     shades: [
-      { id: '20', nameAr: 'درجة 20', nameEn: 'Shade 20', hex: '#D98282' },
-      { id: '21', nameAr: 'درجة 21', nameEn: 'Shade 21', hex: '#E0949C' },
-      { id: '22', nameAr: 'درجة 22', nameEn: 'Shade 22', hex: '#C67E78' },
-      { id: '23', nameAr: 'درجة 23', nameEn: 'Shade 23', hex: '#D28C7D' },
-      { id: '24', nameAr: 'درجة 24', nameEn: 'Shade 24', hex: '#B87D6B' },
-      { id: '25', nameAr: 'درجة 25', nameEn: 'Shade 25', hex: '#B57357' },
-      { id: '26', nameAr: 'درجة 26', nameEn: 'Shade 26', hex: '#6B4B3D' },
-      { id: '27', nameAr: 'درجة 27', nameEn: 'Shade 27', hex: '#5A3A33' },
-      { id: '28', nameAr: 'درجة 28', nameEn: 'Shade 28', hex: '#8D5A63' },
-      { id: '29', nameAr: 'درجة 29', nameEn: 'Shade 29', hex: '#6E4342' }
+      { id: '20', nameAr: 'درجة 20', nameEn: 'Shade 20', hex: '#D88C96', image: '/images/401/2.png' , stock: 35},
+      { id: '21', nameAr: 'درجة 21', nameEn: 'Shade 21', hex: '#E49AA2', image: '/images/401/4.png', stock: 35 },
+      { id: '22', nameAr: 'درجة 22', nameEn: 'Shade 22', hex: '#C98A7A', image: '/images/401/6.png', stock: 35 },
+      { id: '23', nameAr: 'درجة 23', nameEn: 'Shade 23', hex: '#C38B78', image: '/images/401/8.png' , stock: 35},
+      { id: '24', nameAr: 'درجة 24', nameEn: 'Shade 24', hex: '#C9938A', image: '/images/401/10.png', stock: 35 },
+      { id: '25', nameAr: 'درجة 25', nameEn: 'Shade 25', hex: '#B87A6E', image: '/images/401/12.png' , stock: 35},
+      { id: '26', nameAr: 'درجة 26', nameEn: 'Shade 26', hex: '#AD7A6B', image: '/images/401/14.png' , stock: 35},
+      { id: '27', nameAr: 'درجة 27', nameEn: 'Shade 27', hex: '#A66E5B', image: '/images/401/16.png', stock: 35 },
+      { id: '28', nameAr: 'درجة 28', nameEn: 'Shade 28', hex: '#C78C90', image: '/images/401/18.png', stock: 35 },
+      { id: '29', nameAr: 'درجة 29', nameEn: 'Shade 29', hex: '#C99A8C', image: '/images/401/20.png', stock: 35 }
     ],
     origin: 'Made in Turkey | صنع في تركيا',
-    inStock: true,
-  },
-];
+    stock: 315,
+inStock: true
+},
+
+{
+    id: 'miss2m-careful-stick-contour-mp760',
+    nameAr: 'كونتور ستيك كيرفول - MISS2M MP760',
+    nameEn: 'MISS2M Careful Stick Contour MP760',
+    category: 'face',
+    subcategoryAr: 'كونتور',
+    subcategoryEn: 'Contour',
+    price: 3.00,
+    originalPrice: 4.00,
+    rating: 4.9,
+    reviewsCount: 38,
+    image: '/images/760/light.jpg',
+    hoverImage: '/images/760/dark.jpg',
+    gallery: [
+      '/images/760/light.jpg',
+      '/images/760/dark.jpg',
+    ],
+    badge: 'new',
+    descriptionAr: 'مقدمة Careful Stick Contour لإبراز ملامح وجهك بشكل مثالي! تضمن لك عصا تحديد الوجه شكلها العملي وقوامها الكريمي سهولة التطبيق، مما يجعل تحديد الوجه أكثر ببساطة ومتعة في أي وقت مضى.',
+    descriptionEn: 'Introducing the Careful Stick Contour to highlight your facial features perfectly! Its stick form and creamy texture ensure easy application.',
+    keyBenefitsAr: [
+      'إبراز ملامح وجهك وتحديدها بشكل مثالي وعملي',
+      'قوام كريمي ناعم يمنحك سهولة فائقة في الدمج والتطبيق',
+      'يضيف عمقاً وببعاداً لجمال وجهك بمظهر طبيعي وخالٍ من العيوب',
+      'تصميم عملي على شكل ستيك مناسب للاستخدام السريع واليومي'
+    ],
+    keyBenefitsEn: [
+      'Highlight and define facial features perfectly',
+      'Creamy texture ensures easy application and blending',
+      'Adds depth and dimension for a natural and flawless look',
+      'Practical stick form for quick and daily use'
+    ],
+    ingredientsAr: 'زيوت طبيعية مرطبة، شمع خفيف، صبغات معدنية نقية.',
+    ingredientsEn: 'Natural Moisturizing Oils, Lightweight Wax, Pure Mineral Pigments.',
+    shades: [
+      { id: 'light', nameAr: 'الدرجة الفاتحة', nameEn: 'Light Shade', hex: '#A67C52', image: '/images/760/light.jpg', stock: 35 },
+      { id: 'dark', nameAr: 'الدرجة الأغمق', nameEn: 'Dark Shade', hex: '#7D4E2D', image: '/images/760/dark.jpg' , stock: 35}
+    ],
+    origin: 'Made in Turkey | صنع في تركيا',
+   stock: 70,
+inStock: true
+},
+]
