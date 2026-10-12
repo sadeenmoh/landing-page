@@ -14,7 +14,7 @@ export const PRODUCTS: Product[] = [
   rating: 4.9,
   reviewsCount: 187,
   image: '/images/503/101.jpg',
-  hoverImage: '/images/503/101.jpg',
+  hoverImage: '/images/503/102.jpg',
   gallery: [
     '/images/503/101.jpg',
     '/images/503/102.webp',
