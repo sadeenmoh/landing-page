@@ -202,69 +202,65 @@ inStock: true
   rating: 4.9,
   reviewsCount: 342,
   image: '/images/501/01.jpg',
-  
-  hoverImage: '/images/501/01.jpg',
+  hoverImage: '/images/501/011.jpg',
   gallery: [
-    '/images/501/01.jpg',
-    '/images/501/011.jpg',
-    '/images/501/0111.jpg',
-    '/images/501/02.jpg',
-    '/images/501/022.jpg',
-    '/images/501/0222.jpg',
-    '/images/501/03.jpg',
-    '/images/501/03.jpg',
-    '/images/501/0333.jpg',
-    '/images/501/04.jpg',
-    '/images/501/044.jpg',
-    '/images/501/0444.jpg'
-    
-
-
+    '/images/501/01.jpg',    // فراولة - أساسي
+    '/images/501/011.jpg',   // فراولة - تفصيلي
+    '/images/501/0111.jpg',  // فراولة - سواتش
+    '/images/501/03.jpg',    // توت - أساسي (لونه بنفسجي بالصورة)
+    '/images/501/033.jpg',   // توت - تفصيلي
+    '/images/501/0333.jpg',  // توت - سواتش
+    '/images/501/02.jpg',    // خوخ - أساسي
+    '/images/501/022.jpg',   // خوخ - تفصيلي
+    '/images/501/0222.jpg',  // خوخ - سواتش
+    '/images/501/04.jpg',    // فانيلا - أساسي
+    '/images/501/044.jpg',   // فانيلا - تفصيلي
+    '/images/501/0444.jpg'   // فانيلا - سواتش
   ],
   badge: 'bestseller',
+  origin: 'Made in Turkey',
   descriptionAr: 'ملمع الشفاه ليب اويل يقدم لك مجموعة متنوعة من الخيارات. اضف لمسة خاصة لشفتيك بنكهات الفراولة والتوت والخوخ والفانيليا. كل اصدار من LipOil Gloss يجمع بين اللمعان والعناية. ليب اويل غلوس يدلل شفتيك باللون والنكهة المناسبة لكل عمر واسلوب. حجمه العملي يسهل حمله في حقيبتك، مما يوفر النضارة واللمعان طوال اليوم. اكتشفي تنوع LipOil Gloss واضفي نكهة خاصة لشفتيك!',
-  descriptionEn: 'LipOil Gloss now offers you a variety of optional Add a special touch to your lips with strawberry, blackberry, peach, and vanilla flavors. Each LipOil Gloss variant combines shine and care. LipOil Gloss pampers your lips with color and flavor options suitable for every age and style. Its practical size makes it easy to carry in your bag, providing freshness and shine all day long. Discover the rich variety of LipOil Gloss and add a special flavor to your lips!',
-  keyBenefitsAr: ['بنكهات فراولة وتوت وخوخ وفانيليا', 'لمعان وعناية في نفس الوقت', 'حجم عملي سهل الحمل', 'نضارة ولمعان طوال اليوم', 'Ice Blue & Comfort اصدارات خاصة'],
-  keyBenefitsEn: ['Strawberry, Blackberry, Peach, Vanilla Flavors', 'Shine and Care Combined', 'Practical Size Easy To Carry', 'Freshness & Shine All Day Long', 'Ice Blue & Comfort Editions'],
-  ingredientsAr: 'زيوت مرطبة بنكهات الفواكه',
-  ingredientsEn: 'Moisturizing oils with fruit flavors',
-   shades: [
+  descriptionEn: 'LipOil Gloss offers you a variety of options. Add a special touch to your lips with strawberry, blackberry, peach, and vanilla flavors. Each variant combines shine and care. Its practical size makes it easy to carry in your bag, providing freshness and shine all day long.',
+  keyBenefitsAr: ['بنكهات فراولة وتوت وخوخ وفانيليا', 'لمعان وعناية في نفس الوقت', 'حجم عملي سهل الحمل', 'نضارة ولمعان طوال اليوم'],
+  keyBenefitsEn: ['Strawberry, Blackberry, Peach, Vanilla Flavors', 'Shine and Care Combined', 'Practical Size Easy To Carry', 'Freshness & Shine All Day Long'],
+  ingredientsAr: 'زيوت مرطبة بنكهات الفواكه، فيتامين E',
+  ingredientsEn: 'Moisturizing oils with fruit flavors, Vitamin E',
+  shades: [
     { 
       id: 'strawberry', 
       nameAr: 'فراولة', 
       nameEn: 'Strawberry', 
-      hex: '#FF7A9A',
-      image: '/images/501/011.jpg'
-      , stock: 35 // صورة 1
-    },
-    { 
-      id: 'blackberry', 
-      nameAr: 'توت', 
-      nameEn: 'Blackberry', 
-      hex: '#8A2A6A',
-      image: '/images/501/033.jpg'
-      , stock: 35 // صورة 7
+      hex: '#FF6B8A',
+      image: '/images/501/01.jpg',
+      stock: 35
     },
     { 
       id: 'peach', 
       nameAr: 'خوخ', 
       nameEn: 'Peach', 
       hex: '#FF9A6A',
-      image: '/images/501/022.jpg' 
-      , stock: 35// صورة 4
+      image: '/images/501/02.jpg',
+      stock: 35
+    },
+    { 
+      id: 'blackberry', 
+      nameAr: 'توت', 
+      nameEn: 'Blackberry', 
+      hex: '#8A2A6A',
+      image: '/images/501/03.jpg',
+      stock: 35
     },
     { 
       id: 'vanilla', 
       nameAr: 'فانيلا', 
       nameEn: 'Vanilla', 
-      hex: '#FFFFFF',
-      image: '/images/501/044.jpg' 
-      , stock: 35// صورة 10
+      hex: '#F5E6C8',
+      image: '/images/501/04.jpg',
+      stock: 35
     },
   ],
-  origin: 'Made in Turkey',
- stock: 140,
-inStock: true
+  stock: 140,
+  inStock: true
 },
 
 
